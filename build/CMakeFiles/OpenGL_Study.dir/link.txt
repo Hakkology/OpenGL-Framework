@@ -1,1 +1,1 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o -o OpenGL_Study  -lglfw 
+/usr/bin/c++ -g CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o CMakeFiles/OpenGL_Study.dir/Source/glad.c.o -o OpenGL_Study  -lglfw /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 

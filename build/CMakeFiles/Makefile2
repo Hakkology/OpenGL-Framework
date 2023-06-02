@@ -81,12 +81,12 @@ clean: CMakeFiles/OpenGL_Study.dir/clean
 CMakeFiles/OpenGL_Study.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=1,2 "Built target OpenGL_Study"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=1,2,3 "Built target OpenGL_Study"
 .PHONY : CMakeFiles/OpenGL_Study.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGL_Study.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGL_Study.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGL_Study.dir/rule

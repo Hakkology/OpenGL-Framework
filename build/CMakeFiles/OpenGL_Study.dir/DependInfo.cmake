@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/glad.c" "CMakeFiles/OpenGL_Study.dir/Source/glad.c.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/glad.c.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp" "CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o.d"
   )
 

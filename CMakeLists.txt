@@ -1,7 +1,12 @@
-cmake_minimum_required(VERSION 3.0.0)
-project(OpenGL_Study VERSION 0.1.0)
+cmake_minimum_required(VERSION 3.12)
+project(OpenGL_Study)
+cmake_policy(SET CMP0072 NEW)
 
-add_executable(OpenGL_Study 
-                    Source/main.cpp)
+find_package(OpenGL REQUIRED)
 
-target_link_libraries(OpenGL_Study glfw)
+add_executable(OpenGL_Study Source/main.cpp Source/glad.c Source/glad.h)
+
+# Link GLEW library
+target_link_libraries(OpenGL_Study 
+    glfw
+    OpenGL::GL)
