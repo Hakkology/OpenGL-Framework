@@ -20,22 +20,22 @@ int main(void)
         return -1;
     }
 
+    int bufferWidth, bufferHeight;
+    glfwGetFramebufferSize (window, &bufferWidth, &bufferHeight);
+
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
+
     // Initialize the GL Extension Wrangler library
     glewExperimental = GL_TRUE;
 
-    if(!glewInit()){
+    if(glewInit() != GLEW_OK){
 
         printf("GLEW Init failed.");
         glfwDestroyWindow(window);
         glfwTerminate();
         return -1;
     }
-
-    int bufferWidth, bufferHeight;
-    glfwGetFramebufferSize (window, &bufferWidth, &bufferHeight);
-
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
 
     // If we want to use GLAD
     /*if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
@@ -57,7 +57,7 @@ int main(void)
         glfwSwapBuffers(window);
 
         // Make window blue - RBG values, 255 means 1.
-        glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+        glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
 
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
