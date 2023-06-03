@@ -129,30 +129,6 @@ OpenGL_Study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
 .PHONY : OpenGL_Study/fast
 
-Source/glad.o: Source/glad.c.o
-.PHONY : Source/glad.o
-
-# target to build an object file
-Source/glad.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/glad.c.o
-.PHONY : Source/glad.c.o
-
-Source/glad.i: Source/glad.c.i
-.PHONY : Source/glad.i
-
-# target to preprocess a source file
-Source/glad.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/glad.c.i
-.PHONY : Source/glad.c.i
-
-Source/glad.s: Source/glad.c.s
-.PHONY : Source/glad.s
-
-# target to generate assembly for a file
-Source/glad.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/glad.c.s
-.PHONY : Source/glad.c.s
-
 Source/main.o: Source/main.cpp.o
 .PHONY : Source/main.o
 
@@ -186,9 +162,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OpenGL_Study"
-	@echo "... Source/glad.o"
-	@echo "... Source/glad.i"
-	@echo "... Source/glad.s"
 	@echo "... Source/main.o"
 	@echo "... Source/main.i"
 	@echo "... Source/main.s"

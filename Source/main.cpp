@@ -1,5 +1,5 @@
 #include <iostream>
-#include <glad/glad.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 int main(void)
@@ -21,13 +21,13 @@ int main(void)
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    /*if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout <<"Could not load OpenGL" << std::endl;
         glfwTerminate();
         return -1;
     }
-    
+    */
 
     glClearColor(0.25f, 0.5f, 0.75f, 1.0f);
 

@@ -3,10 +3,5 @@
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
   "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp"
-},
-{
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/cc   -g -o CMakeFiles/OpenGL_Study.dir/Source/glad.c.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/glad.c",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/glad.c"
 }
 ]
