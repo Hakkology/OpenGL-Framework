@@ -241,6 +241,9 @@ GLEW_STATIC_LIBRARY_DEBUG:FILEPATH=GLEW_STATIC_LIBRARY_DEBUG-NOTFOUND
 //Path to a library.
 GLEW_STATIC_LIBRARY_RELEASE:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLEW.a
 
+//The directory containing a CMake configuration file for GLM.
+GLM_DIR:PATH=GLM_DIR-NOTFOUND
+
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
 
@@ -279,6 +282,9 @@ OpenGL_Study_SOURCE_DIR:STATIC=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/
 
 //The directory containing a CMake configuration file for glfw3.
 glfw3_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/glfw3
+
+//The directory containing a CMake configuration file for glm.
+glm_DIR:PATH=/usr/lib/cmake/glm
 
 
 ########################
@@ -458,4 +464,6 @@ OPENGL_glx_LIBRARY-ADVANCED:INTERNAL=1
 OPENGL_opengl_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: OPENGL_xmesa_INCLUDE_DIR
 OPENGL_xmesa_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: glm_DIR
+glm_DIR-ADVANCED:INTERNAL=1
 

@@ -82,4 +82,8 @@ Vertices =======> Primitives ======> Fragments
 GLm is used at OpenGL math operations, most importantly vectors and matrices.
 Uniform variables pass global data to shaders.
 Need to obtain a uniform's location then bind data to it.
+
+glm:mat4 model;
+glm::mat4 model(1.0f)
+Correction on mat 4 using GLM.
 */

@@ -3,13 +3,18 @@
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "shader.h"
 
 // Vertex Array Object and Vertex Buffer Objects
 GLuint VAO, VBO, shader;
 
 // Uniform variables
-GLuint uniformXMove;
+GLuint uniformModel;
 
 // Triangle location change variables
 bool direction = true;
@@ -66,7 +71,7 @@ int main(void)
 
     /*Creating Triangle Code Block*/
     CreateTriangle(VAO, VBO);
-    CompileShaders(shader, uniformXMove);
+    CompileShaders(shader, uniformModel);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -81,8 +86,13 @@ int main(void)
         // Beginning of Program for Shader application
         glUseProgram(shader);
 
-        // shader transform
-        glUniform1f(uniformXMove, triOffset);
+        // Math for creating movement model
+        glm::mat4 model(1.0f);
+        model = glm::translate(model, glm::vec3(triOffset, 0.0f, 0.0f));
+
+        // shader transform (later with a model matrix instead of a single variable equation)
+        // glUniform1f(uniformModel, triOffset);
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
 
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);

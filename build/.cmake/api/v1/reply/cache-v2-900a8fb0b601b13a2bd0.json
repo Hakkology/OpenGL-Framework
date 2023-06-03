@@ -1294,6 +1294,18 @@
 			"value" : "/usr/lib/x86_64-linux-gnu/libGLEW.a"
 		},
 		{
+			"name" : "GLM_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for GLM."
+				}
+			],
+			"type" : "PATH",
+			"value" : "GLM_DIR-NOTFOUND"
+		},
+		{
 			"name" : "OPENGL_EGL_INCLUDE_DIR",
 			"properties" : 
 			[
@@ -1484,6 +1496,22 @@
 			],
 			"type" : "PATH",
 			"value" : "/usr/lib/x86_64-linux-gnu/cmake/glfw3"
+		},
+		{
+			"name" : "glm_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "ADVANCED",
+					"value" : "1"
+				},
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for glm."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/cmake/glm"
 		}
 	],
 	"kind" : "cache",
