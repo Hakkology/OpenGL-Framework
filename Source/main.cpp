@@ -6,21 +6,37 @@ int main(void)
 {
     GLFWwindow* window;
 
-    /* Initialize the library */
-    if (!glfwInit())
+    /* Initialize the GL Framework library */
+    if (!glfwInit()) {
+        printf("GLFW Init failed.");
         return -1;
-
+    }
     /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "My_Project", NULL, NULL);
+    window = glfwCreateWindow(800, 600, "My_Project", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
         return -1;
     }
 
+    int bufferWidth, bufferHeight;
+    glfwGetFramebufferSize (window, &bufferWidth, &bufferHeight);
+
     /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
+    // Initialize the GL Extension Wrangler library
+    glewExperimental = GL_TRUE;
+
+    if(!glewInit()){
+
+        printf("GLEW Init failed.");
+        glfwDestroyWindow(window);
+        glfwTerminate();
+        return -1;
+    }
+
+    // If we want to use GLAD
     /*if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout <<"Could not load OpenGL" << std::endl;
@@ -29,18 +45,23 @@ int main(void)
     }
     */
 
-    glClearColor(0.25f, 0.5f, 0.75f, 1.0f);
+    // Setup Viewport size
+    glViewport(0, 0, bufferWidth, bufferHeight);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
     {
-        /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
 
-        /* Poll for and process events such as keyboard input */
+        // Make window blue - RBG values, 255 means 1.
+        glClearColor(1.0f, 0.0f, 0.0f, 1.0f);
+
+        /* Render here */
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        /* Poll for and process events such as keyboard input or mouse movements */
         glfwPollEvents();
     }
 
