@@ -57,6 +57,8 @@ Procedure through Code:
 7- Enable the Attribute Pointer
 8- Unbind the VAO and VBO, ready for the next object to be bound
 
+** This procedure was used in triangle formations.
+
 1- Activate Shader Program you want to use
 2- Bind the VAO of object you want to draw
 3- Call glDrawArrays, which initiates the rest of the pipeline
@@ -70,4 +72,14 @@ Vertex Post-Processing
 
        Geometry Shader     Rasterization
 Vertices =======> Primitives ======> Fragments
+*/
+
+//////////////////////////// 
+
+// Vectors, Matrices and Uniform Variables
+
+/*
+GLm is used at OpenGL math operations.
+
+
 */

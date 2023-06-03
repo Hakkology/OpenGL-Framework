@@ -68,7 +68,7 @@ int main(void)
         // Make window blue - RBG values, 255 means 1.
         glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
 
-        // Program for Shader application
+        // PBeginning of Program for Shader application
         glUseProgram(shader);
 
         glBindVertexArray(VAO);
@@ -76,6 +76,7 @@ int main(void)
         glBindVertexArray(0);
 
         glUseProgram(0);
+        // End of Program for Shader Application
 
         /* Swap front and back buffers */
         glfwSwapBuffers(window);
