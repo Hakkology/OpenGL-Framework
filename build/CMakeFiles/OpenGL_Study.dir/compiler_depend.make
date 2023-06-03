@@ -181,12 +181,16 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/GL/glu.h \
   /usr/include/GL/gl.h \
   /usr/include/GLFW/glfw3.h
 
+
+/usr/include/string.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 
@@ -527,6 +531,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+
+/usr/include/strings.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 

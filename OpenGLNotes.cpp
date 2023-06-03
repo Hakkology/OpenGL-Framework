@@ -63,4 +63,11 @@ Procedure through Code:
 
 Vertex Shader handles vertices individually.
 Stores data in gl_Position.
+Fragment Shaders handles data for each fragment.
+Vertex Post-Processing
+- Transform Feedback
+- Clipping
+
+       Geometry Shader     Rasterization
+Vertices =======> Primitives ======> Fragments
 */
