@@ -10,7 +10,7 @@ layout (location =0) in vec3 pos;                               \n\
                                                                 \n\
 void main()                                                     \n\
 {                                                               \n\
-    gl_Position = vec4(0.4 * pos.x, 0.4 * pos.y, pos.z, 1.0);   \n\
+    gl_Position = vec4(0.7 * pos.x, 0.4 * pos.y, pos.z, 1.0);   \n\
 }";
 
 // Fragment Shader
