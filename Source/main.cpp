@@ -13,17 +13,12 @@ int main(void)
     }
     /* Create a windowed mode window and its OpenGL context */
     window = glfwCreateWindow(800, 600, "My_Project", NULL, NULL);
+
     if (!window)
     {
         glfwTerminate();
         return -1;
     }
-
-    int bufferWidth, bufferHeight;
-    glfwGetFramebufferSize (window, &bufferWidth, &bufferHeight);
-
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
 
     // Initialize the GL Extension Wrangler library
     glewExperimental = GL_TRUE;
@@ -35,6 +30,12 @@ int main(void)
         glfwTerminate();
         return -1;
     }
+
+    int bufferWidth, bufferHeight;
+    glfwGetFramebufferSize (window, &bufferWidth, &bufferHeight);
+
+    /* Make the window's context current */
+    glfwMakeContextCurrent(window);
 
     // If we want to use GLAD
     /*if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
