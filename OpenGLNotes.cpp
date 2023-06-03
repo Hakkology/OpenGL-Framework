@@ -79,7 +79,7 @@ Vertices =======> Primitives ======> Fragments
 // Vectors, Matrices and Uniform Variables
 
 /*
-GLm is used at OpenGL math operations.
-
-
+GLm is used at OpenGL math operations, most importantly vectors and matrices.
+Uniform variables pass global data to shaders.
+Need to obtain a uniform's location then bind data to it.
 */

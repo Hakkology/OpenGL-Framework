@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -6,6 +7,15 @@
 
 // Vertex Array Object and Vertex Buffer Objects
 GLuint VAO, VBO, shader;
+
+// Uniform variables
+GLuint uniformXMove;
+
+// Triangle location change variables
+bool direction = true;
+float triOffset = 0.0f;
+float triMaxoffset = 0.6f;
+float triIncrement = 0.005f;
 
 int main(void)
 {
@@ -56,7 +66,7 @@ int main(void)
 
     /*Creating Triangle Code Block*/
     CreateTriangle(VAO, VBO);
-    CompileShaders(shader);
+    CompileShaders(shader, uniformXMove);
 
     /* Loop until the user closes the window */
     while (!glfwWindowShouldClose(window))
@@ -65,11 +75,14 @@ int main(void)
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // Make window blue - RBG values, 255 means 1.
+        // Make window orange - RBG values, 255 means 1.
         glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
 
-        // PBeginning of Program for Shader application
+        // Beginning of Program for Shader application
         glUseProgram(shader);
+
+        // shader transform
+        glUniform1f(uniformXMove, triOffset);
 
         glBindVertexArray(VAO);
         glDrawArrays(GL_TRIANGLES, 0, 3);
@@ -83,6 +96,19 @@ int main(void)
 
         /* Poll for and process events such as keyboard input or mouse movements */
         glfwPollEvents();
+
+        if(direction){
+
+            triOffset += triIncrement;
+        }
+        else{
+
+            triOffset -= triIncrement;
+        }
+
+        if(triOffset >= triMaxoffset || triOffset <= -triMaxoffset){
+            direction = !direction;
+        }
     }
 
     glfwTerminate();

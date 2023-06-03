@@ -3,25 +3,27 @@
 #include <string.h>
 
 // Vertex Shader
-static const char* vShader = "                                  \n\
-#version 330                                                    \n\
-                                                                \n\
-layout (location =0) in vec3 pos;                               \n\
-                                                                \n\
-void main()                                                     \n\
-{                                                               \n\
-    gl_Position = vec4(0.7 * pos.x, 0.4 * pos.y, pos.z, 1.0);   \n\
+static const char* vShader = "                                          \n\
+#version 330                                                            \n\
+                                                                        \n\
+layout (location =0) in vec3 pos;                                       \n\
+                                                                        \n\
+uniform float xMove;                                                    \n\
+                                                                        \n\
+void main()                                                             \n\
+{                                                                       \n\
+    gl_Position = vec4(0.3 * pos.x + xMove, 0.5 * pos.y, pos.z, 1.0);   \n\
 }";
 
 // Fragment Shader
-static const char* fShader = "                                  \n\
-#version 330                                                    \n\
-                                                                \n\
-out vec4 colour;                                                \n\
-                                                                \n\
-void main()                                                     \n\
-{                                                               \n\
-    colour = vec4(1.0, 0.0, 0.0, 1.0);                          \n\
+static const char* fShader = "                                          \n\
+#version 330                                                            \n\
+                                                                        \n\
+out vec4 colour;                                                        \n\
+                                                                        \n\
+void main()                                                             \n\
+{                                                                       \n\
+    colour = vec4(1.0, 1.0, 0.0, 1.0);                                  \n\
 }";
 
 void CreateTriangle(GLuint& VAO, GLuint& VBO) {
@@ -83,7 +85,7 @@ void AddShader(GLuint theProgram, const char* shaderCode, GLenum shaderType){
 
 }
 
-void CompileShaders(GLuint& shader){
+void CompileShaders(GLuint& shader, GLuint& uniformXMove){
 
     shader = glCreateProgram();
     if (!shader)
@@ -117,4 +119,6 @@ void CompileShaders(GLuint& shader){
         printf("Error validating program: '%s'\n", eLog);
         return;
     }
+
+    uniformXMove = glGetUniformLocation(shader, "xMove");
 }

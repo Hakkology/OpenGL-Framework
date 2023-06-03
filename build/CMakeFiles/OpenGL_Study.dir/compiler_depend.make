@@ -181,6 +181,31 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/GL/glu.h \
@@ -381,6 +406,28 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 ../Source/shader.cpp:
 
+/usr/include/c++/11/tr1/legendre_function.tcc:
+
+/usr/include/c++/11/tr1/beta_function.tcc:
+
+/usr/include/c++/11/limits:
+
+/usr/include/c++/11/bits/specfun.h:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
+
+/usr/include/math.h:
+
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
@@ -395,9 +442,13 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 /usr/include/c++/11/cwctype:
 
+/usr/include/c++/11/tr1/poly_hermite.tcc:
+
 /usr/include/c++/11/bits/locale_facets.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
 
 /usr/include/c++/11/bits/streambuf.tcc:
 
@@ -407,13 +458,19 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 /usr/include/c++/11/system_error:
 
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
 /usr/include/c++/11/bits/locale_classes.tcc:
 
 /usr/include/c++/11/bits/basic_string.tcc:
 
 /usr/include/c++/11/bits/charconv.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
 
 /usr/include/asm-generic/errno.h:
 
@@ -503,6 +560,8 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 /usr/include/c++/11/bits/range_access.h:
 
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
+
 /usr/include/c++/11/cstdlib:
 
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
@@ -552,6 +611,8 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
 
 ../Source/main.cpp:
 
@@ -606,6 +667,8 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 /usr/include/linux/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/c++/11/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
@@ -679,6 +742,8 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
 /usr/include/c++/11/bits/localefwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
@@ -687,7 +752,11 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/c++/11/bits/ios_base.h:
 
@@ -733,7 +802,11 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/setjmp.h:
 
+/usr/include/c++/11/tr1/gamma.tcc:
+
 /usr/include/c++/11/bits/locale_classes.h:
+
+/usr/include/c++/11/cmath:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
@@ -752,5 +825,7 @@ CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp \
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/include/c++/11/ext/alloc_traits.h:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
 
 /usr/include/c++/11/bits/stl_construct.h:

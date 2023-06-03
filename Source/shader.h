@@ -5,6 +5,6 @@
 
 void CreateTriangle(GLuint&, GLuint&);
 void AddShader(GLuint, const char*, GLenum);
-void CompileShaders(GLuint&);
+void CompileShaders(GLuint&, GLuint&);
 
 #endif
