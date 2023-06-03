@@ -86,4 +86,7 @@ Need to obtain a uniform's location then bind data to it.
 glm:mat4 model;
 glm::mat4 model(1.0f)
 Correction on mat 4 using GLM.
+
+OpenGL transformations should be used by the right order.
+If we move something and then rotate it, it will be rotating based on the or the point of the origin point as opposed to its own origin.
 */

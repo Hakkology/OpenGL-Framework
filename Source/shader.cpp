@@ -23,7 +23,7 @@ out vec4 colour;                                                        \n\
                                                                         \n\
 void main()                                                             \n\
 {                                                                       \n\
-    colour = vec4(1.0, 1.0, 0.0, 1.0);                                  \n\
+    colour = vec4(0.2, 0.8, 0.5, 1.0);                                  \n\
 }";
 
 void CreateTriangle(GLuint& VAO, GLuint& VBO) {

@@ -22,6 +22,10 @@ float triOffset = 0.0f;
 float triMaxoffset = 0.6f;
 float triIncrement = 0.005f;
 
+// Rotation tools
+const float toRadians = 3.14159265f / 180.0f;
+float currentAngle = 0.0f;
+
 int main(void)
 {
     GLFWwindow* window;
@@ -88,7 +92,8 @@ int main(void)
 
         // Math for creating movement model
         glm::mat4 model(1.0f);
-        model = glm::translate(model, glm::vec3(triOffset, 0.0f, 0.0f));
+        model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
+        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
 
         // shader transform (later with a model matrix instead of a single variable equation)
         // glUniform1f(uniformModel, triOffset);
@@ -118,6 +123,16 @@ int main(void)
 
         if(triOffset >= triMaxoffset || triOffset <= -triMaxoffset){
             direction = !direction;
+        }
+
+        currentAngle += 0.5f;
+        if(currentAngle >=360){
+
+            currentAngle -=360;
+        }
+        if(currentAngle <0){
+
+            currentAngle +=360;
         }
     }
 
