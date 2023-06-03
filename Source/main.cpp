@@ -26,6 +26,14 @@ float triIncrement = 0.005f;
 const float toRadians = 3.14159265f / 180.0f;
 float currentAngle = 0.0f;
 
+// Size tools
+bool sizeDirection = true;
+float currentSize = 0.4f;
+float maxSize = 0.8f;
+float minSize = 0.1f;
+
+void TransformControls();
+
 int main(void)
 {
     GLFWwindow* window;
@@ -94,6 +102,7 @@ int main(void)
         glm::mat4 model(1.0f);
         model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
 
         // shader transform (later with a model matrix instead of a single variable equation)
         // glUniform1f(uniformModel, triOffset);
@@ -111,6 +120,17 @@ int main(void)
 
         /* Poll for and process events such as keyboard input or mouse movements */
         glfwPollEvents();
+
+        // Function for transform controls
+        TransformControls();
+
+    }
+
+    glfwTerminate();
+    return 0;
+}
+
+void TransformControls(){
 
         if(direction){
 
@@ -134,9 +154,19 @@ int main(void)
 
             currentAngle +=360;
         }
-    }
 
-    glfwTerminate();
-    return 0;
+        if(sizeDirection){
+
+            currentSize += 0.001f;
+        }
+        else{
+            
+            currentSize -= 0.001f;
+        }
+
+        if(currentSize >= maxSize || currentSize <= minSize){
+
+            sizeDirection = !sizeDirection;
+        }
 }
 

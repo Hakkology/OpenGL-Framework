@@ -8,11 +8,11 @@ static const char* vShader = "                                          \n\
                                                                         \n\
 layout (location =0) in vec3 pos;                                       \n\
                                                                         \n\
-uniform mat4 model;                                                    \n\
+uniform mat4 model;                                                     \n\
                                                                         \n\
 void main()                                                             \n\
 {                                                                       \n\
-    gl_Position = model * vec4(0.4 * pos.x, 0.4 * pos.y, pos.z, 1.0);   \n\
+    gl_Position = model * vec4(pos, 1.0);                               \n\
 }";
 
 // Fragment Shader
