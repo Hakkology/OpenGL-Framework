@@ -8,7 +8,7 @@ int main(void)
 
     /* Initialize the GL Framework library */
     if (!glfwInit()) {
-        printf("GLFW Init failed.");
+        printf("GLFW Init failed.\n");
         return -1;
     }
     /* Create a windowed mode window and its OpenGL context */
@@ -31,7 +31,7 @@ int main(void)
 
     if(glewInit() != GLEW_OK){
 
-        printf("GLEW Init failed.");
+        printf("GLEW Init failed.\n");
         glfwDestroyWindow(window);
         glfwTerminate();
         return -1;
