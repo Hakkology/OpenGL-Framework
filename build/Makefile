@@ -153,6 +153,30 @@ Source/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/main.cpp.s
 .PHONY : Source/main.cpp.s
 
+Source/shader.o: Source/shader.cpp.o
+.PHONY : Source/shader.o
+
+# target to build an object file
+Source/shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o
+.PHONY : Source/shader.cpp.o
+
+Source/shader.i: Source/shader.cpp.i
+.PHONY : Source/shader.i
+
+# target to preprocess a source file
+Source/shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.i
+.PHONY : Source/shader.cpp.i
+
+Source/shader.s: Source/shader.cpp.s
+.PHONY : Source/shader.s
+
+# target to generate assembly for a file
+Source/shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.s
+.PHONY : Source/shader.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... Source/main.o"
 	@echo "... Source/main.i"
 	@echo "... Source/main.s"
+	@echo "... Source/shader.o"
+	@echo "... Source/shader.i"
+	@echo "... Source/shader.s"
 .PHONY : help
 
 

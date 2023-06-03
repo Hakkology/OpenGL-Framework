@@ -8,7 +8,7 @@ cmake_policy(SET CMP0072 NEW)
 find_package(OpenGL REQUIRED)
 # package must be found for this project to work
 
-add_executable(OpenGL_Study Source/main.cpp)
+add_executable(OpenGL_Study Source/main.cpp Source/shader.cpp Source/shader.h)
 # compile the source file, main
 
 target_link_libraries(OpenGL_Study 

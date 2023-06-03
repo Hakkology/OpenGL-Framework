@@ -1,5 +1,5 @@
-CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp \
+CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -145,7 +145,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc /usr/include/GL/glew.h \
- /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h \
- /usr/include/GLFW/glfw3.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.h
+ /usr/include/c++/11/bits/istream.tcc \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.h \
+ /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
+ /usr/include/GL/gl.h /usr/include/string.h /usr/include/strings.h
