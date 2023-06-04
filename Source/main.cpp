@@ -42,14 +42,14 @@ float currentSize = 0.7f;
 float maxSize = 0.8f;
 float minSize = 0.1f;
 
+// to create an object
+void CreateGameObject();
+
 // shader functions
 void CreateShaders();
 
 // to define boundary conditions
 void TransformControls();
-
-// to draw an object
-void CreateGameObject();
 
 int main(void)
 {
@@ -83,7 +83,8 @@ int main(void)
         // Creation of GameObject-1
         // Math for creating movement model
         glm::mat4 model(1.0f);
-        model = glm::translate(model, glm::vec3(triOffset, 0.0f, -2.5f));
+
+        model = glm::translate(model, glm::vec3(triOffset, 0.75f, -4.0f));
         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
         model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
 
@@ -94,10 +95,11 @@ int main(void)
 
         // Creation of GameObject-2
         // Math for creating movement model
-        model = glm::mat4();
-        model = glm::translate(model, glm::vec3(0.0f, 1.0f, -2.5f));
+        model = glm::mat4(1.0f);
+
+        model = glm::translate(model, glm::vec3(triOffset, -0.75f, -3.0f));
         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+        model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -121,42 +123,6 @@ int main(void)
     return 0;
 }
 
-// void CreateTriangle() {
-
-//     GLfloat vertices[] = {
-//        -1.0f, -1.0f, 0.0f,
-//         1.0f, -1.0f, 0.0f,
-//         0.0f, 1.0f, 0.0f
-//     };
-
-//     Mesh *TriangleTest = new Mesh();
-//     TriangleTest ->Create2DMeshTriangle(vertices, 3);
-//  }
-
-// void DrawTriangle(){
-
-//         // Beginning of Program for Shader application
-//         shaderList[0]->UseShader();
-//         uniformModel = shaderList[0]->GetModelLocation;
-//         uniformProjection = shaderList[0] ->GetProjectionLocation;
-
-//         // Math for creating movement model
-//         glm::mat4 model(1.0f);
-//         model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
-//         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-//         model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
-
-//         // shader transform (later with a model matrix instead of a single variable equation)
-//         // glUniform1f(uniformModel, triOffset);
-//         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-
-//         meshList[0] ->Render2DMeshTriangle();
-
-//         glUseProgram(0);
-//         // End of Program for Shader Application
-
-// }
-
 void CreateGameObject() {
 
     unsigned int indices[]={
@@ -176,6 +142,10 @@ void CreateGameObject() {
     Mesh *obj1 = new Mesh();
     obj1 ->Create3DMesh(vertices, indices, 12, 12);
     meshList.push_back(obj1);
+
+    Mesh *obj2 = new Mesh();
+    obj2 -> Create3DMesh(vertices, indices, 12, 12);
+    meshList.push_back(obj2);
 
 }
 
