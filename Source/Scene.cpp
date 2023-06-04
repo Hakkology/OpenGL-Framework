@@ -9,6 +9,9 @@ Scene::Scene(){
     {
         keys[i] = 0;
     }
+
+    xChange = 0.0f;
+    yChange = 0.0f;
     
 }
 
@@ -21,6 +24,9 @@ Scene::Scene(GLint windowWidth, GLint windowHeight){
     {
         keys[i] = 0;
     }
+
+    xChange = 0.0f;
+    yChange = 0.0f;
 }
 
 int Scene::Initialize(){
@@ -60,6 +66,7 @@ int Scene::Initialize(){
 
     // Handle key + Mouse Input
     createCallbacks();
+    glfwSetInputMode(mainWindow, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
     // Initialize the GL Extension Wrangler library
     glewExperimental = GL_TRUE;
@@ -129,7 +136,7 @@ void Scene::handleMouse(GLFWwindow* window, double xPos, double yPos){
     theWindow -> lastX = xPos;
     theWindow -> lastY = yPos;
 
-    printf("x:%.6f, y:%.6f\n", theWindow->xChange, theWindow->yChange);
+    //printf("x:%.6f, y:%.6f\n", theWindow->xChange, theWindow->yChange);
 }
 
 void Scene::createCallbacks(){
@@ -137,6 +144,19 @@ void Scene::createCallbacks(){
     glfwSetKeyCallback(mainWindow, handleKeys);
     glfwSetCursorPosCallback(mainWindow, handleMouse);
 }
+
+GLfloat Scene::getXChange(){
+    GLfloat theChange = xChange;
+    xChange = 0.0f;
+    return theChange;
+}
+
+GLfloat Scene::getYChange(){
+    GLfloat theChange = yChange;
+    yChange = 0.0f;
+    return theChange;
+}
+
 
 Scene::~Scene(){
 

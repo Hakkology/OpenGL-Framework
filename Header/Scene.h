@@ -31,6 +31,15 @@ public:
         return glfwWindowShouldClose(mainWindow);
     }
 
+    bool* getKeys(){
+
+        return keys;
+    }
+
+    // Simplified solution
+    GLfloat getXChange();
+    GLfloat getYChange();
+
     void swapBuffers(){
 
         glfwSwapBuffers(mainWindow);
