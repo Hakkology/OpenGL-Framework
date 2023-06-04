@@ -11,7 +11,7 @@
 #include "shader.h"
 
 // Vertex Array Object and Vertex Buffer Objects
-GLuint VAO, VBO, shader;
+GLuint VAO, VBO, IBO, shader;
 
 // Uniform variables
 GLuint uniformModel;
@@ -28,11 +28,18 @@ float currentAngle = 0.0f;
 
 // Size tools
 bool sizeDirection = true;
-float currentSize = 0.4f;
+float currentSize = 0.7f;
 float maxSize = 0.8f;
 float minSize = 0.1f;
 
+// to define boundary conditions
 void TransformControls();
+
+// to draw a Triangle
+void DrawTriangle();
+
+// to draw a Pyramid
+void DrawPyramid();
 
 int main(void)
 {
@@ -78,11 +85,14 @@ int main(void)
     }
     */
 
+    glEnable(GL_DEPTH_TEST);
+
     // Setup Viewport size
     glViewport(0, 0, bufferWidth, bufferHeight);
 
-    /*Creating Triangle Code Block*/
-    CreateTriangle(VAO, VBO);
+    /*Creating Shapes Code Block*/
+    //CreateTriangle(VAO, VBO);
+    CreatePyramid(VAO, VBO, IBO);
     CompileShaders(shader, uniformModel);
 
     /* Loop until the user closes the window */
@@ -90,10 +100,31 @@ int main(void)
     {
 
         /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT);
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Make window orange - RBG values, 255 means 1.
-        glClearColor(1.0f, 0.5f, 0.0f, 1.0f);
+        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+
+        // Draw functionS
+        // DrawTriangle();
+        DrawPyramid();
+
+        /* Swap front and back buffers */
+        glfwSwapBuffers(window);
+
+        /* Poll for and process events such as keyboard input or mouse movements */
+        glfwPollEvents();
+
+        // Function for transform controls
+        TransformControls();
+
+    }
+
+    glfwTerminate();
+    return 0;
+}
+
+void DrawTriangle(){
 
         // Beginning of Program for Shader application
         glUseProgram(shader);
@@ -115,19 +146,31 @@ int main(void)
         glUseProgram(0);
         // End of Program for Shader Application
 
-        /* Swap front and back buffers */
-        glfwSwapBuffers(window);
+}
 
-        /* Poll for and process events such as keyboard input or mouse movements */
-        glfwPollEvents();
+void DrawPyramid(){
 
-        // Function for transform controls
-        TransformControls();
+        // Beginning of Program for Shader application
+        glUseProgram(shader);
 
-    }
+        // Math for creating movement model
+        glm::mat4 model(1.0f);
+        model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
+        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
 
-    glfwTerminate();
-    return 0;
+        // shader transform
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+
+        glBindVertexArray(VAO);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+        glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+        glBindVertexArray(0);
+
+        glUseProgram(0);
+        // End of Program for Shader Application
+
 }
 
 void TransformControls(){

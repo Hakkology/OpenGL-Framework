@@ -89,4 +89,49 @@ Correction on mat 4 using GLM.
 
 OpenGL transformations should be used by the right order.
 If we move something and then rotate it, it will be rotating based on the or the point of the origin point as opposed to its own origin.
+
+Transform functions are:
+model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
+model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+*/
+
+//////////////////////////// 
+
+// Interpolation, Indexed Draws and Projections
+
+/*
+Vertex attributes are interpolated using other values on the primitive.
+Weighted average of the three vertices on a triangle is passed on.
+Fragment shader uses interpolated values.
+
+Indexed Draws:
+1- Define vertices to draw a cube.
+2- Cube will consist of 12 triangles, two for each face.
+3- 12 x 3 vertices per triangle = 36 vertices.
+4- But a cube has 8 vertices.
+5- Some vertices will be used multiple times.
+
+Projections
+1- User to convert from "View Space" to "Clip Space".
+2- Can be used to give the scene a '3D' look through depth.
+3- Alternatively can be used to create 2D style for projects.
+4- Works on coordinate systems.
+
+Local space: raw position of each vertex relative to origin.
+World space: position of vertex in the world itself if came is assumed to be position at the origin.
+View space: position of vertex in the world relative to camera position and orientation.
+Clip space: position of vertex in the world relative to the came position and orientation, as viewed in the are not to be "clipped" from the final output.
+Screen space: after clipping takes place, final image is created and placed.
+
+- Orthographic Projection used in 2D Applications
+- Perspective Projection used in 3D Applications
+
+glm::mat4 proj = glm::perspective(fov, aspect, near, far)
+fov => field of view,
+aspect => aspect ratio of the viewport
+near => distance of the near plane
+far => distance of the far plane
+Bind the given matrix to a uniform in the shade as:
+gl_position = projection * view * model * vec (pos, 1.0)
 */
