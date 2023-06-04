@@ -129,6 +129,78 @@ OpenGL_Study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
 .PHONY : OpenGL_Study/fast
 
+Source/Mesh.o: Source/Mesh.cpp.o
+.PHONY : Source/Mesh.o
+
+# target to build an object file
+Source/Mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o
+.PHONY : Source/Mesh.cpp.o
+
+Source/Mesh.i: Source/Mesh.cpp.i
+.PHONY : Source/Mesh.i
+
+# target to preprocess a source file
+Source/Mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.i
+.PHONY : Source/Mesh.cpp.i
+
+Source/Mesh.s: Source/Mesh.cpp.s
+.PHONY : Source/Mesh.s
+
+# target to generate assembly for a file
+Source/Mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.s
+.PHONY : Source/Mesh.cpp.s
+
+Source/Scene.o: Source/Scene.cpp.o
+.PHONY : Source/Scene.o
+
+# target to build an object file
+Source/Scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o
+.PHONY : Source/Scene.cpp.o
+
+Source/Scene.i: Source/Scene.cpp.i
+.PHONY : Source/Scene.i
+
+# target to preprocess a source file
+Source/Scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.i
+.PHONY : Source/Scene.cpp.i
+
+Source/Scene.s: Source/Scene.cpp.s
+.PHONY : Source/Scene.s
+
+# target to generate assembly for a file
+Source/Scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.s
+.PHONY : Source/Scene.cpp.s
+
+Source/Shader.o: Source/Shader.cpp.o
+.PHONY : Source/Shader.o
+
+# target to build an object file
+Source/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o
+.PHONY : Source/Shader.cpp.o
+
+Source/Shader.i: Source/Shader.cpp.i
+.PHONY : Source/Shader.i
+
+# target to preprocess a source file
+Source/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.i
+.PHONY : Source/Shader.cpp.i
+
+Source/Shader.s: Source/Shader.cpp.s
+.PHONY : Source/Shader.s
+
+# target to generate assembly for a file
+Source/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.s
+.PHONY : Source/Shader.cpp.s
+
 Source/main.o: Source/main.cpp.o
 .PHONY : Source/main.o
 
@@ -153,30 +225,6 @@ Source/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/main.cpp.s
 .PHONY : Source/main.cpp.s
 
-Source/shader.o: Source/shader.cpp.o
-.PHONY : Source/shader.o
-
-# target to build an object file
-Source/shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o
-.PHONY : Source/shader.cpp.o
-
-Source/shader.i: Source/shader.cpp.i
-.PHONY : Source/shader.i
-
-# target to preprocess a source file
-Source/shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.i
-.PHONY : Source/shader.cpp.i
-
-Source/shader.s: Source/shader.cpp.s
-.PHONY : Source/shader.s
-
-# target to generate assembly for a file
-Source/shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.s
-.PHONY : Source/shader.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +234,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OpenGL_Study"
+	@echo "... Source/Mesh.o"
+	@echo "... Source/Mesh.i"
+	@echo "... Source/Mesh.s"
+	@echo "... Source/Scene.o"
+	@echo "... Source/Scene.i"
+	@echo "... Source/Scene.s"
+	@echo "... Source/Shader.o"
+	@echo "... Source/Shader.i"
+	@echo "... Source/Shader.s"
 	@echo "... Source/main.o"
 	@echo "... Source/main.i"
 	@echo "... Source/main.s"
-	@echo "... Source/shader.o"
-	@echo "... Source/shader.i"
-	@echo "... Source/shader.s"
 .PHONY : help
 
 

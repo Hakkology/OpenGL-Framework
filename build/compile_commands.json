@@ -6,7 +6,17 @@
 },
 {
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.cpp"
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp"
 }
 ]

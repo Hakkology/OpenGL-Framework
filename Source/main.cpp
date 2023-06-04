@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <vector>
 
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
@@ -8,13 +9,22 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
-#include "shader.h"
+#include "../Header/Mesh.h"
+#include "../Header/Shader.h"
+#include "../Header/Scene.h"
 
-// Vertex Array Object and Vertex Buffer Objects
-GLuint VAO, VBO, IBO, shader;
+// Vertex Shader
+static const char* vShader = "../Shaders/shader.vert";
 
-// Uniform variables
-GLuint uniformModel;
+// Fragment Shader
+static const char* fShader = "../Shaders/shader.frag";
+
+// Window Creation
+Scene mainWindow;
+
+// Mesh list
+std::vector<Mesh*> meshList;
+std::vector<Shader> shaderList;
 
 // Triangle location change variables
 bool direction = true;
@@ -32,85 +42,72 @@ float currentSize = 0.7f;
 float maxSize = 0.8f;
 float minSize = 0.1f;
 
+// shader functions
+void CreateShaders();
+
 // to define boundary conditions
 void TransformControls();
 
-// to draw a Triangle
-void DrawTriangle();
-
-// to draw a Pyramid
-void DrawPyramid();
+// to draw an object
+void CreateGameObject();
 
 int main(void)
 {
-    GLFWwindow* window;
 
-    /* Initialize the GL Framework library */
-    if (!glfwInit()) {
-        printf("GLFW Init failed.\n");
-        return -1;
-    }
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(800, 600, "My_Project", NULL, NULL);
-
-    if (!window)
-    {
-        glfwTerminate();
-        return -1;
-    }
-
-    int bufferWidth, bufferHeight;
-    glfwGetFramebufferSize (window, &bufferWidth, &bufferHeight);
-
-    /* Make the window's context current */
-    glfwMakeContextCurrent(window);
-
-    // Initialize the GL Extension Wrangler library
-    glewExperimental = GL_TRUE;
-
-    if(glewInit() != GLEW_OK){
-
-        printf("GLEW Init failed.\n");
-        glfwDestroyWindow(window);
-        glfwTerminate();
-        return -1;
-    }
-
-    // If we want to use GLAD
-    /*if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        std::cout <<"Could not load OpenGL" << std::endl;
-        glfwTerminate();
-        return -1;
-    }
-    */
-
-    glEnable(GL_DEPTH_TEST);
-
-    // Setup Viewport size
-    glViewport(0, 0, bufferWidth, bufferHeight);
+    mainWindow = Scene(800,600);
+    mainWindow.Initialize();
 
     /*Creating Shapes Code Block*/
     //CreateTriangle(VAO, VBO);
-    CreatePyramid(VAO, VBO, IBO);
-    CompileShaders(shader, uniformModel);
+    CreateGameObject();
+    CreateShaders();
+    GLuint uniformProjection =0, uniformModel=0;
+
+    // Math for creating projection model
+    glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
 
     /* Loop until the user closes the window */
-    while (!glfwWindowShouldClose(window))
+    while (!mainWindow.getShouldClose())
     {
+        // Make window orange - RBG values, 255 means 1.
+        glClearColor(0.2f, 0.1f, 0.2f, 1.0f);
 
         /* Render here */
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-        // Make window orange - RBG values, 255 means 1.
-        glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+        // Beginning of Program for Shader application
+        shaderList[0].UseShader();
+        uniformModel = shaderList[0].GetModelLocation();
+        uniformProjection = shaderList[0].GetProjectionLocation();
 
-        // Draw functionS
-        // DrawTriangle();
-        DrawPyramid();
+        // Creation of GameObject-1
+        // Math for creating movement model
+        glm::mat4 model(1.0f);
+        model = glm::translate(model, glm::vec3(triOffset, 0.0f, -2.5f));
+        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+
+        // shader transform
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+        meshList[0] -> Render3DMesh();
+
+        // Creation of GameObject-2
+        // Math for creating movement model
+        model = glm::mat4();
+        model = glm::translate(model, glm::vec3(0.0f, 1.0f, -2.5f));
+        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
+        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+
+        // shader transform
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        meshList[1] -> Render3DMesh();
+
+        glUseProgram(0);
+        // End of Program for Shader Application
 
         /* Swap front and back buffers */
-        glfwSwapBuffers(window);
+        mainWindow.swapBuffers();
 
         /* Poll for and process events such as keyboard input or mouse movements */
         glfwPollEvents();
@@ -124,53 +121,69 @@ int main(void)
     return 0;
 }
 
-void DrawTriangle(){
+// void CreateTriangle() {
 
-        // Beginning of Program for Shader application
-        glUseProgram(shader);
+//     GLfloat vertices[] = {
+//        -1.0f, -1.0f, 0.0f,
+//         1.0f, -1.0f, 0.0f,
+//         0.0f, 1.0f, 0.0f
+//     };
 
-        // Math for creating movement model
-        glm::mat4 model(1.0f);
-        model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
-        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
-        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+//     Mesh *TriangleTest = new Mesh();
+//     TriangleTest ->Create2DMeshTriangle(vertices, 3);
+//  }
 
-        // shader transform (later with a model matrix instead of a single variable equation)
-        // glUniform1f(uniformModel, triOffset);
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+// void DrawTriangle(){
 
-        glBindVertexArray(VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(0);
+//         // Beginning of Program for Shader application
+//         shaderList[0]->UseShader();
+//         uniformModel = shaderList[0]->GetModelLocation;
+//         uniformProjection = shaderList[0] ->GetProjectionLocation;
 
-        glUseProgram(0);
-        // End of Program for Shader Application
+//         // Math for creating movement model
+//         glm::mat4 model(1.0f);
+//         model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
+//         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 0.0f, 1.0f));
+//         model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+
+//         // shader transform (later with a model matrix instead of a single variable equation)
+//         // glUniform1f(uniformModel, triOffset);
+//         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+
+//         meshList[0] ->Render2DMeshTriangle();
+
+//         glUseProgram(0);
+//         // End of Program for Shader Application
+
+// }
+
+void CreateGameObject() {
+
+    unsigned int indices[]={
+        0, 3, 1,
+        1, 3, 2,
+        2, 3, 0,
+        0, 1, 2
+    };
+
+    GLfloat vertices[] = {
+        -1.0f, -1.0f, 0.0f,
+        0.0f, -1.0f, 1.0f,
+        1.0f, -1.0f, 0.0f,
+        0.0f, 1.0f, 0.0f
+    };
+
+    Mesh *obj1 = new Mesh();
+    obj1 ->Create3DMesh(vertices, indices, 12, 12);
+    meshList.push_back(obj1);
 
 }
 
-void DrawPyramid(){
+void CreateShaders(){
 
-        // Beginning of Program for Shader application
-        glUseProgram(shader);
-
-        // Math for creating movement model
-        glm::mat4 model(1.0f);
-        model = glm::translate(model, glm::vec3(triOffset, triOffset/2, 0.0f));
-        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
-
-        // shader transform
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-
-        glBindVertexArray(VAO);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
-        glDrawElements(GL_TRIANGLES, 12, GL_UNSIGNED_INT, 0);
-        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-        glBindVertexArray(0);
-
-        glUseProgram(0);
-        // End of Program for Shader Application
-
+    Shader *shader1 = new Shader();
+    shader1 ->CreateFromFiles(vShader, fShader);
+    shaderList.push_back(*shader1);
 }
 
 void TransformControls(){

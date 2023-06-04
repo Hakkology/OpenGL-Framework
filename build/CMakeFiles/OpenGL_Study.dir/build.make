@@ -83,35 +83,67 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Study.dir/Source/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp -o CMakeFiles/OpenGL_Study.dir/Source/main.cpp.s
 
-CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: CMakeFiles/OpenGL_Study.dir/flags.make
-CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: ../Source/shader.cpp
-CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o: CMakeFiles/OpenGL_Study.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o -MF CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o.d -o CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.cpp
+CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o: CMakeFiles/OpenGL_Study.dir/flags.make
+CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o: ../Source/Mesh.cpp
+CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o: CMakeFiles/OpenGL_Study.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o -MF CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o.d -o CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp
 
-CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.cpp > CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.i
+CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp > CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.i
 
-CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/shader.cpp -o CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.s
+CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp -o CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.s
+
+CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: CMakeFiles/OpenGL_Study.dir/flags.make
+CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: ../Source/Shader.cpp
+CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: CMakeFiles/OpenGL_Study.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o -MF CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o.d -o CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp
+
+CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp > CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.i
+
+CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp -o CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.s
+
+CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o: CMakeFiles/OpenGL_Study.dir/flags.make
+CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o: ../Source/Scene.cpp
+CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o: CMakeFiles/OpenGL_Study.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o -MF CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o.d -o CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp
+
+CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp > CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.i
+
+CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp -o CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.s
 
 # Object files for target OpenGL_Study
 OpenGL_Study_OBJECTS = \
 "CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o" \
-"CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o"
+"CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o" \
+"CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o" \
+"CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o"
 
 # External object files for target OpenGL_Study
 OpenGL_Study_EXTERNAL_OBJECTS =
 
 OpenGL_Study: CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o
-OpenGL_Study: CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o
+OpenGL_Study: CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o
+OpenGL_Study: CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o
+OpenGL_Study: CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o
 OpenGL_Study: CMakeFiles/OpenGL_Study.dir/build.make
 OpenGL_Study: /usr/lib/x86_64-linux-gnu/libGLX.so
 OpenGL_Study: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 OpenGL_Study: CMakeFiles/OpenGL_Study.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable OpenGL_Study"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable OpenGL_Study"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGL_Study.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

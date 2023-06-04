@@ -1,8 +1,12 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o"
+  "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o.d"
+  "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o"
+  "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o.d"
+  "CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o"
+  "CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o.d"
   "CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o"
   "CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o.d"
-  "CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o"
-  "CMakeFiles/OpenGL_Study.dir/Source/shader.cpp.o.d"
   "OpenGL_Study"
   "OpenGL_Study.pdb"
 )
