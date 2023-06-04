@@ -135,3 +135,67 @@ far => distance of the far plane
 Bind the given matrix to a uniform in the shade as:
 gl_position = projection * view * model * vec (pos, 1.0)
 */
+
+//////////////////////////// 
+
+/*
+Camera/View Space
+
+Camera processes the scene as seen in "View Space".
+View space is the coordinate system with each vertex as seen from the camera.
+Use a View matrix to convert from World Space to View Space
+Required 4 values:
+- Camera Position
+- Direction
+- Right
+- Up
+
+Camera position: position of the camera.
+direction: the direction camera is looking in.
+direction vector points in opposite direction of the intuitive direction.
+
+Right means multiply camera by cross product of [0, 1, 0]
+Up means multiply camera by cross product of Direction and right vectors.
+
+glm::mat4 viewMatrix;
+glm::lookAt(position, target, up)
+
+to use view Matrix: 
+1- bind it to a uniform on the shader.
+2- Apply it between the projection and model matrices.
+3- Order in shader matters, usually projection - view - model.
+
+Input: Moving the Camera
+
+GLFW: glfw GetKey(window, GLFW_KEY_W)
+Add the value to camera position while key held.
+To fix computer speeds and track it by fps:
+
+Input: Delta Time
+Check how much time passed since last loop, apply maths based on this to keep consistent speeds.
+
+deltaTime = currentTime - lastTime;
+lastTime = currentTime;
+
+Input: Turning
+
+Angles for turning:
+- Pitch: looking up and down (axis relative to the yaw)
+- Yaw: looking left and right (around x-axis)
+- Roll: like a plane doing a barrel roll
+
+Input: Turning- Pitch
+y = sin(pitch);
+x = cos(pitch);
+z = cos(pitch);
+
+Input: Turning- Yaw
+x = cos(yaw);
+z = sin(yaw);
+
+GLFW: glfwSetCursorPosCallback (window, callback);
+Store old mouse position, compare to new position, Use diff to decide pitch/yaw change.
+
+
+
+*/
