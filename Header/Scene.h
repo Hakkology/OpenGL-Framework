@@ -39,6 +39,7 @@ public:
     // Simplified solution
     GLfloat getXChange();
     GLfloat getYChange();
+    GLFWwindow* getWindow();
 
     void swapBuffers(){
 

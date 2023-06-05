@@ -129,6 +129,30 @@ OpenGL_Study/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
 .PHONY : OpenGL_Study/fast
 
+Source/Camera.o: Source/Camera.cpp.o
+.PHONY : Source/Camera.o
+
+# target to build an object file
+Source/Camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o
+.PHONY : Source/Camera.cpp.o
+
+Source/Camera.i: Source/Camera.cpp.i
+.PHONY : Source/Camera.i
+
+# target to preprocess a source file
+Source/Camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.i
+.PHONY : Source/Camera.cpp.i
+
+Source/Camera.s: Source/Camera.cpp.s
+.PHONY : Source/Camera.s
+
+# target to generate assembly for a file
+Source/Camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.s
+.PHONY : Source/Camera.cpp.s
+
 Source/Mesh.o: Source/Mesh.cpp.o
 .PHONY : Source/Mesh.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... OpenGL_Study"
+	@echo "... Source/Camera.o"
+	@echo "... Source/Camera.i"
+	@echo "... Source/Camera.s"
 	@echo "... Source/Mesh.o"
 	@echo "... Source/Mesh.i"
 	@echo "... Source/Mesh.s"

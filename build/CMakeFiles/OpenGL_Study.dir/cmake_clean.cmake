@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o"
+  "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o.d"
   "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o"
   "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o.d"
   "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o"

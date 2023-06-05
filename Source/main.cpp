@@ -12,6 +12,7 @@
 #include "../Header/Mesh.h"
 #include "../Header/Shader.h"
 #include "../Header/Scene.h"
+#include "../Header/Camera.h"
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
@@ -25,6 +26,12 @@ Scene mainWindow;
 // Mesh list
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
+
+// Camera creation
+Camera camera; 
+
+GLfloat deltaTime = 0.0f;
+GLfloat lastTime = 0.0f;
 
 // Triangle location change variables
 bool direction = true;
@@ -61,7 +68,10 @@ int main(void)
     //CreateTriangle(VAO, VBO);
     CreateGameObject();
     CreateShaders();
-    GLuint uniformProjection =0, uniformModel=0;
+
+    camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.5f);
+
+    GLuint uniformProjection =0, uniformModel=0, uniformView =0;
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
@@ -79,6 +89,7 @@ int main(void)
         shaderList[0].UseShader();
         uniformModel = shaderList[0].GetModelLocation();
         uniformProjection = shaderList[0].GetProjectionLocation();
+        uniformView = shaderList[0].GetViewLocation();
 
         // Creation of GameObject-1
         // Math for creating movement model
@@ -91,6 +102,7 @@ int main(void)
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
         glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+        glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
         meshList[0] -> Render3DMesh();
 
         // Creation of GameObject-2
@@ -111,9 +123,16 @@ int main(void)
         /* Swap front and back buffers */
         mainWindow.swapBuffers();
 
+        // Delta time on code
+        GLfloat now = glfwGetTime();
+        deltaTime = now - lastTime;
+        lastTime = now;
+
         /* Poll for and process events such as keyboard input or mouse movements */
         glfwPollEvents();
-
+        // Camera key controls
+        camera.keyControl(mainWindow.getWindow(), deltaTime);
+        camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
         // Function for transform controls
         TransformControls();
 

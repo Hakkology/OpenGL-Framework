@@ -157,6 +157,9 @@ GLfloat Scene::getYChange(){
     return theChange;
 }
 
+GLFWwindow* Scene::getWindow(){
+    return mainWindow;
+}
 
 Scene::~Scene(){
 

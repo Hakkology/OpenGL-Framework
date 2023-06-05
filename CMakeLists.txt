@@ -9,7 +9,11 @@ find_package(OpenGL REQUIRED)
 find_package(glm REQUIRED)
 # package must be found for this project to work
 
-add_executable(OpenGL_Study Source/main.cpp Source/Mesh.cpp Header/Mesh.h Source/Shader.cpp Header/Shader.h Source/Scene.cpp Header/Scene.h)
+add_executable(OpenGL_Study Source/main.cpp 
+                            Source/Mesh.cpp Header/Mesh.h 
+                            Source/Shader.cpp Header/Shader.h 
+                            Source/Scene.cpp Header/Scene.h 
+                            Source/Camera.cpp Header/Camera.h)
 # compile the source file, main
 
 target_link_libraries(OpenGL_Study 
