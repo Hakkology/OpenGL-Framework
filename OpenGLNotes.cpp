@@ -196,6 +196,85 @@ z = sin(yaw);
 GLFW: glfwSetCursorPosCallback (window, callback);
 Store old mouse position, compare to new position, Use diff to decide pitch/yaw change.
 
+*/
 
+//////////////////////////// 
+
+/*
+Textures
+
+Textures are images used to add extra detail to an object. Textures can also be used to hold generic data.
+Usually 2D but can also have 1D and 3D textures.
+Points on textures are texels, not pixels. Texels are defined between 0 and 1, bound to vertices with interpolated values.
+
+To sample a point at the top-middle you reference texel (0.5,1).
+Map texels to vertices. Interpolation over each fragment will calculate appropriate texels in between the assigned texels.
+
+glGenTextures (1, &texture);
+glBindTexture(GL_TEXTURE_2D, texture);
+- Different type of textures for 1D and 3D
+
+glTexImage2D (GL_TEXTURE2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data)
+
+- Texture target.
+- Mipmap level, resolution limitations for textures, handling level of detail.
+Create multiple version of image at different resolutions and switch when needed.
+- Format of stored data. RGB is red green blue. Also RGBA which has alpha channel, transparency.
+- Width and height of the texture with 4 and 5.
+- Texture borders, always 0.
+- Format of the loaded data (not stored).
+- The data type of the values.
+- The data itself.
+
+Texture parameters:
+Render off center of texels ?
+- Nearest - use the texel with most overlap
+- Linear - Use a weighted average of surrounding texels
+
+glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+Texture filtering changes how texels are blended
+Nearest to give more pixelated look, linear to give more blended look;
+Outside (0,1) range;
+- Repeat the texture,
+- Repeat a mirrored form of the texture,
+- Extend pixels at the edge,
+- Apply a coloured border.
+glTexParameter helps with this.
+
+Texture wrapping changes how textures are handled for texel values outside 0,1.
+GL_TEXTURE_WRAP_S > Wrapping on x-axis
+GL_TEXTURE_WRAP_T > Wrapping on y-axis
+
+GL_REPEAT: Repeat texture.
+GL_MIRRORED_REPEAT: Repeat and mirror texture.
+GL_CLAMP_TO_EDGE: Extend pixels at edge.
+GL_CLAMP_TO_BORDER: Apply coloured border.
+
+Image loader libraries:
+SOIL Library (Simple OpenGL Image Library)
+stb_image
+#define STB_IMAGE_IMPLEMENTATION
+unsigned char* data=
+stbi_load("image.jpg", &width, &height, &bitDepth, 0);
+Might need to flip image.
+stbi_set_flip_vertically_on_load(true);
+
+- Texture in Shaders are accessed via "Samplers" with IDs.
+- Textures are attached to a "Texture Unit".
+- Samplers access textures attached to their Texture Unit.
+- In shader, use "sampler2D" type.
+- To get the value of a texel, use GLSL "texture" function.
+- texture(textureSampler, TexCoord);
+- textureSampler: the sampler2D Object.
+- TexCoord: interpolated texel coordinate in fragment shader.
+
+Bind texture to desired Texture Unit:
+- glActiveTexture (GL_TEXTURE0);
+- glBindTexture (GL_TEXTURE_2D, textureID);
+Ensure sampler2D variables know which Texture Unit to access:
+- glUniform1i(uniformTextureSampler, 0);
+Value attached to Uniform is the Texture Unit Number.
 
 */
