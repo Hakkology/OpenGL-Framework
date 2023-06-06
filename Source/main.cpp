@@ -1,3 +1,5 @@
+#define STB_IMAGE_IMPLEMENTATION
+
 #include <iostream>
 #include <cmath>
 #include <vector>
@@ -152,9 +154,9 @@ void CreateGameObject() {
     };
 
     GLfloat vertices[] = {
-        -1.0f, -1.0f, 0.0f,
-        0.0f, -1.0f, 1.0f,
-        1.0f, -1.0f, 0.0f,
+        -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
+        0.0f, -1.0f, 1.0f, 0.0f, 0.0f,
+        1.0f, -1.0f, 0.0f, 
         0.0f, 1.0f, 0.0f
     };
 
