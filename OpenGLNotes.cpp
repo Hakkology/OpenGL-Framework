@@ -277,4 +277,6 @@ Ensure sampler2D variables know which Texture Unit to access:
 - glUniform1i(uniformTextureSampler, 0);
 Value attached to Uniform is the Texture Unit Number.
 
+Textures can be retrieved from Texturer.com
+
 */

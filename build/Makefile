@@ -225,6 +225,30 @@ Source/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.s
 .PHONY : Source/Shader.cpp.s
 
+Source/Texture.o: Source/Texture.cpp.o
+.PHONY : Source/Texture.o
+
+# target to build an object file
+Source/Texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.o
+.PHONY : Source/Texture.cpp.o
+
+Source/Texture.i: Source/Texture.cpp.i
+.PHONY : Source/Texture.i
+
+# target to preprocess a source file
+Source/Texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.i
+.PHONY : Source/Texture.cpp.i
+
+Source/Texture.s: Source/Texture.cpp.s
+.PHONY : Source/Texture.s
+
+# target to generate assembly for a file
+Source/Texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.s
+.PHONY : Source/Texture.cpp.s
+
 Source/main.o: Source/main.cpp.o
 .PHONY : Source/main.o
 
@@ -270,6 +294,9 @@ help:
 	@echo "... Source/Shader.o"
 	@echo "... Source/Shader.i"
 	@echo "... Source/Shader.s"
+	@echo "... Source/Texture.o"
+	@echo "... Source/Texture.i"
+	@echo "... Source/Texture.s"
 	@echo "... Source/main.o"
 	@echo "... Source/main.i"
 	@echo "... Source/main.s"

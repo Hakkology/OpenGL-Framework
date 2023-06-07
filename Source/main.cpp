@@ -15,6 +15,7 @@
 #include "../Header/Shader.h"
 #include "../Header/Scene.h"
 #include "../Header/Camera.h"
+#include "../Header/Texture.h"
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
@@ -32,6 +33,11 @@ std::vector<Shader> shaderList;
 // Camera creation
 Camera camera; 
 
+// Texture creation
+Texture brickTexture;
+Texture dirtTexture;
+
+// Constants for deltatime
 GLfloat deltaTime = 0.0f;
 GLfloat lastTime = 0.0f;
 
@@ -73,6 +79,12 @@ int main(void)
 
     camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.5f);
 
+    // Loading textures
+    brickTexture = Texture("../Textures/brick.png");
+    brickTexture.LoadTexture();
+    dirtTexture = Texture("../Textures/dirt.png");
+    dirtTexture.LoadTexture();
+
     GLuint uniformProjection =0, uniformModel=0, uniformView =0;
 
     // Math for creating projection model
@@ -105,6 +117,7 @@ int main(void)
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
         glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
         glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
+        brickTexture.UseTexture();
         meshList[0] -> Render3DMesh();
 
         // Creation of GameObject-2
@@ -117,6 +130,7 @@ int main(void)
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        dirtTexture.UseTexture();
         meshList[1] -> Render3DMesh();
 
         glUseProgram(0);
@@ -154,18 +168,19 @@ void CreateGameObject() {
     };
 
     GLfloat vertices[] = {
+      // x      y       z    u      v
         -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
-        0.0f, -1.0f, 1.0f, 0.0f, 0.0f,
-        1.0f, -1.0f, 0.0f, 
-        0.0f, 1.0f, 0.0f
+        0.0f, -1.0f, 1.0f,  0.5f, 0.0f,
+        1.0f, -1.0f, 0.0f,  1.0f, 0.0f,
+        0.0f, 1.0f, 0.0f,   0.5f, 1.0f,
     };
 
     Mesh *obj1 = new Mesh();
-    obj1 ->Create3DMesh(vertices, indices, 12, 12);
+    obj1 ->Create3DMesh(vertices, indices, 20, 12);
     meshList.push_back(obj1);
 
     Mesh *obj2 = new Mesh();
-    obj2 -> Create3DMesh(vertices, indices, 12, 12);
+    obj2 -> Create3DMesh(vertices, indices, 20, 12);
     meshList.push_back(obj2);
 
 }

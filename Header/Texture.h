@@ -9,7 +9,7 @@ class Texture{
 
 public:
     Texture();
-    Texture(char* fileLoc)
+    Texture(char* fileLoc);
     ~Texture();
 
     void LoadTexture();
@@ -22,6 +22,6 @@ private:
 
     char* fileLocation;
 
+#endif
 
-
-}
+};

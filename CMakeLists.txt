@@ -13,7 +13,8 @@ add_executable(OpenGL_Study Source/main.cpp
                             Source/Mesh.cpp Header/Mesh.h 
                             Source/Shader.cpp Header/Shader.h 
                             Source/Scene.cpp Header/Scene.h 
-                            Source/Camera.cpp Header/Camera.h)
+                            Source/Camera.cpp Header/Camera.h
+                            Source/Texture.cpp Header/Texture.h)
 # compile the source file, main
 
 target_link_libraries(OpenGL_Study 
