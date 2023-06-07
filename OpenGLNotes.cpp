@@ -280,3 +280,82 @@ Value attached to Uniform is the Texture Unit Number.
 Textures can be retrieved from Texturer.com
 
 */
+
+//////////////////////////// 
+
+/*
+Phong Lighting and Directional Lights
+
+- Ambient Lighting: Always present light, even if blocked.
+- Diffuse Lighting: Light determined by direction of light source. Faded effect further from light.
+- Specular Lighting: Light reflected from the source to the viewers eyes. 
+Combination of all three is "Phong Lighting Model".
+
+Ambient Lighting :
+- Simulates light bouncing off other objects.
+- Global illumination simulates this.
+- Create an ambient lighting factor.
+ambient = lightColour * ambientStrength;
+- This factor is how much of a fragment's colour this light's ambient shows.
+fragColour = objectColour * ambient;
+- If ambient is 1, fully lit, 0, then is black, 0.5, half its normal colour.
+
+Diffuse Lighting:
+- Simulates the drop-off of lightning as angle of lighting becomes more shallow.
+- Side facing directly at a light is brightly lit.
+- Side facging at an angle is more dim.
+- Can use angle between vector connecting to light source to fragment and the vector perpendicular to the face (surface "normal");
+- Diffuse factor should be determined based on angle in between, which can be found with dot product.
+v1 . v2 output determines diffuse factor.
+- If diffuse factory is negative (less than 0), then light is behind surface so default to 0.
+fragColour = objectColour * (ambient + diffuse)
+
+Defining normals;
+- Could be done for each face. 
+- Each vertex will have multiple normals, one for each face it is part of.
+- Good for "Flat Shading", not good for realistic smooth shading.
+- Also does not work too well for indexed draws: we only define each vertex once per face.
+
+Phong Shading:
+- Each vertex has an average of the normals of the all the surfaces it is part of.
+- Interpolate between these averages in shader to create smooth effect.
+- Good for complex models.
+- Not so good for simple models with sharp edges.
+- Phong shaded sphere is defined the same way as Flat Shaded.
+- Smoothness interpolates averaged normals to create smooth surfaces.
+Transform normals with mat3(transpose(inverse(model)))
+
+Specular Lighting:
+- Relies on the possition of the viewer.
+- It is the direct reflection of the light source hitting the viewer's eye.
+- Moving around will affect the apparent position of the specular reflection on the surface.
+Needed four things:
+- Light vector
+- Normal vector
+- Reflection vector (light vector reflected around Normal)
+- View vector (vector from viewer to fragment)
+
+- View vector is the difference between fragment position and the viewer (Camera) position.
+- Reflection vector can be obtained with a built in GLSL function: reflect (incident, normal)
+- Incident : vector to reflect
+- Normal : normal vector to reflect around
+- Use dot product of normalized forms
+
+Specular Lighting - Shininess
+- More accurate reflection
+- simply put previously calculated specular factor to the power of shininess value.
+specularFactor = (view . reflection)^shininess;
+fragColour = objectColour * (ambient+diffuse+specular);
+
+Types of light:
+- Directional light: a light without a position or source. All light is coming as parallel rays from an seeminly infinite distance. Sunlight.
+- Point light: a light with a position that shines in all directions. Lightbulb.
+- Spot light: similar to point light but cut down to emit in a certain range with a certain angle. Flashlight.
+- Area light: more advances light type that emits light from an area. Large light up panel on a wall or ceiling.
+
+Directional light:
+- Simplest form of light.
+- requires basic information of colour, ambient, diffuse, specular and a direction.
+- treat all calculations using the same direction.
+
+*/
