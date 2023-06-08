@@ -17,6 +17,7 @@
 #include "../Header/Camera.h"
 #include "../Header/Texture.h"
 #include "../Header/Light.h"
+#include "../Header/Utility.h"
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
@@ -38,7 +39,11 @@ Camera camera;
 Texture brickTexture;
 Texture dirtTexture;
 
+// Light instance creation
 Light mainLight;
+
+// Utility instance creation
+Utility utility;
 
 // Constants for deltatime
 GLfloat deltaTime = 0.0f;
@@ -88,9 +93,10 @@ int main(void)
     dirtTexture = Texture("../Textures/dirt.png");
     dirtTexture.LoadTexture();
 
-    mainLight = Light(1.0f, 1.0f, 1.0f, 0.4f);
+    mainLight = Light(1.0f, 1.0f, 1.0f, 0.2f, 2.0f, -1.0f, -2.0f, 1.0f);
 
-    GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformAmbientIntensity =0, uniformAmbientColour =0;
+    GLuint uniformProjection =0, uniformModel=0, uniformView =0, 
+            uniformAmbientIntensity =0, uniformAmbientColour =0, uniformDirection =0, uniformDiffuseIntensity =0;
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
@@ -111,8 +117,10 @@ int main(void)
         uniformView = shaderList[0].GetViewLocation();
         uniformAmbientColour = shaderList[0].GetAmbientColourLocation();
         uniformAmbientIntensity = shaderList[0].GetAmbientIntensityLocation();
+        uniformDirection = shaderList[0].GetDirectionLocation();
+        uniformDiffuseIntensity = shaderList[0].GetDiffuseIntensityLocation();
 
-        mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour);
+        mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour, uniformDiffuseIntensity, uniformDirection);
 
         // Creation of GameObject-1
         // Math for creating movement model
@@ -177,19 +185,21 @@ void CreateGameObject() {
     };
 
     GLfloat vertices[] = {
-      // x      y       z    u      v
-        -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,
-        0.0f, -1.0f, 1.0f,  0.5f, 0.0f,
-        1.0f, -1.0f, 0.0f,  1.0f, 0.0f,
-        0.0f, 1.0f, 0.0f,   0.5f, 1.0f,
+      // x      y       z    u      v       nx    ny    nz
+        -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,     0.0f, 0.0f, 0.0f,
+        0.0f, -1.0f, 1.0f,  0.5f, 0.0f,     0.0f, 0.0f, 0.0f,
+        1.0f, -1.0f, 0.0f,  1.0f, 0.0f,     0.0f, 0.0f, 0.0f,
+        0.0f, 1.0f, 0.0f,   0.5f, 1.0f,     0.0f, 0.0f, 0.0f
     };
 
+    utility.CalculateAverageNormals(indices, 12, vertices, 32, 8, 5);
+
     Mesh *obj1 = new Mesh();
-    obj1 ->Create3DMesh(vertices, indices, 20, 12);
+    obj1 ->Create3DMesh(vertices, indices, 32, 12);
     meshList.push_back(obj1);
 
     Mesh *obj2 = new Mesh();
-    obj2 -> Create3DMesh(vertices, indices, 20, 12);
+    obj2 -> Create3DMesh(vertices, indices, 32, 12);
     meshList.push_back(obj2);
 }
 

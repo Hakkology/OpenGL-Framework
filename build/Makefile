@@ -273,6 +273,30 @@ Source/Texture.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.s
 .PHONY : Source/Texture.cpp.s
 
+Source/Utility.o: Source/Utility.cpp.o
+.PHONY : Source/Utility.o
+
+# target to build an object file
+Source/Utility.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.o
+.PHONY : Source/Utility.cpp.o
+
+Source/Utility.i: Source/Utility.cpp.i
+.PHONY : Source/Utility.i
+
+# target to preprocess a source file
+Source/Utility.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.i
+.PHONY : Source/Utility.cpp.i
+
+Source/Utility.s: Source/Utility.cpp.s
+.PHONY : Source/Utility.s
+
+# target to generate assembly for a file
+Source/Utility.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.s
+.PHONY : Source/Utility.cpp.s
+
 Source/main.o: Source/main.cpp.o
 .PHONY : Source/main.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... Source/Texture.o"
 	@echo "... Source/Texture.i"
 	@echo "... Source/Texture.s"
+	@echo "... Source/Utility.o"
+	@echo "... Source/Utility.i"
+	@echo "... Source/Utility.s"
 	@echo "... Source/main.o"
 	@echo "... Source/main.i"
 	@echo "... Source/main.s"
