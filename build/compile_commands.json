@@ -1,47 +1,47 @@
 [
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/main.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/main.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/main.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Mesh.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Mesh.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shader.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shader.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Camera.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Camera.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Texture.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Texture.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Texture.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Texture.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Light.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Light.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Light.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Light.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Utility.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Utility.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Utility.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Utility.cpp"
 },
 {
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Material.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Material.cpp"
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp"
 }
 ]

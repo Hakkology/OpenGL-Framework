@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study
+CMAKE_SOURCE_DIR = /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build
+CMAKE_BINARY_DIR = /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/OpenGL_Study.dir/clean
 CMakeFiles/OpenGL_Study.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target OpenGL_Study"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target OpenGL_Study"
 .PHONY : CMakeFiles/OpenGL_Study.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/OpenGL_Study.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGL_Study.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles 0
 .PHONY : CMakeFiles/OpenGL_Study.dir/rule
 
 # Convenience name for target.

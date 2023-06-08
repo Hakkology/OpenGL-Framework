@@ -1,7 +1,7 @@
 CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o: \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Camera.cpp \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp \
  /usr/include/stdc-predef.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/../Header/Camera.h \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Camera.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

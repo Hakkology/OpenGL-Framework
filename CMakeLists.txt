@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 # minimum required version of CMake
-project(OpenGL_Study)
+project(OpenGL_Framework)
 # project name
 cmake_policy(SET CMP0072 NEW)
 # Related to finding packages, forcing new behaviour applied after version 3.12, CMake specific

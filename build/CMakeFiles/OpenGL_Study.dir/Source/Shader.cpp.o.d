@@ -1,5 +1,5 @@
 CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shader.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -147,7 +147,7 @@ CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/../Header/Shader.h \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Shader.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \

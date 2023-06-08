@@ -1,5 +1,5 @@
 CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o: \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Mesh.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iostream \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -147,6 +147,6 @@ CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/string.h \
  /usr/include/strings.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/../Header/Mesh.h \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Mesh.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
  /usr/include/GL/gl.h

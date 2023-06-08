@@ -1,7 +1,7 @@
 CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o: \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene.cpp \
  /usr/include/stdc-predef.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/../Header/Scene.h \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Scene.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
