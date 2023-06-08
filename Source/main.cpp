@@ -82,7 +82,7 @@ void TransformControls();
 int main(void)
 {
 
-    mainWindow = Scene(800,600);
+    mainWindow = Scene(1366,768);
     mainWindow.Initialize();
 
     /*Creating Shapes Code Block*/
@@ -101,7 +101,7 @@ int main(void)
     shinyMaterial = Material(1.0f, 32);
     dullMaterial = Material (0.3f, 4);
 
-    mainLight = Light(1.0f, 1.0f, 1.0f, 0.1f, 2.0f, -1.0f, -2.0f, 0.1f);
+    mainLight = Light(1.0f, 1.0f, 1.0f, 0.2f, 2.0f, -1.0f, -2.0f, 0.7f);
 
     GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
             uniformAmbientIntensity =0, uniformAmbientColour =0, uniformDirection =0, uniformDiffuseIntensity =0,
@@ -144,8 +144,8 @@ int main(void)
         glm::mat4 model(1.0f);
 
         model = glm::translate(model, glm::vec3(triOffset, 0.75f, -4.0f));
-        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 3.0f, 0.0f));
+        //model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -157,9 +157,9 @@ int main(void)
         // Math for creating movement model
         model = glm::mat4(1.0f);
 
-        model = glm::translate(model, glm::vec3(triOffset, -0.75f, -3.0f));
+        model = glm::translate(model, glm::vec3(triOffset, -2.0f, -3.0f));
         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 0.0f));
-        model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
+        //model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
@@ -203,9 +203,9 @@ void CreateGameObject() {
 
     GLfloat vertices[] = {
       // x      y       z    u      v       nx    ny    nz
-        -1.0f, -1.0f, 0.0f, 0.0f, 0.0f,     0.0f, 0.0f, 0.0f,
+        -1.0f, -1.0f,-0.6f, 0.0f, 0.0f,     0.0f, 0.0f, 0.0f,
         0.0f, -1.0f, 1.0f,  0.5f, 0.0f,     0.0f, 0.0f, 0.0f,
-        1.0f, -1.0f, 0.0f,  1.0f, 0.0f,     0.0f, 0.0f, 0.0f,
+        1.0f, -1.0f, -0.6f, 1.0f, 0.0f,     0.0f, 0.0f, 0.0f,
         0.0f, 1.0f, 0.0f,   0.5f, 1.0f,     0.0f, 0.0f, 0.0f
     };
 
