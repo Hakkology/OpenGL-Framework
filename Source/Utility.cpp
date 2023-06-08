@@ -12,7 +12,7 @@ void Utility::CalculateAverageNormals(unsigned int* indices, unsigned int indice
         unsigned int in2 = indices [i+2] * vLength;
 
         glm::vec3 v1 (vertices[in1]- vertices[in0], vertices[in1+1] - vertices[in0+1], vertices[in1+2] - vertices[in0+2]);
-        glm::vec3 v2 (vertices[in2]- vertices[in0], vertices[in2+0] - vertices[in1+0], vertices[in2+2] - vertices[in1+0]);
+        glm::vec3 v2 (vertices[in2]- vertices[in0], vertices[in2+1] - vertices[in0+1], vertices[in2+2] - vertices[in0+2]);
         glm::vec3 normal = glm::cross(v1,v2);
         normal = glm::normalize(normal);
 

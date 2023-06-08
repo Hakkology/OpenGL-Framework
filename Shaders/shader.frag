@@ -20,7 +20,7 @@ void main()
 {
     vec4 ambientColour = vec4(directionalLight.colour, 1.0f) * directionalLight.ambientIntensity;
 
-    float diffuseFactor = max(dot(normalize(Normal), normalize(directionalLight.direction)), 0.0f);
+    float diffuseFactor = max(dot(normalize(Normal), normalize(directionalLight.direction)), 0.1f);
     vec4 diffuseColour = vec4(directionalLight.colour, 1.0f) * directionalLight.diffuseIntensity * diffuseFactor;
 
     colour = texture(theTexture, TexCoord) * (ambientColour + diffuseColour);
