@@ -3,7 +3,7 @@
 in vec4 vCol;
 in vec2 TexCoord;
 in vec3 Normal;
-in vec3 fragPos;
+in vec3 FragPos;
 
 out vec4 colour;
 
@@ -35,7 +35,7 @@ void main()
     vec4 specularColour = vec4(0, 0, 0, 0);
 
     if(diffuseFactor > 0.0f){
-        vec3 fragToEye = normalize(eyePosition - fragPos);
+        vec3 fragToEye = normalize(eyePosition - FragPos);
         vec3 reflectedVertex = normalize(reflect(directionalLight.direction, normalize(Normal)));
 
         float specularFactor = dot (fragToEye, reflectedVertex);
