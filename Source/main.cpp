@@ -16,6 +16,7 @@
 #include "../Header/Scene.h"
 #include "../Header/Camera.h"
 #include "../Header/Texture.h"
+#include "../Header/Light.h"
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
@@ -36,6 +37,8 @@ Camera camera;
 // Texture creation
 Texture brickTexture;
 Texture dirtTexture;
+
+Light mainLight;
 
 // Constants for deltatime
 GLfloat deltaTime = 0.0f;
@@ -85,7 +88,9 @@ int main(void)
     dirtTexture = Texture("../Textures/dirt.png");
     dirtTexture.LoadTexture();
 
-    GLuint uniformProjection =0, uniformModel=0, uniformView =0;
+    mainLight = Light(1.0f, 1.0f, 1.0f, 0.4f);
+
+    GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformAmbientIntensity =0, uniformAmbientColour =0;
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
@@ -104,6 +109,10 @@ int main(void)
         uniformModel = shaderList[0].GetModelLocation();
         uniformProjection = shaderList[0].GetProjectionLocation();
         uniformView = shaderList[0].GetViewLocation();
+        uniformAmbientColour = shaderList[0].GetAmbientColourLocation();
+        uniformAmbientIntensity = shaderList[0].GetAmbientIntensityLocation();
+
+        mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour);
 
         // Creation of GameObject-1
         // Math for creating movement model
@@ -182,7 +191,6 @@ void CreateGameObject() {
     Mesh *obj2 = new Mesh();
     obj2 -> Create3DMesh(vertices, indices, 20, 12);
     meshList.push_back(obj2);
-
 }
 
 void CreateShaders(){

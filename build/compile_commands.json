@@ -28,5 +28,10 @@
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
   "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Texture.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Texture.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Light.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Light.cpp"
 }
 ]
