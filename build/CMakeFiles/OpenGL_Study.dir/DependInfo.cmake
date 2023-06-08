@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Camera.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Light.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o.d"
+  "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Material.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Mesh.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Scene.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL_Study/Source/Shader.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o.d"

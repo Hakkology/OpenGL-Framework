@@ -177,6 +177,30 @@ Source/Light.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.s
 .PHONY : Source/Light.cpp.s
 
+Source/Material.o: Source/Material.cpp.o
+.PHONY : Source/Material.o
+
+# target to build an object file
+Source/Material.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o
+.PHONY : Source/Material.cpp.o
+
+Source/Material.i: Source/Material.cpp.i
+.PHONY : Source/Material.i
+
+# target to preprocess a source file
+Source/Material.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.i
+.PHONY : Source/Material.cpp.i
+
+Source/Material.s: Source/Material.cpp.s
+.PHONY : Source/Material.s
+
+# target to generate assembly for a file
+Source/Material.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.s
+.PHONY : Source/Material.cpp.s
+
 Source/Mesh.o: Source/Mesh.cpp.o
 .PHONY : Source/Mesh.o
 
@@ -336,6 +360,9 @@ help:
 	@echo "... Source/Light.o"
 	@echo "... Source/Light.i"
 	@echo "... Source/Light.s"
+	@echo "... Source/Material.o"
+	@echo "... Source/Material.i"
+	@echo "... Source/Material.s"
 	@echo "... Source/Mesh.o"
 	@echo "... Source/Mesh.i"
 	@echo "... Source/Mesh.s"

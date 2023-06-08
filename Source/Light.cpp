@@ -24,8 +24,8 @@ Light::Light(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity
 
 }
 
-void Light::UseLight(GLfloat ambientIntensityLocation, GLfloat ambientColourLocation,
-                    GLfloat diffuseIntensityLocation, GLfloat directionLocation){
+void Light::UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation,
+                    GLuint diffuseIntensityLocation, GLuint directionLocation){
 
     // adding RGB and intensity values uniform locations for shaders
     glUniform3f(ambientColourLocation, colour.x, colour.y, colour.z);

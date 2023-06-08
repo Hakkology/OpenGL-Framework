@@ -18,6 +18,7 @@
 #include "../Header/Texture.h"
 #include "../Header/Light.h"
 #include "../Header/Utility.h"
+#include "../Header/Material.h"
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
@@ -38,6 +39,10 @@ Camera camera;
 // Texture creation
 Texture brickTexture;
 Texture dirtTexture;
+
+// Material instance creation
+Material shinyMaterial;
+Material dullMaterial;
 
 // Light instance creation
 Light mainLight;
@@ -93,10 +98,14 @@ int main(void)
     dirtTexture = Texture("../Textures/dirt.png");
     dirtTexture.LoadTexture();
 
-    mainLight = Light(1.0f, 1.0f, 1.0f, 0.2f, 2.0f, -1.0f, -2.0f, 1.0f);
+    shinyMaterial = Material(1.0f, 32);
+    dullMaterial = Material (0.3f, 4);
 
-    GLuint uniformProjection =0, uniformModel=0, uniformView =0, 
-            uniformAmbientIntensity =0, uniformAmbientColour =0, uniformDirection =0, uniformDiffuseIntensity =0;
+    mainLight = Light(1.0f, 1.0f, 1.0f, 0.1f, 2.0f, -1.0f, -2.0f, 0.1f);
+
+    GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
+            uniformAmbientIntensity =0, uniformAmbientColour =0, uniformDirection =0, uniformDiffuseIntensity =0,
+            uniformSpecularIntensity =0, uniformShininess =0;
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
@@ -119,8 +128,16 @@ int main(void)
         uniformAmbientIntensity = shaderList[0].GetAmbientIntensityLocation();
         uniformDirection = shaderList[0].GetDirectionLocation();
         uniformDiffuseIntensity = shaderList[0].GetDiffuseIntensityLocation();
+        uniformEyePosition = shaderList[0].GetEyePositionLocation();
+        uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
+        uniformShininess = shaderList[0].GetShininessLocation();
 
-        mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour, uniformDiffuseIntensity, uniformDirection);
+        mainLight.UseLight(uniformAmbientIntensity, uniformAmbientColour, 
+                            uniformDiffuseIntensity, uniformDirection);
+
+        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
+        glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
+        glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 
         // Creation of GameObject-1
         // Math for creating movement model
@@ -132,9 +149,8 @@ int main(void)
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
-        glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
         brickTexture.UseTexture();
+        shinyMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
         meshList[0] -> Render3DMesh();
 
         // Creation of GameObject-2
@@ -148,6 +164,7 @@ int main(void)
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
         dirtTexture.UseTexture();
+        dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
         meshList[1] -> Render3DMesh();
 
         glUseProgram(0);
