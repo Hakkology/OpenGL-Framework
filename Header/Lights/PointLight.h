@@ -23,5 +23,6 @@ private:
     // Attenuation of the light source
     GLfloat constant, linear, exponent;
 
-#endif
 };
+
+#endif

@@ -8,8 +8,10 @@
 
 #include <GL/glew.h>
 
+#include "CommonValues.h"
 #include "Lights/DirectionalLight.h"
 #include "Lights/PointLight.h"
+
 
 class Shader{
 
@@ -33,6 +35,7 @@ public:
     GLuint GetEyePositionLocation();
 
     void SetDirectionalLight(DirectionalLight *directionalLight);
+    void SetPointLight(PointLight *pointLight, unsigned int lightCount);
 
     void UseShader();
     void ClearShader();
@@ -56,6 +59,8 @@ private:
         GLuint uniformDirection;
 
     } uniformDirectionalLight;
+
+    GLuint uniformPointLightCount;
 
     struct{
 

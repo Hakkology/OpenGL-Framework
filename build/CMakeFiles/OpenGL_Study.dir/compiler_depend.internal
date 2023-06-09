@@ -1723,6 +1723,7 @@ CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o
  /usr/include/c++/11/cstddef
  /usr/include/GL/glu.h
  /usr/include/GL/gl.h
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/CommonValues.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/DirectionalLight.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/Light.h
  /usr/include/glm/glm.hpp
@@ -2651,6 +2652,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/glm/gtc/type_ptr.inl
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/CommonValues.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Mesh.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Shader.h
  /usr/include/c++/11/fstream
@@ -2658,6 +2660,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h
  /usr/include/c++/11/bits/fstream.tcc
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/CommonValues.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/DirectionalLight.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/Light.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/PointLight.h
@@ -2672,6 +2675,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/DirectionalLight.h
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Lights/PointLight.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Utility.h
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Header/Material.h
 

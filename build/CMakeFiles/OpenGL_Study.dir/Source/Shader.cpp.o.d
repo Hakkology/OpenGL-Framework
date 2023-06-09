@@ -153,6 +153,7 @@ CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc /usr/include/GL/glew.h \
  /usr/include/c++/11/cstddef /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/CommonValues.h \
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Lights/DirectionalLight.h \
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Lights/Light.h \
  /usr/include/glm/glm.hpp /usr/include/glm/detail/_fixes.hpp \

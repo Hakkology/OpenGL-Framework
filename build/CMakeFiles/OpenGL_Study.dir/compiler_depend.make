@@ -1715,6 +1715,7 @@ CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: ../Source/Shader.cpp \
   /usr/include/c++/11/cstddef \
   /usr/include/GL/glu.h \
   /usr/include/GL/gl.h \
+  ../Header/CommonValues.h \
   ../Header/Lights/DirectionalLight.h \
   ../Header/Lights/Light.h \
   /usr/include/glm/glm.hpp \
@@ -2640,6 +2641,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/glm/gtc/type_ptr.inl \
+  ../Header/CommonValues.h \
   ../Header/Mesh.h \
   ../Header/Shader.h \
   /usr/include/c++/11/fstream \
@@ -2647,6 +2649,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  ../Header/CommonValues.h \
   ../Header/Lights/DirectionalLight.h \
   ../Header/Lights/Light.h \
   ../Header/Lights/PointLight.h \
@@ -2661,6 +2664,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
   ../Header/Lights/DirectionalLight.h \
+  ../Header/Lights/PointLight.h \
   ../Header/Utility.h \
   ../Header/Material.h
 
@@ -2708,6 +2712,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 ../Header/stb_image.h:
 
 ../Source/Texture.cpp:
+
+../Header/CommonValues.h:
 
 /usr/include/c++/11/bits/fstream.tcc:
 
