@@ -177,6 +177,12 @@ GLuint Shader::GetSpecularIntensityLocation(){
     return uniformSpecularIntensity;
 }
 
+void Shader::SetDirectionalLight(DirectionalLight *directionalLight){
+
+    directionalLight ->UseLight(uniformDirectionalLight.uniformAmbientIntensity, uniformDirectionalLight.uniformColour,
+                                uniformDirectionalLight.uniformDiffuseIntensity, uniformDirectionalLight.uniformDirection);
+}
+
 void Shader::UseShader(){
 
     glUseProgram(shaderID);

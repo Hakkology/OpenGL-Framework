@@ -31,11 +31,6 @@
 },
 {
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
-  "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -g -o CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/Light.cpp",
-  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/Light.cpp"
-},
-{
-  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
   "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -g -o CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Utility.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Utility.cpp"
 },
@@ -46,7 +41,17 @@
 },
 {
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -g -o CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/Light.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/Light.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
   "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -g -o CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/DirectionalLight.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/DirectionalLight.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -g -o CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/PointLight.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/PointLight.cpp"
 }
 ]

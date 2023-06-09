@@ -15,10 +15,11 @@ add_executable(OpenGL_Study Source/main.cpp
                             Source/Scene.cpp Header/Scene.h 
                             Source/Camera.cpp Header/Camera.h
                             Source/Texture.cpp Header/Texture.h
-                            Source/Lights/Light.cpp Header/Lights/Light.h
                             Source/Utility.cpp Header/Utility.h
                             Source/Material.cpp Header/Material.h
-                            Source/Lights/DirectionalLight.cpp Header/Lights/DirectionalLight.h)
+                            Source/Lights/Light.cpp Header/Lights/Light.h
+                            Source/Lights/DirectionalLight.cpp Header/Lights/DirectionalLight.h
+                            Source/Lights/PointLight.cpp Header/Lights/PointLight.h)
 # compile the source file, main
 
 include_directories(

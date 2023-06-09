@@ -201,6 +201,30 @@ Source/Lights/Light.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.s
 .PHONY : Source/Lights/Light.cpp.s
 
+Source/Lights/PointLight.o: Source/Lights/PointLight.cpp.o
+.PHONY : Source/Lights/PointLight.o
+
+# target to build an object file
+Source/Lights/PointLight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o
+.PHONY : Source/Lights/PointLight.cpp.o
+
+Source/Lights/PointLight.i: Source/Lights/PointLight.cpp.i
+.PHONY : Source/Lights/PointLight.i
+
+# target to preprocess a source file
+Source/Lights/PointLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.i
+.PHONY : Source/Lights/PointLight.cpp.i
+
+Source/Lights/PointLight.s: Source/Lights/PointLight.cpp.s
+.PHONY : Source/Lights/PointLight.s
+
+# target to generate assembly for a file
+Source/Lights/PointLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.s
+.PHONY : Source/Lights/PointLight.cpp.s
+
 Source/Material.o: Source/Material.cpp.o
 .PHONY : Source/Material.o
 
@@ -387,6 +411,9 @@ help:
 	@echo "... Source/Lights/Light.o"
 	@echo "... Source/Lights/Light.i"
 	@echo "... Source/Lights/Light.s"
+	@echo "... Source/Lights/PointLight.o"
+	@echo "... Source/Lights/PointLight.i"
+	@echo "... Source/Lights/PointLight.s"
 	@echo "... Source/Material.o"
 	@echo "... Source/Material.i"
 	@echo "... Source/Material.s"

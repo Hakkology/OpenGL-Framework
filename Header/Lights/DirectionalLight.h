@@ -12,7 +12,8 @@ public:
                     GLfloat _ambientIntensity, GLfloat _diffuseIntensity,
                     GLfloat xDir, GLfloat yDir, GLfloat zdir);
 
-    void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation);
+    void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation, 
+                    GLuint constantLocation=0, GLfloat linearLocation=0, GLfloat exponentLocation=0) override;
 
 
     ~DirectionalLight();

@@ -13,7 +13,7 @@ public:
                 GLfloat con, GLfloat lin, GLfloat exp);
 
     void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint positionLocation,
-                            GLuint constantLocation, GLfloat linearLocation, GLfloat exponentLocation);
+                    GLuint constantLocation, GLfloat linearLocation, GLfloat exponentLocation) override;
 
     ~PointLight();
 

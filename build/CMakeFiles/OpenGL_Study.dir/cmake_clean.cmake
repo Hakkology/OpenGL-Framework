@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o.d"
   "CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o"
   "CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o.d"
+  "CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o"
+  "CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o.d"
   "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o"
   "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o.d"
   "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o"

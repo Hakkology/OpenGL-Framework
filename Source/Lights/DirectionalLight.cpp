@@ -13,7 +13,8 @@ DirectionalLight::DirectionalLight(GLfloat red, GLfloat green, GLfloat blue, GLf
     direction = glm::vec3(xDir, yDir, zDir);
 }
 
-void DirectionalLight::UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation){
+void DirectionalLight::UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation, 
+                                GLuint constantLocation, GLfloat linearLocation, GLfloat exponentLocation){
 
     Light::UseLight (ambientIntensityLocation, ambientColourLocation, diffuseIntensityLocation);
     

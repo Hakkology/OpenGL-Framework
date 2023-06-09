@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/DirectionalLight.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/Light.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o.d"
+  "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/PointLight.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Mesh.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o.d"

@@ -32,6 +32,8 @@ public:
     GLuint GetShininessLocation();
     GLuint GetEyePositionLocation();
 
+    void SetDirectionalLight(DirectionalLight *directionalLight);
+
     void UseShader();
     void ClearShader();
 
@@ -52,7 +54,21 @@ private:
         GLuint uniformDiffuseIntensity;
         
         GLuint uniformDirection;
+
     } uniformDirectionalLight;
+
+    struct{
+
+        GLuint uniformColour;
+        GLuint uniformAmbientIntensity;
+        GLuint uniformDiffuseIntensity;
+        
+        GLuint uniformPosition;
+        GLuint uniformConstant;
+        GLuint uniformLinear;
+        GLuint uniformExponent;
+
+    } uniformPointLight[MAX_POINT_LIGHTS];
         
     void CompileShader(const char* vertexCode, const char* fragmentCode);
     void AddShader(GLuint theProgram, const char* shaderCode, GLenum shaderType);
