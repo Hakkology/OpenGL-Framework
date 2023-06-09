@@ -359,3 +359,42 @@ Directional light:
 - treat all calculations using the same direction.
 
 */
+
+//////////////////////////// 
+
+/*
+
+Point Lights
+- Lights with a position that emit light in ALL directions.
+- Need to determine direction vector manually.
+- Get difference between light position and fragment position.
+- Apply directional lighting maths to the calculated direction vector.
+
+Value of Attenuation
+- Point light has positions and distance from point being lit changes power of lighting.
+- Linear drop-off.
+- Light intensity initially drops quickly with a distance.
+- Further object is, slower it decreases.
+- Quadratic function can create this effect for positive values.
+1 / (ax2 + bx +c)
+- Where x is the distance between light source and the fragment.
+- Where a is the user-defined value, usually the lowest of all three.
+- Where b is the user-defined value, lower than constant.
+- Where c is the constant, usually 1 to ensure denominator is always greater than 1.
+
+Spot Lights
+- Direction where the spot light is facing.
+- Cut-off angle: The angle describing the "edges" of light from the direction vector.
+angletoFragment: lightVector * lightDirection
+light Vector: The vector from the light to the fragment.
+light Direction: The direction the Spot Light is facing.
+- angletoFragment will be a value between 0 and 1, representing the angle between the two.
+cos(cutOffAngle)
+- Larger the value, smaller the angle, and vice versa.
+- If angletoFragment value > cos(cutOffAngle); Apply Lighting(); else; Don't apply lighting.
+- Edges must be softened instead of this black-white situation.
+- Solution - Scale dot product range to 0-1 !
+SpotLightFade = 1- (1-angletoFragment)/(1-cutOffAngle);
+colour = spotLightColour * spotLightFade;
+
+*/
