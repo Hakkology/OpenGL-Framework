@@ -11,7 +11,8 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries"
+			"target_link_libraries",
+			"include_directories"
 		],
 		"files" : 
 		[
@@ -31,6 +32,12 @@
 			{
 				"command" : 1,
 				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
 				"line" : 24,
 				"parent" : 0
 			}
@@ -43,6 +50,17 @@
 			[
 				{
 					"fragment" : "-g"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights"
 				}
 			],
 			"language" : "CXX",
@@ -202,12 +220,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Source/Light.cpp",
+			"path" : "Source/Lights/Light.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Header/Light.h",
+			"path" : "Header/Lights/Light.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -235,12 +253,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Source/DirectionalLight.cpp",
+			"path" : "Source/Lights/DirectionalLight.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Header/DirectionalLight.h",
+			"path" : "Header/Lights/DirectionalLight.h",
 			"sourceGroupIndex" : 1
 		}
 	],

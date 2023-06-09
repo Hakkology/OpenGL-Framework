@@ -269,10 +269,10 @@ CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o: ../Source/Camera.cpp \
   /usr/include/glm/ext/matrix_transform.inl \
   /usr/include/glm/gtc/matrix_transform.inl
 
-CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o: ../Source/DirectionalLight.cpp \
+CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/Lights/DirectionalLight.cpp \
   /usr/include/stdc-predef.h \
-  ../Header/DirectionalLight.h \
-  ../Header/Light.h \
+  ../Header/Lights/DirectionalLight.h \
+  ../Header/Lights/Light.h \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -525,9 +525,9 @@ CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o: ../Source/Directional
   /usr/include/glm/integer.hpp \
   /usr/include/glm/detail/func_integer.inl
 
-CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o: ../Source/Light.cpp \
+CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o: ../Source/Lights/Light.cpp \
   /usr/include/stdc-predef.h \
-  ../Header/Light.h \
+  ../Header/Lights/Light.h \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1458,7 +1458,184 @@ CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o: ../Source/Shader.cpp \
   /usr/include/GL/glew.h \
   /usr/include/c++/11/cstddef \
   /usr/include/GL/glu.h \
-  /usr/include/GL/gl.h
+  /usr/include/GL/gl.h \
+  ../Header/Lights/DirectionalLight.h \
+  ../Header/Lights/Light.h \
+  /usr/include/glm/glm.hpp \
+  /usr/include/glm/detail/_fixes.hpp \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/limits \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc \
+  /usr/include/glm/detail/setup.hpp \
+  /usr/include/c++/11/cassert \
+  /usr/include/assert.h \
+  /usr/include/glm/simd/platform.h \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/include/c++/11/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/include/glm/fwd.hpp \
+  /usr/include/glm/detail/qualifier.hpp \
+  /usr/include/glm/detail/setup.hpp \
+  /usr/include/glm/vec2.hpp \
+  /usr/include/glm/ext/vector_bool2.hpp \
+  /usr/include/glm/detail/type_vec2.hpp \
+  /usr/include/glm/detail/type_vec2.inl \
+  /usr/include/glm/detail/compute_vector_relational.hpp \
+  /usr/include/glm/ext/vector_bool2_precision.hpp \
+  /usr/include/glm/ext/vector_float2.hpp \
+  /usr/include/glm/ext/vector_float2_precision.hpp \
+  /usr/include/glm/ext/vector_double2.hpp \
+  /usr/include/glm/ext/vector_double2_precision.hpp \
+  /usr/include/glm/ext/vector_int2.hpp \
+  /usr/include/glm/ext/vector_int2_sized.hpp \
+  /usr/include/glm/ext/scalar_int_sized.hpp \
+  /usr/include/glm/detail/setup.hpp \
+  /usr/include/glm/ext/vector_uint2.hpp \
+  /usr/include/glm/ext/vector_uint2_sized.hpp \
+  /usr/include/glm/ext/scalar_uint_sized.hpp \
+  /usr/include/glm/vec3.hpp \
+  /usr/include/glm/ext/vector_bool3.hpp \
+  /usr/include/glm/detail/type_vec3.hpp \
+  /usr/include/glm/detail/type_vec3.inl \
+  /usr/include/glm/ext/vector_bool3_precision.hpp \
+  /usr/include/glm/ext/vector_float3.hpp \
+  /usr/include/glm/ext/vector_float3_precision.hpp \
+  /usr/include/glm/ext/vector_double3.hpp \
+  /usr/include/glm/ext/vector_double3_precision.hpp \
+  /usr/include/glm/ext/vector_int3.hpp \
+  /usr/include/glm/ext/vector_int3_sized.hpp \
+  /usr/include/glm/ext/vector_uint3.hpp \
+  /usr/include/glm/ext/vector_uint3_sized.hpp \
+  /usr/include/glm/vec4.hpp \
+  /usr/include/glm/ext/vector_bool4.hpp \
+  /usr/include/glm/detail/type_vec4.hpp \
+  /usr/include/glm/detail/type_vec4.inl \
+  /usr/include/glm/ext/vector_bool4_precision.hpp \
+  /usr/include/glm/ext/vector_float4.hpp \
+  /usr/include/glm/ext/vector_float4_precision.hpp \
+  /usr/include/glm/ext/vector_double4.hpp \
+  /usr/include/glm/ext/vector_double4_precision.hpp \
+  /usr/include/glm/ext/vector_int4.hpp \
+  /usr/include/glm/ext/vector_int4_sized.hpp \
+  /usr/include/glm/ext/vector_uint4.hpp \
+  /usr/include/glm/ext/vector_uint4_sized.hpp \
+  /usr/include/glm/mat2x2.hpp \
+  /usr/include/glm/ext/matrix_double2x2.hpp \
+  /usr/include/glm/detail/type_mat2x2.hpp \
+  /usr/include/glm/detail/type_mat2x2.inl \
+  /usr/include/glm/matrix.hpp \
+  /usr/include/glm/mat2x3.hpp \
+  /usr/include/glm/ext/matrix_double2x3.hpp \
+  /usr/include/glm/detail/type_mat2x3.hpp \
+  /usr/include/glm/detail/type_mat2x3.inl \
+  /usr/include/glm/ext/matrix_double2x3_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x3.hpp \
+  /usr/include/glm/ext/matrix_float2x3_precision.hpp \
+  /usr/include/glm/mat2x4.hpp \
+  /usr/include/glm/ext/matrix_double2x4.hpp \
+  /usr/include/glm/detail/type_mat2x4.hpp \
+  /usr/include/glm/detail/type_mat2x4.inl \
+  /usr/include/glm/ext/matrix_double2x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x4.hpp \
+  /usr/include/glm/ext/matrix_float2x4_precision.hpp \
+  /usr/include/glm/mat3x2.hpp \
+  /usr/include/glm/ext/matrix_double3x2.hpp \
+  /usr/include/glm/detail/type_mat3x2.hpp \
+  /usr/include/glm/detail/type_mat3x2.inl \
+  /usr/include/glm/ext/matrix_double3x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float3x2.hpp \
+  /usr/include/glm/ext/matrix_float3x2_precision.hpp \
+  /usr/include/glm/mat3x3.hpp \
+  /usr/include/glm/ext/matrix_double3x3.hpp \
+  /usr/include/glm/detail/type_mat3x3.hpp \
+  /usr/include/glm/detail/type_mat3x3.inl \
+  /usr/include/glm/ext/matrix_double3x3_precision.hpp \
+  /usr/include/glm/ext/matrix_float3x3.hpp \
+  /usr/include/glm/ext/matrix_float3x3_precision.hpp \
+  /usr/include/glm/mat3x4.hpp \
+  /usr/include/glm/ext/matrix_double3x4.hpp \
+  /usr/include/glm/detail/type_mat3x4.hpp \
+  /usr/include/glm/detail/type_mat3x4.inl \
+  /usr/include/glm/ext/matrix_double3x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float3x4.hpp \
+  /usr/include/glm/ext/matrix_float3x4_precision.hpp \
+  /usr/include/glm/mat4x2.hpp \
+  /usr/include/glm/ext/matrix_double4x2.hpp \
+  /usr/include/glm/detail/type_mat4x2.hpp \
+  /usr/include/glm/detail/type_mat4x2.inl \
+  /usr/include/glm/ext/matrix_double4x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x2.hpp \
+  /usr/include/glm/ext/matrix_float4x2_precision.hpp \
+  /usr/include/glm/mat4x3.hpp \
+  /usr/include/glm/ext/matrix_double4x3.hpp \
+  /usr/include/glm/detail/type_mat4x3.hpp \
+  /usr/include/glm/detail/type_mat4x3.inl \
+  /usr/include/glm/ext/matrix_double4x3_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x3.hpp \
+  /usr/include/glm/ext/matrix_float4x3_precision.hpp \
+  /usr/include/glm/mat4x4.hpp \
+  /usr/include/glm/ext/matrix_double4x4.hpp \
+  /usr/include/glm/detail/type_mat4x4.hpp \
+  /usr/include/glm/detail/type_mat4x4.inl \
+  /usr/include/glm/ext/matrix_double4x4_precision.hpp \
+  /usr/include/glm/ext/matrix_float4x4.hpp \
+  /usr/include/glm/ext/matrix_float4x4_precision.hpp \
+  /usr/include/glm/detail/func_matrix.inl \
+  /usr/include/glm/geometric.hpp \
+  /usr/include/glm/detail/func_geometric.inl \
+  /usr/include/glm/exponential.hpp \
+  /usr/include/glm/detail/type_vec1.hpp \
+  /usr/include/glm/detail/type_vec1.inl \
+  /usr/include/glm/detail/func_exponential.inl \
+  /usr/include/glm/vector_relational.hpp \
+  /usr/include/glm/detail/func_vector_relational.inl \
+  /usr/include/glm/detail/_vectorize.hpp \
+  /usr/include/glm/common.hpp \
+  /usr/include/glm/detail/func_common.inl \
+  /usr/include/glm/detail/compute_common.hpp \
+  /usr/include/glm/ext/matrix_double2x2_precision.hpp \
+  /usr/include/glm/ext/matrix_float2x2.hpp \
+  /usr/include/glm/ext/matrix_float2x2_precision.hpp \
+  /usr/include/glm/trigonometric.hpp \
+  /usr/include/glm/detail/func_trigonometric.inl \
+  /usr/include/glm/packing.hpp \
+  /usr/include/glm/detail/func_packing.inl \
+  /usr/include/glm/detail/type_half.hpp \
+  /usr/include/glm/detail/type_half.inl \
+  /usr/include/glm/integer.hpp \
+  /usr/include/glm/detail/func_integer.inl \
+  ../Header/Lights/PointLight.h
 
 CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.o: ../Source/Texture.cpp \
   /usr/include/stdc-predef.h \
@@ -2214,6 +2391,9 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
+  ../Header/Lights/DirectionalLight.h \
+  ../Header/Lights/Light.h \
+  ../Header/Lights/PointLight.h \
   ../Header/Scene.h \
   ../Header/Camera.h \
   ../Header/Texture.h \
@@ -2224,8 +2404,7 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  ../Header/DirectionalLight.h \
-  ../Header/Light.h \
+  ../Header/Lights/DirectionalLight.h \
   ../Header/Utility.h \
   ../Header/Material.h
 
@@ -2235,8 +2414,6 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
-
-/usr/include/glm/ext/vector_uint1.hpp:
 
 /usr/include/glm/ext/vector_int1_sized.hpp:
 
@@ -2388,6 +2565,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/pthread.h:
 
+/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
+
 /usr/include/c++/11/ext/atomicity.h:
 
 /usr/include/c++/11/bits/ios_base.h:
@@ -2448,11 +2627,9 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 ../Source/Material.cpp:
 
-../Source/Light.cpp:
+/usr/include/glm/ext/vector_uint1.hpp:
 
-/usr/include/x86_64-linux-gnu/c++/11/bits/gthr-default.h:
-
-../Header/DirectionalLight.h:
+../Source/Lights/DirectionalLight.cpp:
 
 /usr/include/glm/ext/matrix_transform.hpp:
 
@@ -2536,6 +2713,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
+../Header/Lights/DirectionalLight.h:
+
 ../Source/Camera.cpp:
 
 ../Header/Texture.h:
@@ -2551,6 +2730,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+../Source/Lights/Light.cpp:
 
 /usr/include/glm/detail/type_mat2x4.hpp:
 
@@ -2627,8 +2808,6 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/glm/geometric.hpp:
 
 /usr/include/glm/ext/matrix_double2x2_precision.hpp:
-
-../Header/Light.h:
 
 /usr/include/c++/11/limits:
 
@@ -2761,6 +2940,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/limits.h:
 
 /usr/include/glm/detail/type_mat3x4.hpp:
+
+../Header/Lights/PointLight.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -2946,6 +3127,8 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
+../Header/Lights/Light.h:
+
 /usr/include/glm/ext/vector_int4_sized.hpp:
 
 /usr/include/c++/11/bits/exception_defines.h:
@@ -2967,8 +3150,6 @@ CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/glm/ext/vector_bool3.hpp:
 
 /usr/include/glm/matrix.hpp:
-
-../Source/DirectionalLight.cpp:
 
 /usr/include/glm/detail/type_vec2.hpp:
 

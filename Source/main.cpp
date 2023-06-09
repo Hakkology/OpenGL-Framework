@@ -16,7 +16,7 @@
 #include "../Header/Scene.h"
 #include "../Header/Camera.h"
 #include "../Header/Texture.h"
-#include "../Header/DirectionalLight.h"
+#include "../Header/Lights/DirectionalLight.h"
 #include "../Header/Utility.h"
 #include "../Header/Material.h"
 

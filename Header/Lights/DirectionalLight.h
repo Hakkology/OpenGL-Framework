@@ -12,7 +12,7 @@ public:
                     GLfloat _ambientIntensity, GLfloat _diffuseIntensity,
                     GLfloat xDir, GLfloat yDir, GLfloat zdir);
 
-    void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation) override;
+    void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation);
 
 
     ~DirectionalLight();
@@ -20,5 +20,7 @@ public:
 private:
     glm::vec3 direction;
 
-#endif
+
 };
+
+#endif

@@ -1,4 +1,4 @@
-#include "../Header/Light.h"
+#include "../../Header/Lights/Light.h"
 
 Light::Light(){
 
@@ -18,11 +18,14 @@ Light::Light(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity
 
 }
 
-void Light::UseLight (GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation){
+void Light::UseLight (GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation){
 
     // adding RGB and intensity values uniform locations for shaders
     glUniform3f(ambientColourLocation, colour.x, colour.y, colour.z);
     glUniform1f(ambientIntensityLocation, ambientIntensity);
+
+    // adding diffuse light uniform locations for shaders
+    glUniform1f(diffuseIntensityLocation, diffuseIntensity);
 
 }
 

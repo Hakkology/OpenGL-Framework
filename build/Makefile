@@ -153,53 +153,53 @@ Source/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.s
 .PHONY : Source/Camera.cpp.s
 
-Source/DirectionalLight.o: Source/DirectionalLight.cpp.o
-.PHONY : Source/DirectionalLight.o
+Source/Lights/DirectionalLight.o: Source/Lights/DirectionalLight.cpp.o
+.PHONY : Source/Lights/DirectionalLight.o
 
 # target to build an object file
-Source/DirectionalLight.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o
-.PHONY : Source/DirectionalLight.cpp.o
+Source/Lights/DirectionalLight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o
+.PHONY : Source/Lights/DirectionalLight.cpp.o
 
-Source/DirectionalLight.i: Source/DirectionalLight.cpp.i
-.PHONY : Source/DirectionalLight.i
+Source/Lights/DirectionalLight.i: Source/Lights/DirectionalLight.cpp.i
+.PHONY : Source/Lights/DirectionalLight.i
 
 # target to preprocess a source file
-Source/DirectionalLight.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.i
-.PHONY : Source/DirectionalLight.cpp.i
+Source/Lights/DirectionalLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.i
+.PHONY : Source/Lights/DirectionalLight.cpp.i
 
-Source/DirectionalLight.s: Source/DirectionalLight.cpp.s
-.PHONY : Source/DirectionalLight.s
+Source/Lights/DirectionalLight.s: Source/Lights/DirectionalLight.cpp.s
+.PHONY : Source/Lights/DirectionalLight.s
 
 # target to generate assembly for a file
-Source/DirectionalLight.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.s
-.PHONY : Source/DirectionalLight.cpp.s
+Source/Lights/DirectionalLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.s
+.PHONY : Source/Lights/DirectionalLight.cpp.s
 
-Source/Light.o: Source/Light.cpp.o
-.PHONY : Source/Light.o
+Source/Lights/Light.o: Source/Lights/Light.cpp.o
+.PHONY : Source/Lights/Light.o
 
 # target to build an object file
-Source/Light.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o
-.PHONY : Source/Light.cpp.o
+Source/Lights/Light.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o
+.PHONY : Source/Lights/Light.cpp.o
 
-Source/Light.i: Source/Light.cpp.i
-.PHONY : Source/Light.i
+Source/Lights/Light.i: Source/Lights/Light.cpp.i
+.PHONY : Source/Lights/Light.i
 
 # target to preprocess a source file
-Source/Light.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.i
-.PHONY : Source/Light.cpp.i
+Source/Lights/Light.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.i
+.PHONY : Source/Lights/Light.cpp.i
 
-Source/Light.s: Source/Light.cpp.s
-.PHONY : Source/Light.s
+Source/Lights/Light.s: Source/Lights/Light.cpp.s
+.PHONY : Source/Lights/Light.s
 
 # target to generate assembly for a file
-Source/Light.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.s
-.PHONY : Source/Light.cpp.s
+Source/Lights/Light.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.s
+.PHONY : Source/Lights/Light.cpp.s
 
 Source/Material.o: Source/Material.cpp.o
 .PHONY : Source/Material.o
@@ -381,12 +381,12 @@ help:
 	@echo "... Source/Camera.o"
 	@echo "... Source/Camera.i"
 	@echo "... Source/Camera.s"
-	@echo "... Source/DirectionalLight.o"
-	@echo "... Source/DirectionalLight.i"
-	@echo "... Source/DirectionalLight.s"
-	@echo "... Source/Light.o"
-	@echo "... Source/Light.i"
-	@echo "... Source/Light.s"
+	@echo "... Source/Lights/DirectionalLight.o"
+	@echo "... Source/Lights/DirectionalLight.i"
+	@echo "... Source/Lights/DirectionalLight.s"
+	@echo "... Source/Lights/Light.o"
+	@echo "... Source/Lights/Light.i"
+	@echo "... Source/Lights/Light.s"
 	@echo "... Source/Material.o"
 	@echo "... Source/Material.i"
 	@echo "... Source/Material.s"
