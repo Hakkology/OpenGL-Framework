@@ -16,7 +16,7 @@
 #include "../Header/Scene.h"
 #include "../Header/Camera.h"
 #include "../Header/Texture.h"
-#include "../Header/Light.h"
+#include "../Header/DirectionalLight.h"
 #include "../Header/Utility.h"
 #include "../Header/Material.h"
 
@@ -45,7 +45,7 @@ Material shinyMaterial;
 Material dullMaterial;
 
 // Light instance creation
-Light mainLight;
+DirectionalLight mainLight;
 
 // Utility instance creation
 Utility utility;
@@ -101,7 +101,9 @@ int main(void)
     shinyMaterial = Material(1.0f, 32);
     dullMaterial = Material (0.3f, 4);
 
-    mainLight = Light(1.0f, 1.0f, 1.0f, 0.2f, 2.0f, -1.0f, -2.0f, 0.7f);
+    mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
+                                0.2f, 0.5f, 
+                                -1.0f, -1.0f, -1.0f);
 
     GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
             uniformAmbientIntensity =0, uniformAmbientColour =0, uniformDirection =0, uniformDiffuseIntensity =0,

@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o.d"
+  "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/DirectionalLight.cpp" "CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Light.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Light.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Mesh.cpp" "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o" "gcc" "CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o.d"

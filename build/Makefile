@@ -153,6 +153,30 @@ Source/Camera.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.s
 .PHONY : Source/Camera.cpp.s
 
+Source/DirectionalLight.o: Source/DirectionalLight.cpp.o
+.PHONY : Source/DirectionalLight.o
+
+# target to build an object file
+Source/DirectionalLight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o
+.PHONY : Source/DirectionalLight.cpp.o
+
+Source/DirectionalLight.i: Source/DirectionalLight.cpp.i
+.PHONY : Source/DirectionalLight.i
+
+# target to preprocess a source file
+Source/DirectionalLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.i
+.PHONY : Source/DirectionalLight.cpp.i
+
+Source/DirectionalLight.s: Source/DirectionalLight.cpp.s
+.PHONY : Source/DirectionalLight.s
+
+# target to generate assembly for a file
+Source/DirectionalLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.s
+.PHONY : Source/DirectionalLight.cpp.s
+
 Source/Light.o: Source/Light.cpp.o
 .PHONY : Source/Light.o
 
@@ -357,6 +381,9 @@ help:
 	@echo "... Source/Camera.o"
 	@echo "... Source/Camera.i"
 	@echo "... Source/Camera.s"
+	@echo "... Source/DirectionalLight.o"
+	@echo "... Source/DirectionalLight.i"
+	@echo "... Source/DirectionalLight.s"
 	@echo "... Source/Light.o"
 	@echo "... Source/Light.i"
 	@echo "... Source/Light.s"

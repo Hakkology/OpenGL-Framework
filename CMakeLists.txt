@@ -17,7 +17,8 @@ add_executable(OpenGL_Study Source/main.cpp
                             Source/Texture.cpp Header/Texture.h
                             Source/Light.cpp Header/Light.h
                             Source/Utility.cpp Header/Utility.h
-                            Source/Material.cpp Header/Material.h)
+                            Source/Material.cpp Header/Material.h
+                            Source/DirectionalLight.cpp Header/DirectionalLight.h)
 # compile the source file, main
 
 target_link_libraries(OpenGL_Study 

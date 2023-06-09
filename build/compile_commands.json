@@ -43,5 +43,10 @@
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
   "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/OpenGL_Study.dir/Source/DirectionalLight.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/DirectionalLight.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/DirectionalLight.cpp"
 }
 ]
