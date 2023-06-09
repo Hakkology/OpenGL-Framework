@@ -228,7 +228,6 @@ void Shader::SetPointLight(PointLight *pointLight, unsigned int lightCount){
                                uniformPointLight[i].uniformConstant, uniformPointLight[i].uniformLinear, uniformPointLight[i].uniformExponent);
     }
     
-    
 }
 
 void Shader::UseShader(){

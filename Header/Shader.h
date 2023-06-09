@@ -78,6 +78,6 @@ private:
     void CompileShader(const char* vertexCode, const char* fragmentCode);
     void AddShader(GLuint theProgram, const char* shaderCode, GLenum shaderType);
 
-#endif
-
 };
+
+#endif
