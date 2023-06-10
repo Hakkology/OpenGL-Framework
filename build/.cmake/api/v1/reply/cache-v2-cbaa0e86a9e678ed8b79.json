@@ -1294,6 +1294,30 @@
 			"value" : "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework"
 		},
 		{
+			"name" : "assimp_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for assimp."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/assimp-5.2"
+		},
+		{
+			"name" : "draco_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for draco."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/draco"
+		},
+		{
 			"name" : "glm_DIR",
 			"properties" : 
 			[

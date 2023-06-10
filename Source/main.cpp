@@ -11,6 +11,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include <assimp/Importer.hpp>
+
 #include "../Header/CommonValues.h"
 
 #include "../Header/Mesh.h"
@@ -101,11 +103,11 @@ int main(void)
 
     // Loading textures
     brickTexture = Texture("../Resources/Textures/brick.png");
-    brickTexture.LoadTexture();
+    brickTexture.LoadTextureA();
     dirtTexture = Texture("../Resources/Textures/dirt.png");
-    dirtTexture.LoadTexture();
+    dirtTexture.LoadTextureA();
     plainTexture = Texture("../Resources/Textures/plain.png");
-    plainTexture.LoadTexture();
+    plainTexture.LoadTextureA();
 
     shinyMaterial = Material(1.0f, 32);
     dullMaterial = Material (0.3f, 4);
@@ -157,6 +159,10 @@ int main(void)
         uniformEyePosition = shaderList[0].GetEyePositionLocation();
         uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
         uniformShininess = shaderList[0].GetShininessLocation();
+
+        //for Camera Lights
+        //spotLights[0].SetFlash(camera.getCameraPosition(), camera.getCameraDirection());
+
         shaderList[0].SetDirectionalLight(&mainLight);
         shaderList[0].SetPointLight(pointLights, pointLightCount);
         shaderList[0].SetSpotLight(spotLights, spotLightCount);

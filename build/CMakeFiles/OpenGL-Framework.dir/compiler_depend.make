@@ -2900,6 +2900,48 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/glm/gtc/type_ptr.inl \
+  /usr/include/assimp/Importer.hpp \
+  /usr/include/assimp/types.h \
+  /usr/include/assimp/defs.h \
+  /usr/include/assimp/config.h \
+  /usr/include/assimp/vector2.h \
+  /usr/include/assimp/vector3.h \
+  /usr/include/assimp/color4.h \
+  /usr/include/assimp/matrix3x3.h \
+  /usr/include/assimp/matrix4x4.h \
+  /usr/include/assimp/quaternion.h \
+  /usr/include/assimp/vector2.inl \
+  /usr/include/assimp/vector3.inl \
+  /usr/include/assimp/color4.inl \
+  /usr/include/assimp/matrix3x3.inl \
+  /usr/include/c++/11/algorithm \
+  /usr/include/c++/11/utility \
+  /usr/include/c++/11/bits/stl_relops.h \
+  /usr/include/c++/11/bits/stl_algo.h \
+  /usr/include/c++/11/bits/algorithmfwd.h \
+  /usr/include/c++/11/bits/stl_heap.h \
+  /usr/include/c++/11/bits/stl_tempbuf.h \
+  /usr/include/c++/11/bits/uniform_int_dist.h \
+  /usr/include/c++/11/pstl/glue_algorithm_defs.h \
+  /usr/include/c++/11/functional \
+  /usr/include/c++/11/tuple \
+  /usr/include/c++/11/array \
+  /usr/include/c++/11/bits/uses_allocator.h \
+  /usr/include/c++/11/bits/invoke.h \
+  /usr/include/c++/11/bits/refwrap.h \
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/c++/11/unordered_map \
+  /usr/include/c++/11/ext/aligned_buffer.h \
+  /usr/include/c++/11/bits/hashtable.h \
+  /usr/include/c++/11/bits/hashtable_policy.h \
+  /usr/include/c++/11/bits/enable_special_members.h \
+  /usr/include/c++/11/bits/node_handle.h \
+  /usr/include/c++/11/bits/unordered_map.h \
+  /usr/include/c++/11/bits/erase_if.h \
+  /usr/include/c++/11/pstl/execution_defs.h \
+  /usr/include/assimp/matrix4x4.inl \
+  /usr/include/assimp/MathFunctions.h \
+  /usr/include/assimp/quaternion.inl \
   ../Header/CommonValues.h \
   ../Header/Mesh.h \
   ../Header/Shader.h \
@@ -2937,13 +2979,51 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
 
+/usr/include/assimp/quaternion.inl:
+
+/usr/include/c++/11/unordered_map:
+
+/usr/include/c++/11/bits/refwrap.h:
+
+/usr/include/c++/11/bits/uses_allocator.h:
+
+/usr/include/c++/11/tuple:
+
+/usr/include/c++/11/bits/std_function.h:
+
+/usr/include/c++/11/bits/stl_tempbuf.h:
+
+/usr/include/c++/11/bits/stl_algo.h:
+
+/usr/include/c++/11/algorithm:
+
+/usr/include/assimp/matrix3x3.inl:
+
+/usr/include/assimp/color4.inl:
+
+/usr/include/assimp/vector3.inl:
+
+/usr/include/assimp/vector2.inl:
+
+/usr/include/assimp/matrix4x4.h:
+
+/usr/include/assimp/matrix3x3.h:
+
+/usr/include/assimp/vector2.h:
+
+/usr/include/assimp/defs.h:
+
 /usr/include/glm/ext/vector_int1_sized.hpp:
 
 /usr/include/glm/ext/vector_int1.hpp:
 
 /usr/include/glm/ext/vector_float1.hpp:
 
+/usr/include/c++/11/bits/hashtable.h:
+
 /usr/include/glm/ext/vector_bool1_precision.hpp:
+
+/usr/include/assimp/MathFunctions.h:
 
 /usr/include/glm/ext/vector_bool1.hpp:
 
@@ -2993,6 +3073,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/c++/11/bits/ostream.tcc:
 
+/usr/include/c++/11/bits/enable_special_members.h:
+
 /usr/include/c++/11/bits/codecvt.h:
 
 /usr/include/c++/11/bits/basic_ios.tcc:
@@ -3002,6 +3084,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/c++/11/cwctype:
+
+/usr/include/c++/11/bits/uniform_int_dist.h:
 
 /usr/include/c++/11/bits/basic_ios.h:
 
@@ -3024,6 +3108,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
+
+/usr/include/c++/11/functional:
 
 /usr/include/linux/errno.h:
 
@@ -3111,11 +3197,15 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/c++/11/bits/cxxabi_init_exception.h:
 
+/usr/include/assimp/matrix4x4.inl:
+
 /usr/include/c++/11/bits/exception_ptr.h:
 
 /usr/include/c++/11/bits/locale_facets.h:
 
 /usr/include/c++/11/bits/exception.h:
+
+/usr/include/assimp/types.h:
 
 /usr/include/c++/11/exception:
 
@@ -3137,11 +3227,15 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/c++/11/bits/stringfwd.h:
 
+/usr/include/c++/11/utility:
+
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
 /usr/include/c++/11/ios:
 
 /usr/include/c++/11/ostream:
+
+/usr/include/c++/11/bits/invoke.h:
 
 ../Source/Mesh.cpp:
 
@@ -3150,6 +3244,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 ../Header/Material.h:
 
 ../Source/Material.cpp:
+
+/usr/include/c++/11/bits/hashtable_policy.h:
 
 ../Header/Lights/SpotLight.h:
 
@@ -3194,6 +3290,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/c++/11/tr1/hypergeometric.tcc:
+
+/usr/include/c++/11/pstl/glue_algorithm_defs.h:
 
 /usr/include/c++/11/stdexcept:
 
@@ -3357,6 +3455,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
+/usr/include/c++/11/bits/erase_if.h:
+
 /usr/include/c++/11/bits/ptr_traits.h:
 
 /usr/include/stdint.h:
@@ -3368,6 +3468,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 ../Header/Mesh.h:
 
 /usr/include/glm/ext/matrix_float3x4.hpp:
+
+/usr/include/assimp/Importer.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
@@ -3437,6 +3539,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
+/usr/include/assimp/vector3.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
 /usr/include/c++/11/bits/stl_algobase.h:
@@ -3467,9 +3571,13 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 
+/usr/include/c++/11/bits/stl_relops.h:
+
 /usr/include/limits.h:
 
 /usr/include/glm/detail/type_mat3x4.hpp:
+
+/usr/include/assimp/config.h:
 
 ../Header/Lights/PointLight.h:
 
@@ -3486,6 +3594,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/glm/ext/vector_double2_precision.hpp:
 
 /usr/include/c++/11/tr1/bessel_function.tcc:
+
+/usr/include/assimp/color4.h:
 
 /usr/include/c++/11/bits/stl_bvector.h:
 
@@ -3527,6 +3637,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/glm/ext/vector_float4.hpp:
 
+/usr/include/c++/11/bits/stl_heap.h:
+
 /usr/include/glm/ext/vector_double1.hpp:
 
 /usr/include/c++/11/bits/std_abs.h:
@@ -3545,11 +3657,15 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/glm/mat3x3.hpp:
 
+/usr/include/c++/11/bits/unordered_map.h:
+
 /usr/include/glm/gtc/matrix_transform.inl:
 
 /usr/include/glm/detail/type_mat2x3.hpp:
 
 /usr/include/glm/detail/qualifier.hpp:
+
+/usr/include/c++/11/ext/aligned_buffer.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -3609,6 +3725,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/glm/ext/vector_float3.hpp:
 
+/usr/include/c++/11/array:
+
 /usr/include/c++/11/tr1/beta_function.tcc:
 
 /usr/include/glm/ext/matrix_float2x4.hpp:
@@ -3630,6 +3748,10 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/assert.h:
 
 /usr/include/glm/ext/vector_int3_sized.hpp:
+
+/usr/include/c++/11/pstl/execution_defs.h:
+
+/usr/include/c++/11/bits/algorithmfwd.h:
 
 /usr/include/glm/ext/vector_uint3_sized.hpp:
 
@@ -3791,6 +3913,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/glm/detail/func_exponential.inl:
 
+/usr/include/c++/11/bits/node_handle.h:
+
 /usr/include/c++/11/iostream:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
@@ -3822,6 +3946,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/glm/detail/type_half.hpp:
 
 /usr/include/glm/integer.hpp:
+
+/usr/include/assimp/quaternion.h:
 
 /usr/include/glm/simd/platform.h:
 

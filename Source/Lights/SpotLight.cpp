@@ -13,7 +13,7 @@ SpotLight::SpotLight(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientI
                                     PointLight(red, green, blue, _ambientIntensity, _diffuseIntensity, xPos, yPos, zPos, con, lin, exp){
 
     // defining values for spotlight
-    direction =  glm::vec3(xDir, yDir, zDir);
+    direction =  glm::normalize(glm::vec3(xDir, yDir, zDir));
     edge = _edge;
     processedEdge = cosf(glm::radians(edge));
 
@@ -28,6 +28,12 @@ void SpotLight::UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLo
     glUniform3f(directionLocation, direction.x, direction.y, direction.z);
     glUniform1f(edgeLocation, processedEdge);
 
+}
+
+void SpotLight::SetFlash (glm::vec3 pos, glm::vec3 dir){
+
+    position = pos;
+    direction = dir;
 }
 
 SpotLight::~SpotLight(){

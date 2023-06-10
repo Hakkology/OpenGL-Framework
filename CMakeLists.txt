@@ -7,6 +7,7 @@ cmake_policy(SET CMP0072 NEW)
 
 find_package(OpenGL REQUIRED)
 find_package(glm REQUIRED)
+find_package(assimp REQUIRED)
 # package must be found for this project to work
 
 add_executable(OpenGL-Framework Source/main.cpp 

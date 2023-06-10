@@ -18,6 +18,8 @@ public:
                     GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation, 
                     GLuint directionLocation, GLuint edgeLocation) override;
 
+    void SetFlash(glm::vec3 pos, glm::vec3 dir);
+
     ~SpotLight();
 
 private:

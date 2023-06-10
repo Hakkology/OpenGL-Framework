@@ -103,7 +103,7 @@ vec4 CalculateSpotLight (SpotLight spotLight){
     if(spotLightFactor > spotLight.edge){
 
         vec4 lightColour = CalculatePointLight (spotLight.base);
-        return lightColour;
+        return lightColour * (1.0f - (1.0f - spotLightFactor) * (1.0f/(1.0f - spotLight.edge)));
 
     } else {
         return vec4 (0, 0, 0, 0);

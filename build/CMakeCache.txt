@@ -241,6 +241,12 @@ OpenGL_Framework_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 OpenGL_Framework_SOURCE_DIR:STATIC=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework
 
+//The directory containing a CMake configuration file for assimp.
+assimp_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/assimp-5.2
+
+//The directory containing a CMake configuration file for draco.
+draco_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/draco
+
 //The directory containing a CMake configuration file for glm.
 glm_DIR:PATH=/usr/lib/cmake/glm
 
