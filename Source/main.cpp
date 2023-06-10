@@ -129,9 +129,9 @@ int main(void)
     unsigned int spotLightCount =0;
     spotLights[0] = SpotLight(1.0f, 0.0f, 0.0f,
                               0.0f, 8.0f,
-                              0.0f, 2.0f, 0.0f,
-                              0.0f,-1.0f, 0.0f,
-                              0.3f, 0.2f, 0.1f, 30.0f);
+                              5.0f, 2.0f, 5.0f,
+                              0.3f, 0.2f, 0.1f,
+                              0.0f,-1.0f, 0.0f, 30.0f);
     spotLightCount++;
 
     GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
