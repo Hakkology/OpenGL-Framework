@@ -14,7 +14,7 @@ DirectionalLight::DirectionalLight(GLfloat red, GLfloat green, GLfloat blue, GLf
 }
 
 void DirectionalLight::UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint directionLocation, 
-                                GLuint constantLocation, GLfloat linearLocation, GLfloat exponentLocation){
+                                GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation, GLuint positionLocation, GLuint edgeLocation){
 
     Light::UseLight (ambientIntensityLocation, ambientColourLocation, diffuseIntensityLocation);
     

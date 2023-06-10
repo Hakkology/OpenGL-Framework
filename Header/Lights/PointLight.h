@@ -12,12 +12,14 @@ public:
                 GLfloat xPos, GLfloat yPos, GLfloat zPos,
                 GLfloat con, GLfloat lin, GLfloat exp);
 
-    void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, GLuint diffuseIntensityLocation, GLuint positionLocation,
-                    GLuint constantLocation, GLfloat linearLocation, GLfloat exponentLocation) override;
+    void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, 
+                GLuint diffuseIntensityLocation, GLuint positionLocation,
+                GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation, 
+                GLuint directionLocation=0, GLuint edgeLocation=0) override;
 
     ~PointLight();
 
-private:
+protected:
     glm::vec3 position;
 
     // Attenuation of the light source
