@@ -25,6 +25,7 @@ add_executable(OpenGL_Study Source/main.cpp
 include_directories(
     $(PROJECT_SOURCE_DIR)/Header
     $(PROJECT_SOURCE_DIR)/Header/Lights
+    $(PROJECT_SOURCE_DIR)/Resources
 )
 
 target_link_libraries(OpenGL_Study 

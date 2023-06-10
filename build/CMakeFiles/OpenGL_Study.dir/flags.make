@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights
+CXX_INCLUDES = -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Resources
 
 CXX_FLAGS = -g
 

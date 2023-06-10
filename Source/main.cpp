@@ -42,6 +42,7 @@ Camera camera;
 // Texture creation
 Texture brickTexture;
 Texture dirtTexture;
+Texture plainTexture;
 
 // Material instance creation
 Material shinyMaterial;
@@ -97,10 +98,12 @@ int main(void)
     camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.5f);
 
     // Loading textures
-    brickTexture = Texture("../Textures/brick.png");
+    brickTexture = Texture("../Resources/Textures/brick.png");
     brickTexture.LoadTexture();
-    dirtTexture = Texture("../Textures/dirt.png");
+    dirtTexture = Texture("../Resources/Textures/dirt.png");
     dirtTexture.LoadTexture();
+    plainTexture = Texture("../Resources/Textures/plain.png");
+    plainTexture.LoadTexture();
 
     shinyMaterial = Material(1.0f, 32);
     dullMaterial = Material (0.3f, 4);
@@ -171,6 +174,7 @@ int main(void)
 
         model = glm::translate(model, glm::vec3(triOffset, -1.0f, -3.0f));
         model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 3.0f));
+        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
         //model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
 
         // shader transform
