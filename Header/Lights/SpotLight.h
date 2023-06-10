@@ -14,7 +14,7 @@ public:
                 GLfloat xDir, GLfloat yDir, GLfloat zDir, GLfloat _edge);
 
     void UseLight(GLuint ambientIntensityLocation, GLuint ambientColourLocation, 
-                    GLuint diffuseIntensityLocation, GLuint positionLocation,
+                    GLuint diffuseIntenQsityLocation, GLuint positionLocation,
                     GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation, 
                     GLuint directionLocation, GLuint edgeLocation) override;
 
@@ -26,7 +26,6 @@ private:
 
     // how much is not going to be shown on
     GLfloat edge, processedEdge;
-
 
 };
 

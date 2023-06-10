@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Frame
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/OpenGL_Study.dir/all
+all: CMakeFiles/OpenGL-Framework.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/OpenGL_Study.dir/clean
+clean: CMakeFiles/OpenGL-Framework.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/OpenGL_Study.dir
+# Target rules for target CMakeFiles/OpenGL-Framework.dir
 
 # All Build rule for target.
-CMakeFiles/OpenGL_Study.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target OpenGL_Study"
-.PHONY : CMakeFiles/OpenGL_Study.dir/all
+CMakeFiles/OpenGL-Framework.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target OpenGL-Framework"
+.PHONY : CMakeFiles/OpenGL-Framework.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/OpenGL_Study.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles 12
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGL_Study.dir/all
+CMakeFiles/OpenGL-Framework.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles 13
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OpenGL-Framework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles 0
-.PHONY : CMakeFiles/OpenGL_Study.dir/rule
+.PHONY : CMakeFiles/OpenGL-Framework.dir/rule
 
 # Convenience name for target.
-OpenGL_Study: CMakeFiles/OpenGL_Study.dir/rule
-.PHONY : OpenGL_Study
+OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/rule
+.PHONY : OpenGL-Framework
 
 # clean rule for target.
-CMakeFiles/OpenGL_Study.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/clean
-.PHONY : CMakeFiles/OpenGL_Study.dir/clean
+CMakeFiles/OpenGL-Framework.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/clean
+.PHONY : CMakeFiles/OpenGL-Framework.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

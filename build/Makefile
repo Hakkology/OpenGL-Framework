@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named OpenGL_Study
+# Target rules for targets named OpenGL-Framework
 
 # Build rule for target.
-OpenGL_Study: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OpenGL_Study
-.PHONY : OpenGL_Study
+OpenGL-Framework: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OpenGL-Framework
+.PHONY : OpenGL-Framework
 
 # fast build rule for target.
-OpenGL_Study/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/build
-.PHONY : OpenGL_Study/fast
+OpenGL-Framework/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/build
+.PHONY : OpenGL-Framework/fast
 
 Source/Camera.o: Source/Camera.cpp.o
 .PHONY : Source/Camera.o
 
 # target to build an object file
 Source/Camera.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o
 .PHONY : Source/Camera.cpp.o
 
 Source/Camera.i: Source/Camera.cpp.i
@@ -142,7 +142,7 @@ Source/Camera.i: Source/Camera.cpp.i
 
 # target to preprocess a source file
 Source/Camera.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.i
 .PHONY : Source/Camera.cpp.i
 
 Source/Camera.s: Source/Camera.cpp.s
@@ -150,7 +150,7 @@ Source/Camera.s: Source/Camera.cpp.s
 
 # target to generate assembly for a file
 Source/Camera.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Camera.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.s
 .PHONY : Source/Camera.cpp.s
 
 Source/Lights/DirectionalLight.o: Source/Lights/DirectionalLight.cpp.o
@@ -158,7 +158,7 @@ Source/Lights/DirectionalLight.o: Source/Lights/DirectionalLight.cpp.o
 
 # target to build an object file
 Source/Lights/DirectionalLight.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o
 .PHONY : Source/Lights/DirectionalLight.cpp.o
 
 Source/Lights/DirectionalLight.i: Source/Lights/DirectionalLight.cpp.i
@@ -166,7 +166,7 @@ Source/Lights/DirectionalLight.i: Source/Lights/DirectionalLight.cpp.i
 
 # target to preprocess a source file
 Source/Lights/DirectionalLight.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.i
 .PHONY : Source/Lights/DirectionalLight.cpp.i
 
 Source/Lights/DirectionalLight.s: Source/Lights/DirectionalLight.cpp.s
@@ -174,7 +174,7 @@ Source/Lights/DirectionalLight.s: Source/Lights/DirectionalLight.cpp.s
 
 # target to generate assembly for a file
 Source/Lights/DirectionalLight.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/DirectionalLight.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.s
 .PHONY : Source/Lights/DirectionalLight.cpp.s
 
 Source/Lights/Light.o: Source/Lights/Light.cpp.o
@@ -182,7 +182,7 @@ Source/Lights/Light.o: Source/Lights/Light.cpp.o
 
 # target to build an object file
 Source/Lights/Light.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o
 .PHONY : Source/Lights/Light.cpp.o
 
 Source/Lights/Light.i: Source/Lights/Light.cpp.i
@@ -190,7 +190,7 @@ Source/Lights/Light.i: Source/Lights/Light.cpp.i
 
 # target to preprocess a source file
 Source/Lights/Light.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.i
 .PHONY : Source/Lights/Light.cpp.i
 
 Source/Lights/Light.s: Source/Lights/Light.cpp.s
@@ -198,7 +198,7 @@ Source/Lights/Light.s: Source/Lights/Light.cpp.s
 
 # target to generate assembly for a file
 Source/Lights/Light.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/Light.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.s
 .PHONY : Source/Lights/Light.cpp.s
 
 Source/Lights/PointLight.o: Source/Lights/PointLight.cpp.o
@@ -206,7 +206,7 @@ Source/Lights/PointLight.o: Source/Lights/PointLight.cpp.o
 
 # target to build an object file
 Source/Lights/PointLight.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o
 .PHONY : Source/Lights/PointLight.cpp.o
 
 Source/Lights/PointLight.i: Source/Lights/PointLight.cpp.i
@@ -214,7 +214,7 @@ Source/Lights/PointLight.i: Source/Lights/PointLight.cpp.i
 
 # target to preprocess a source file
 Source/Lights/PointLight.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.i
 .PHONY : Source/Lights/PointLight.cpp.i
 
 Source/Lights/PointLight.s: Source/Lights/PointLight.cpp.s
@@ -222,15 +222,39 @@ Source/Lights/PointLight.s: Source/Lights/PointLight.cpp.s
 
 # target to generate assembly for a file
 Source/Lights/PointLight.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Lights/PointLight.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.s
 .PHONY : Source/Lights/PointLight.cpp.s
+
+Source/Lights/SpotLight.o: Source/Lights/SpotLight.cpp.o
+.PHONY : Source/Lights/SpotLight.o
+
+# target to build an object file
+Source/Lights/SpotLight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o
+.PHONY : Source/Lights/SpotLight.cpp.o
+
+Source/Lights/SpotLight.i: Source/Lights/SpotLight.cpp.i
+.PHONY : Source/Lights/SpotLight.i
+
+# target to preprocess a source file
+Source/Lights/SpotLight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.i
+.PHONY : Source/Lights/SpotLight.cpp.i
+
+Source/Lights/SpotLight.s: Source/Lights/SpotLight.cpp.s
+.PHONY : Source/Lights/SpotLight.s
+
+# target to generate assembly for a file
+Source/Lights/SpotLight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.s
+.PHONY : Source/Lights/SpotLight.cpp.s
 
 Source/Material.o: Source/Material.cpp.o
 .PHONY : Source/Material.o
 
 # target to build an object file
 Source/Material.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o
 .PHONY : Source/Material.cpp.o
 
 Source/Material.i: Source/Material.cpp.i
@@ -238,7 +262,7 @@ Source/Material.i: Source/Material.cpp.i
 
 # target to preprocess a source file
 Source/Material.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.i
 .PHONY : Source/Material.cpp.i
 
 Source/Material.s: Source/Material.cpp.s
@@ -246,7 +270,7 @@ Source/Material.s: Source/Material.cpp.s
 
 # target to generate assembly for a file
 Source/Material.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Material.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.s
 .PHONY : Source/Material.cpp.s
 
 Source/Mesh.o: Source/Mesh.cpp.o
@@ -254,7 +278,7 @@ Source/Mesh.o: Source/Mesh.cpp.o
 
 # target to build an object file
 Source/Mesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Mesh.cpp.o
 .PHONY : Source/Mesh.cpp.o
 
 Source/Mesh.i: Source/Mesh.cpp.i
@@ -262,7 +286,7 @@ Source/Mesh.i: Source/Mesh.cpp.i
 
 # target to preprocess a source file
 Source/Mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Mesh.cpp.i
 .PHONY : Source/Mesh.cpp.i
 
 Source/Mesh.s: Source/Mesh.cpp.s
@@ -270,7 +294,7 @@ Source/Mesh.s: Source/Mesh.cpp.s
 
 # target to generate assembly for a file
 Source/Mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Mesh.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Mesh.cpp.s
 .PHONY : Source/Mesh.cpp.s
 
 Source/Scene.o: Source/Scene.cpp.o
@@ -278,7 +302,7 @@ Source/Scene.o: Source/Scene.cpp.o
 
 # target to build an object file
 Source/Scene.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o
 .PHONY : Source/Scene.cpp.o
 
 Source/Scene.i: Source/Scene.cpp.i
@@ -286,7 +310,7 @@ Source/Scene.i: Source/Scene.cpp.i
 
 # target to preprocess a source file
 Source/Scene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.i
 .PHONY : Source/Scene.cpp.i
 
 Source/Scene.s: Source/Scene.cpp.s
@@ -294,7 +318,7 @@ Source/Scene.s: Source/Scene.cpp.s
 
 # target to generate assembly for a file
 Source/Scene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Scene.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.s
 .PHONY : Source/Scene.cpp.s
 
 Source/Shader.o: Source/Shader.cpp.o
@@ -302,7 +326,7 @@ Source/Shader.o: Source/Shader.cpp.o
 
 # target to build an object file
 Source/Shader.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o
 .PHONY : Source/Shader.cpp.o
 
 Source/Shader.i: Source/Shader.cpp.i
@@ -310,7 +334,7 @@ Source/Shader.i: Source/Shader.cpp.i
 
 # target to preprocess a source file
 Source/Shader.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.i
 .PHONY : Source/Shader.cpp.i
 
 Source/Shader.s: Source/Shader.cpp.s
@@ -318,7 +342,7 @@ Source/Shader.s: Source/Shader.cpp.s
 
 # target to generate assembly for a file
 Source/Shader.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Shader.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.s
 .PHONY : Source/Shader.cpp.s
 
 Source/Texture.o: Source/Texture.cpp.o
@@ -326,7 +350,7 @@ Source/Texture.o: Source/Texture.cpp.o
 
 # target to build an object file
 Source/Texture.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o
 .PHONY : Source/Texture.cpp.o
 
 Source/Texture.i: Source/Texture.cpp.i
@@ -334,7 +358,7 @@ Source/Texture.i: Source/Texture.cpp.i
 
 # target to preprocess a source file
 Source/Texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.i
 .PHONY : Source/Texture.cpp.i
 
 Source/Texture.s: Source/Texture.cpp.s
@@ -342,7 +366,7 @@ Source/Texture.s: Source/Texture.cpp.s
 
 # target to generate assembly for a file
 Source/Texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Texture.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.s
 .PHONY : Source/Texture.cpp.s
 
 Source/Utility.o: Source/Utility.cpp.o
@@ -350,7 +374,7 @@ Source/Utility.o: Source/Utility.cpp.o
 
 # target to build an object file
 Source/Utility.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o
 .PHONY : Source/Utility.cpp.o
 
 Source/Utility.i: Source/Utility.cpp.i
@@ -358,7 +382,7 @@ Source/Utility.i: Source/Utility.cpp.i
 
 # target to preprocess a source file
 Source/Utility.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.i
 .PHONY : Source/Utility.cpp.i
 
 Source/Utility.s: Source/Utility.cpp.s
@@ -366,7 +390,7 @@ Source/Utility.s: Source/Utility.cpp.s
 
 # target to generate assembly for a file
 Source/Utility.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/Utility.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.s
 .PHONY : Source/Utility.cpp.s
 
 Source/main.o: Source/main.cpp.o
@@ -374,7 +398,7 @@ Source/main.o: Source/main.cpp.o
 
 # target to build an object file
 Source/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o
 .PHONY : Source/main.cpp.o
 
 Source/main.i: Source/main.cpp.i
@@ -382,7 +406,7 @@ Source/main.i: Source/main.cpp.i
 
 # target to preprocess a source file
 Source/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.i
 .PHONY : Source/main.cpp.i
 
 Source/main.s: Source/main.cpp.s
@@ -390,7 +414,7 @@ Source/main.s: Source/main.cpp.s
 
 # target to generate assembly for a file
 Source/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL_Study.dir/build.make CMakeFiles/OpenGL_Study.dir/Source/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.s
 .PHONY : Source/main.cpp.s
 
 # Help Target
@@ -401,7 +425,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... OpenGL_Study"
+	@echo "... OpenGL-Framework"
 	@echo "... Source/Camera.o"
 	@echo "... Source/Camera.i"
 	@echo "... Source/Camera.s"
@@ -414,6 +438,9 @@ help:
 	@echo "... Source/Lights/PointLight.o"
 	@echo "... Source/Lights/PointLight.i"
 	@echo "... Source/Lights/PointLight.s"
+	@echo "... Source/Lights/SpotLight.o"
+	@echo "... Source/Lights/SpotLight.i"
+	@echo "... Source/Lights/SpotLight.s"
 	@echo "... Source/Material.o"
 	@echo "... Source/Material.i"
 	@echo "... Source/Material.s"

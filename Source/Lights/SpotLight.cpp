@@ -12,6 +12,7 @@ SpotLight::SpotLight(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientI
                                     GLfloat xDir, GLfloat yDir, GLfloat zDir, GLfloat _edge) : 
                                     PointLight(red, green, blue, _ambientIntensity, _diffuseIntensity, xPos, yPos, zPos, con, lin, exp){
 
+    // defining values for spotlight
     direction =  glm::vec3(xDir, yDir, zDir);
     edge = _edge;
     processedEdge = cosf(glm::radians(edge));

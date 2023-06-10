@@ -9,7 +9,7 @@ find_package(OpenGL REQUIRED)
 find_package(glm REQUIRED)
 # package must be found for this project to work
 
-add_executable(OpenGL_Study Source/main.cpp 
+add_executable(OpenGL-Framework Source/main.cpp 
                             Source/Mesh.cpp Header/Mesh.h 
                             Source/Shader.cpp Header/Shader.h 
                             Source/Scene.cpp Header/Scene.h 
@@ -19,7 +19,8 @@ add_executable(OpenGL_Study Source/main.cpp
                             Source/Material.cpp Header/Material.h
                             Source/Lights/Light.cpp Header/Lights/Light.h
                             Source/Lights/DirectionalLight.cpp Header/Lights/DirectionalLight.h
-                            Source/Lights/PointLight.cpp Header/Lights/PointLight.h)
+                            Source/Lights/PointLight.cpp Header/Lights/PointLight.h
+                            Source/Lights/SpotLight.cpp Header/Lights/SpotLight.h)
 # compile the source file, main
 
 include_directories(
@@ -28,7 +29,7 @@ include_directories(
     $(PROJECT_SOURCE_DIR)/Resources
 )
 
-target_link_libraries(OpenGL_Study 
+target_link_libraries(OpenGL-Framework 
     GLEW
     glfw
     OpenGL::GL
