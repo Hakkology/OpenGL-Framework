@@ -297,6 +297,30 @@ Source/Mesh.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Mesh.cpp.s
 .PHONY : Source/Mesh.cpp.s
 
+Source/Model.o: Source/Model.cpp.o
+.PHONY : Source/Model.o
+
+# target to build an object file
+Source/Model.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o
+.PHONY : Source/Model.cpp.o
+
+Source/Model.i: Source/Model.cpp.i
+.PHONY : Source/Model.i
+
+# target to preprocess a source file
+Source/Model.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.i
+.PHONY : Source/Model.cpp.i
+
+Source/Model.s: Source/Model.cpp.s
+.PHONY : Source/Model.s
+
+# target to generate assembly for a file
+Source/Model.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.s
+.PHONY : Source/Model.cpp.s
+
 Source/Scene.o: Source/Scene.cpp.o
 .PHONY : Source/Scene.o
 
@@ -447,6 +471,9 @@ help:
 	@echo "... Source/Mesh.o"
 	@echo "... Source/Mesh.i"
 	@echo "... Source/Mesh.s"
+	@echo "... Source/Model.o"
+	@echo "... Source/Model.i"
+	@echo "... Source/Model.s"
 	@echo "... Source/Scene.o"
 	@echo "... Source/Scene.i"
 	@echo "... Source/Scene.s"

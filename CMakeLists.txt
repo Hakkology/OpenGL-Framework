@@ -18,6 +18,7 @@ add_executable(OpenGL-Framework Source/main.cpp
                             Source/Texture.cpp Header/Texture.h
                             Source/Utility.cpp Header/Utility.h
                             Source/Material.cpp Header/Material.h
+                            Source/Model.cpp Header/Model.h
                             Source/Lights/Light.cpp Header/Lights/Light.h
                             Source/Lights/DirectionalLight.cpp Header/Lights/DirectionalLight.h
                             Source/Lights/PointLight.cpp Header/Lights/PointLight.h
@@ -34,5 +35,6 @@ target_link_libraries(OpenGL-Framework
     GLEW
     glfw
     OpenGL::GL
+    assimp
     )
 # Link glfw library and OpenGL::GL library. glfw is linked explicitly, while OpenGL::GL is using imported target provided by find_package(OpenGL)
