@@ -19,6 +19,6 @@ private:
     GLuint VAO, VBO, IBO;
     GLsizei indexCount;
 
-#endif
-
 };
+
+#endif

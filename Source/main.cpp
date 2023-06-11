@@ -16,15 +16,20 @@
 #include "../Header/CommonValues.h"
 
 #include "../Header/Mesh.h"
+#include "../Header/Texture.h"
+#include "../Header/Material.h"
+#include "../Header/Model.h"
+
 #include "../Header/Shader.h"
 #include "../Header/Scene.h"
 #include "../Header/Camera.h"
-#include "../Header/Texture.h"
+
 #include "../Header/Lights/DirectionalLight.h"
 #include "../Header/Lights/PointLight.h"
 #include "../Header/Lights/SpotLight.h"
+
 #include "../Header/Utility.h"
-#include "../Header/Material.h"
+
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
@@ -50,6 +55,10 @@ Texture plainTexture;
 // Material instance creation
 Material shinyMaterial;
 Material dullMaterial;
+
+// Model objs
+Model trees;
+Model lamps;
 
 // Light instance creation
 DirectionalLight mainLight;
@@ -102,15 +111,18 @@ int main(void)
     camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.5f);
 
     // Loading textures
-    brickTexture = Texture("../Resources/Textures/brick.png");
+    brickTexture = Texture("../Resources/Textures/Ground/brick.png");
     brickTexture.LoadTextureA();
-    dirtTexture = Texture("../Resources/Textures/dirt.png");
+    dirtTexture = Texture("../Resources/Textures/Ground/dirt.png");
     dirtTexture.LoadTextureA();
-    plainTexture = Texture("../Resources/Textures/plain.png");
+    plainTexture = Texture("../Resources/Textures/Ground/plain.png");
     plainTexture.LoadTextureA();
 
     shinyMaterial = Material(1.0f, 32);
     dullMaterial = Material (0.3f, 4);
+
+    trees = Model();
+    trees.LoadModel("Tree1.obj","Trees");
 
     mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
                                 0.01f, 0.03f, 
@@ -204,13 +216,22 @@ int main(void)
         // Math for creating movement model
         model = glm::mat4(1.0f);
 
-        model = glm::translate(model, glm::vec3(0, -2.0f, 0.0f));
+        model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
         dirtTexture.UseTexture();
         dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
         meshList[2] -> Render3DMesh();
+
+        // Creation of trees
+        model = glm::mat4(1.0f);
+        model = glm::translate(model, glm::vec3(-5.0f, -2.0f, -5.0f));
+
+        // shader transform
+        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+        trees.Render3DModel();
 
         glUseProgram(0);
         // End of Program for Shader Application

@@ -3207,6 +3207,31 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
   /usr/include/assimp/quaternion.inl \
   ../Header/CommonValues.h \
   ../Header/Mesh.h \
+  ../Header/Texture.h \
+  ../Header/stb_image.h \
+  /usr/include/c++/11/stdlib.h \
+  /usr/include/c++/11/math.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
+  ../Header/Material.h \
+  ../Header/Model.h \
+  /usr/include/assimp/scene.h \
+  /usr/include/assimp/texture.h \
+  /usr/include/assimp/Compiler/pushpack1.h \
+  /usr/include/assimp/Compiler/poppack1.h \
+  /usr/include/assimp/mesh.h \
+  /usr/include/assimp/aabb.h \
+  /usr/include/assimp/light.h \
+  /usr/include/assimp/camera.h \
+  /usr/include/assimp/material.h \
+  /usr/include/assimp/material.inl \
+  /usr/include/assimp/anim.h \
+  /usr/include/assimp/metadata.h \
+  /usr/include/assimp/postprocess.h \
+  ../Header/Mesh.h \
+  ../Header/Texture.h \
   ../Header/Shader.h \
   /usr/include/c++/11/fstream \
   /usr/include/c++/11/bits/codecvt.h \
@@ -3221,19 +3246,10 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
   ../Header/Lights/PointLight.h \
   ../Header/Scene.h \
   ../Header/Camera.h \
-  ../Header/Texture.h \
-  ../Header/stb_image.h \
-  /usr/include/c++/11/stdlib.h \
-  /usr/include/c++/11/math.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
   ../Header/Lights/DirectionalLight.h \
   ../Header/Lights/PointLight.h \
   ../Header/Lights/SpotLight.h \
-  ../Header/Utility.h \
-  ../Header/Material.h
+  ../Header/Utility.h
 
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:

@@ -17,10 +17,11 @@ public:
     
     Model();
 
-    void LoadModel(const std::string& fileName);
-    void RenderModel();
+    void LoadModel(const std::string &fileName, const std::string &directory);
+    void Render3DModel();
     void ClearModel();
 
+    std::string GetTexturePath(const aiString& aiPath);
 
     ~Model();
 
@@ -28,7 +29,7 @@ private:
 
     void LoadNode(aiNode *node, const aiScene *scene);
     void LoadMesh(aiMesh *mesh, const aiScene *scene);
-    void LoadMaterials(const aiScene *scene);
+    void LoadMaterials(const aiScene *scene, const std::string &directory);
 
     std::vector<Mesh*> meshList;
     std::vector<Texture*> textureList;

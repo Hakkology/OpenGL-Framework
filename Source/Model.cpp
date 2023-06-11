@@ -4,7 +4,7 @@ Model::Model(){
 
 }
 
-void Model::LoadModel(const std::string &fileName){
+void Model::LoadModel(const std::string &fileName, const std::string& directory){
 
     Assimp::Importer importer;
     const aiScene *scene = importer.ReadFile(fileName, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_GenSmoothNormals | aiProcess_JoinIdenticalVertices); 
@@ -15,11 +15,11 @@ void Model::LoadModel(const std::string &fileName){
     }
 
     LoadNode(scene -> mRootNode, scene);
-    LoadMaterials(scene);
+    LoadMaterials(scene, directory);
     
 }
 
-void Model::RenderModel(){
+void Model::Render3DModel(){
     
     for (size_t i = 0; i < meshList.size(); i++)
     {
@@ -32,7 +32,6 @@ void Model::RenderModel(){
         
         meshList[i] -> Render3DMesh();
     }
-    
 }
 
 void Model::ClearModel(){
@@ -54,6 +53,10 @@ void Model::ClearModel(){
             textureList[i] = nullptr;
         }
     }
+
+    meshList.clear();
+    textureList.clear();
+    meshToTex.clear();
 }
 
 Model::~Model(){
@@ -111,23 +114,43 @@ void Model::LoadMesh(aiMesh *mesh, const aiScene *scene){
     meshToTex.push_back(mesh -> mMaterialIndex);
 }
 
-void Model::LoadMaterials(const aiScene *scene){
+std::string Model::GetTexturePath(const aiString& aiPath){
+
+    std::string path = aiPath.C_Str();
+
+    // Handle relative paths with backslashes
+    size_t idx = path.rfind("\\");
+    if (idx != std::string::npos)
+    {
+        path = path.substr(idx + 1);
+    }
+
+    // Combine the directory and the relative texture path
+    std::string texturePath = "../Resources/Models/" + path;
+
+    return texturePath;
+}
+
+void Model::LoadMaterials(const aiScene *scene, const std::string &directory){
 
     textureList.resize(scene -> mNumMaterials);
+
     for (size_t i = 0; i < scene -> mNumMaterials; i++)
     {
         aiMaterial* material = scene -> mMaterials[i];
-
         textureList[i] = nullptr;
+
         if (material -> GetTextureCount(aiTextureType_DIFFUSE))
         {
             aiString path;
+
             if (material ->GetTexture(aiTextureType_DIFFUSE, 0, &path) == AI_SUCCESS)
             {
-                int idx = std::string(path.data).rfind("\\");
-                std::string fileName = std::string(path.data).substr(idx + 1);
 
-                std::string texPath = std::string("Resources/Textures/") + fileName;
+                // int idx = std::string(path.data).rfind("/");
+                // std::string fileName = std::string(path.data).substr(idx + 1);
+
+                std::string texPath = GetTexturePath(path, directory);
 
                 textureList[i] = new Texture(texPath.c_str());
 
@@ -144,7 +167,7 @@ void Model::LoadMaterials(const aiScene *scene){
 
         if (!textureList[i])
         {
-            textureList[i] = new Texture("Resources/Textures/plain.png");
+            textureList[i] = new Texture("../Resources/Textures/Ground/plain.png");
             textureList[i] -> LoadTextureA();
         }
     }

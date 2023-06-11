@@ -25,6 +25,6 @@ private:
 
     const char* fileLocation;
 
-#endif
-
 };
+
+#endif
