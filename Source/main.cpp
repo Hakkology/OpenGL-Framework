@@ -58,7 +58,7 @@ Material dullMaterial;
 
 // Model objs
 Model trees;
-Model lamps;
+Model trees2;
 
 // Light instance creation
 DirectionalLight mainLight;
@@ -122,7 +122,9 @@ int main(void)
     dullMaterial = Material (0.3f, 4);
 
     trees = Model();
-    trees.LoadModel("../Resources/Models/Trees/Tree1.obj");
+    trees.LoadModel("../Resources/Models/Tree1/Tree.obj");
+    // trees2 = Model();
+    // trees2.LoadModel("../Resources/Models/Trees/trees9.obj");
 
     mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
                                 0.01f, 0.03f, 
@@ -227,11 +229,21 @@ int main(void)
         // Creation of trees
         model = glm::mat4(1.0f);
         model = glm::translate(model, glm::vec3(-5.0f, -2.0f, -5.0f));
+        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
 
         // shader transform
         glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
         dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
         trees.Render3DModel();
+
+        // model = glm::mat4(1.0f);
+        // model = glm::translate(model, glm::vec3(-12.0f, -2.0f, -5.0f));
+        // model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+
+        // // shader transform
+        // glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+        // dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+        // trees2.Render3DModel();
 
         glUseProgram(0);
         // End of Program for Shader Application

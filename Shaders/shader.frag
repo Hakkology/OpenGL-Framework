@@ -140,4 +140,7 @@ void main()
     finalColour += CalculateSpotLights();
 
     colour= texture(theTexture, TexCoord) * finalColour;
+
+
+    
 }

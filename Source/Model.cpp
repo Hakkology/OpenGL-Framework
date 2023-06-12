@@ -112,27 +112,26 @@ void Model::LoadMesh(aiMesh *mesh, const aiScene *scene){
 }
 
 void Model::LoadMaterials(const aiScene *scene){
+    
+    textureList.resize(scene->mNumMaterials);
 
-    textureList.resize(scene -> mNumMaterials);
-
-    for (size_t i = 0; i < scene -> mNumMaterials; i++)
+    for (size_t i = 0; i < scene->mNumMaterials; i++)
     {
-        aiMaterial* material = scene -> mMaterials[i];
+        aiMaterial* material = scene->mMaterials[i];
         textureList[i] = nullptr;
+        printf("I loaded a texture.");
 
-        if (material -> GetTextureCount(aiTextureType_DIFFUSE))
+        for (unsigned int j = 0; j < material->GetTextureCount(aiTextureType_DIFFUSE); j++)
         {
             aiString path;
 
-            if (material ->GetTexture(aiTextureType_DIFFUSE, 0, &path) == AI_SUCCESS)
+            if (material->GetTexture(aiTextureType_DIFFUSE, j, &path) == AI_SUCCESS)
             {
-                int idx = std::string(path.data).rfind("\\");
-                std::string fileName = std::string(path.data).substr(idx + 1);
-
-                const std::string texPath = "../Resources/Models/Trees/" + fileName;
+                std::string fileName = std::string(path.data);
+                const std::string texPath = "../Resources/Models/Texture/" + fileName;
                 textureList[i] = new Texture(texPath.c_str());
 
-                if (!textureList[i] -> LoadTexture())
+                if (!textureList[i]->LoadTextureA())
                 {
                     printf("Failed to load texture at: %s", texPath);
                     delete textureList[i];
@@ -144,9 +143,9 @@ void Model::LoadMaterials(const aiScene *scene){
         if (!textureList[i])
         {
             textureList[i] = new Texture("../Resources/Textures/Ground/plain.png");
-            textureList[i] -> LoadTextureA();
+            textureList[i]->LoadTextureA();
         }
     }
-    
 }
+
 
