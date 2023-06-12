@@ -122,7 +122,7 @@ int main(void)
     dullMaterial = Material (0.3f, 4);
 
     trees = Model();
-    trees.LoadModel("Tree1.obj","Trees");
+    trees.LoadModel("../Resources/Models/Trees/Tree1.obj");
 
     mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
                                 0.01f, 0.03f, 
@@ -172,8 +172,8 @@ int main(void)
         uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
         uniformShininess = shaderList[0].GetShininessLocation();
 
-        //for Camera Lights
-        //spotLights[0].SetFlash(camera.getCameraPosition(), camera.getCameraDirection());
+        // for Camera Lights
+        spotLights[0].SetFlash(camera.getCameraPosition(), camera.getCameraDirection());
 
         shaderList[0].SetDirectionalLight(&mainLight);
         shaderList[0].SetPointLight(pointLights, pointLightCount);

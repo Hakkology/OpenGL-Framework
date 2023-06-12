@@ -4,7 +4,7 @@ Model::Model(){
 
 }
 
-void Model::LoadModel(const std::string &fileName, const std::string& directory){
+void Model::LoadModel(const std::string &fileName){
 
     Assimp::Importer importer;
     const aiScene *scene = importer.ReadFile(fileName, aiProcess_Triangulate | aiProcess_FlipUVs | aiProcess_GenSmoothNormals | aiProcess_JoinIdenticalVertices); 
@@ -15,7 +15,7 @@ void Model::LoadModel(const std::string &fileName, const std::string& directory)
     }
 
     LoadNode(scene -> mRootNode, scene);
-    LoadMaterials(scene, directory);
+    LoadMaterials(scene);
     
 }
 
@@ -54,9 +54,6 @@ void Model::ClearModel(){
         }
     }
 
-    meshList.clear();
-    textureList.clear();
-    meshToTex.clear();
 }
 
 Model::~Model(){
@@ -114,24 +111,7 @@ void Model::LoadMesh(aiMesh *mesh, const aiScene *scene){
     meshToTex.push_back(mesh -> mMaterialIndex);
 }
 
-std::string Model::GetTexturePath(const aiString& aiPath){
-
-    std::string path = aiPath.C_Str();
-
-    // Handle relative paths with backslashes
-    size_t idx = path.rfind("\\");
-    if (idx != std::string::npos)
-    {
-        path = path.substr(idx + 1);
-    }
-
-    // Combine the directory and the relative texture path
-    std::string texturePath = "../Resources/Models/" + path;
-
-    return texturePath;
-}
-
-void Model::LoadMaterials(const aiScene *scene, const std::string &directory){
+void Model::LoadMaterials(const aiScene *scene){
 
     textureList.resize(scene -> mNumMaterials);
 
@@ -146,12 +126,10 @@ void Model::LoadMaterials(const aiScene *scene, const std::string &directory){
 
             if (material ->GetTexture(aiTextureType_DIFFUSE, 0, &path) == AI_SUCCESS)
             {
+                int idx = std::string(path.data).rfind("\\");
+                std::string fileName = std::string(path.data).substr(idx + 1);
 
-                // int idx = std::string(path.data).rfind("/");
-                // std::string fileName = std::string(path.data).substr(idx + 1);
-
-                std::string texPath = GetTexturePath(path, directory);
-
+                const std::string texPath = "../Resources/Models/Trees/" + fileName;
                 textureList[i] = new Texture(texPath.c_str());
 
                 if (!textureList[i] -> LoadTexture())
@@ -160,9 +138,7 @@ void Model::LoadMaterials(const aiScene *scene, const std::string &directory){
                     delete textureList[i];
                     textureList[i] = nullptr;
                 }
-                
             }
-            
         }
 
         if (!textureList[i])
