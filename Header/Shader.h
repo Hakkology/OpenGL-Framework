@@ -38,6 +38,9 @@ public:
     void SetDirectionalLight(DirectionalLight *directionalLight);
     void SetPointLight(PointLight *pointLight, unsigned int lightCount);
     void SetSpotLight(SpotLight *SpotLight, unsigned int lightCount);
+    void SetTexture(GLuint textureUnit);
+    void SetDirectionalShadowMap(GLuint textureUnit);
+    void SetDirectionalLightTransform(glm::mat4 *transform);
 
     void UseShader();
     void ClearShader();
@@ -51,7 +54,9 @@ private:
     int spotLightCount;
 
     // Vertex shaders and Uniform variables
-    GLuint shaderID, uniformProjection, uniformModel, uniformView, uniformEyePosition, uniformSpecularIntensity, uniformShininess;
+    GLuint shaderID, uniformProjection, uniformModel, uniformView, 
+                    uniformEyePosition, uniformSpecularIntensity, uniformShininess,
+                    uniformTexture, uniformDirectionalLightTransform, uniformDirectionalShadowMap;
 
     struct{
 

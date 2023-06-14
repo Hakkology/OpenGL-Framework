@@ -398,3 +398,80 @@ SpotLightFade = 1- (1-angletoFragment)/(1-cutOffAngle);
 colour = spotLightColour * spotLightFade;
 
 */
+
+//////////////////////////// 
+
+/*
+
+Shadow Mapping
+- Literally create a "map" of the shadows made by light to determine where not to apply light.
+- Held as 2D Texture (sampler2D in shader).
+- Map is created using a "Framebuffer", which then writes it to texture.
+- At least two rendering passes needed, one for shadow map creation, one for drawing scene.
+
+1) Render the scene from perspective of a light source
+2) Define if that point can be seen
+
+- Pre-Sample Operations with depth tests, using depth buffer values.
+- Depth buffer is another buffer along with colour buffer that holds a value between 0 and 1 and determines how deep in to frustrum a fragment is.
+- 0 is near plane (close to camera), 1 is far plane (far from camera).
+
+- To extract depth buffer data, framebuffer object is used.
+- Framebuffer is 0 in default.
+- A third seperate framebuffer to keep shadow frames between two buffers.
+
+glGenFramebuffers (1, &FBO);
+glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, width, height, 0, GL_DEPTH COMPONENT, GL_FLOAT, NULL);
+GL_DEPTH_COMPONENT: Single GLfloat value, unlike RGB, which was glm:vec3.
+- Data is NULL so we create an empty texture with dimensions width x height.
+- Set framebuffer to write texture with:
+glFramebufferTexture2D (GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, GL_TEXTURE_2D, textureID, 0);
+GL_DEPTH_aTTACHMENT: tells frambuffer to only write depth buffer data.
+glDrawBuffer(GL_NONE);
+glReadBuffer(GL_NONE);
+- These override colour data draw/read operations. We do not want to output colour with our shadow map!
+
+- Apply projection and view matrices as if light source is the camera.
+- Apply model matrix of each object.
+- Fragment shader not needed, depth buffer written automatically.
+- Difference between direcitonal light and point/spot light shadow maps.
+- View matrix position should consist of reverse of Directional light's direction, which is direction of the light.
+- Projection matrix is different. Dİrectional Light rays all parallel.
+glm::ortho(-20.0f, -20.0f, -20.0f, -20.0f, 0.01f, 100.0f);
+- Texture is bound with shadow map data, unbind the framebuffer and bind the texture to our main shader for use.
+
+- Perspective divide to convert them into normalized device coordinates.
+- Divide vector by its w component, so vec4.
+vec3 projCoords = LightSpacePos.xyz / LightSpacePos.w;
+projCoords = (projCoords * 0.5) + 0.5; (to scale 1-0)
+- Texture function gets closest depth measured during Shadow Map pass.
+float closest = texture (shadowMap, projCoords.xy).r;
+- z value from projCoords is between 0 and 1 just like depth.
+- Compare current and closest depth. If current larger than closest: Further away from the first point so must be in shadow.
+- Otherwise same point, so gets hit by light.
+colour = fragColour * (ambient + (1.0 - shadow) * (diffuse + specular));
+
+Shadow Acne
+- Shadow Acne occurs due to resolution issues.
+- When rendering from a less slanted angle, two pixels may converge to one texel on the shadow map.
+- We add a slight bias to fix this.
+- Moving everything slightly towards the camera to fake a closer depth.
+
+Oversampling
+- What about areas outside the Projection frustum used to create the shadow map ?
+- Always create shadows since values are outside the range 0,1.
+- Set texture type to use border with values all consisting of 0 (always lowest depth value so always lit).
+- For values beyond far plane and therefore greater than 1: Initialize to 0.
+
+PCF (Percentage CLoser Filtering)
+- Edge of shadows are limited to resolution of texture shadow map.
+- Unsightly pixelated edges.
+- Sample surrounding texels and calculate average. 
+- Apply on partial shadows for shadowed areas.
+- GEt depth values of surrounding texels, determine if in shadow.
+- If yes, Increment shadow value, divide shadow value by number of samples taken, apply percentage of shadow.
+shadow value is 3, 9 samples are taken, 3/9 = 0.333, so apply %33 shadow.
+- More samples, better fade effect.
+- set of samples are taken for EVERY fragment, so its not one calculation, its 9 calculations for using immediate surrounding texels.
+
+*/
