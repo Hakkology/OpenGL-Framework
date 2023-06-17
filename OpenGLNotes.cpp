@@ -475,3 +475,81 @@ shadow value is 3, 9 samples are taken, 3/9 = 0.333, so apply %33 shadow.
 - set of samples are taken for EVERY fragment, so its not one calculation, its 9 calculations for using immediate surrounding texels.
 
 */
+
+//////////////////////////// 
+
+/*
+
+Omnidirectional Shadow Maps
+- Used for Point Lights and Spot Lights.
+- Shadows must be handled in every direction.
+- Cant use single texture, need multiple textures.
+- Solution: CubeMap.
+
+CubeMaps
+- Type of texture in OpenGL.
+- Exist in 6 textures but can be referenced in GLSL as if its a single texture.
+glBindTexture(GL_TEXTURE_CUBE_MAP, depthCubemap);
+glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, ...)
+GL_TEXTURE_CUBE_MAP_POSITIVE_X, GL_TEXTURE_CUBE_MAP_NEGATIVE_X,
+GL_TEXTURE_CUBE_MAP_POSITIVE_Y, GL_TEXTURE_CUBE_MAP_NEGATIVE_Y,
+GL_TEXTURE_CUBE_MAP_POSITIVE_Z, GL_TEXTURE_CUBE_MAP_NEGATIVE_Z
+- Each enum is one increment of the previous, so can loop through with incrementing value.
+
+- Dont need to use (u, v) values.
+- Can access any point on cube map with direction vector pointing to texel on cube map.
+- 6 versions of projection x view matrix, one for each of the 6 directions is required for shadow map pass.
+- Use perspective projection
+glm::perspective(glm::radians(90.0f), aspect, near, far);
+- 90 degree perspective ensures all 360 degrees around one axis can be covered.
+- Aspect is width/height and it should be "1" for this to work properly.
+- Near and far decide the size of the cube, in this case light range.
+
+- In order to create 6 light transforms with projection matrix,
+projection * upViewMatrix
+projection * downViewMatrix
+- Can create view matrices using light position and direction.
+glm::lookAt(lightPos, lightPos+glm::vec3(1.0, 0.0, 0.0), glm::vec3(0.0,-1.0,0.0));
+- Direction is lightPos + glm::vec3(1.0, 0.0, 0.0) because it points to right, in positive X.
+- These directions must line up with Cubemap texture order.
+
+- Vertex shader needs world space transformation - (multiple vertex by model matrix)
+- Projection and view will be applied in the Geometry shader.
+- Geometry shader is another shader type that occurs between vertex and fragment shader, it handles primitives such as points, lines and triangles.
+- Vertex shader handles individual vertices,
+- Geometry shader handles groups of vertices
+EmitVertex() -> Creates vertex at location stored in gl_Position.
+EndPrimitive() -> Stores primitive created by last EmitVertex() calls and startes a new primitive.
+- For geometry shader
+-> layout (triangles) in;
+gl_in -> stores data for data for each vertex passed from vertex shader
+gl_Layer -> set a value to determine which one to write to when calling EmitVertex.
+
+- Using geometry shader, use 6 transformation matrix to reassing gl_Layer for each face.
+- Render each object 6 times for each of the directions of the light source, all in one render pass.
+- GLSL has type "samplerCube", which we bind the cube to.
+- When using texture, use direction vector instead of uv coordinates
+- Direction of light source to fragment, no need for light transform matrix.
+float closest = texture (depthMap, fragToLight).r;
+closest *= far_plane;
+- Then compare this value to the length of fragToLight (distance from fragment to light source) and create shadow.
+
+With Multiple Point Lights,
+- One samplercube for each Point Light for shadow map pass.
+- Render Pass the same.
+- samplers are mapped to Texture Unit 0.
+- Then you have an array of unused Point Lights, their samplerCubes will remain as default, Texture Unit 0.
+- OpenGL forbids different types of sampler to be bound to the same Texture Unit.
+- All sampler types must have a unique Texture unit value.
+
+Percentage Closer Filtering (PCF)
+- for PCF, vector has 3 values with a third dimesion,
+- a lot of the samples will be very close to the original
+- Predefined offset directions that are likely to be well spaced
+- predefined offsets are directions, not relative positions.
+- we can scale how far we sample in a direction, so you can scale based on viewer distance.
+- if user is close, sample more close to original vector.
+- if user is distant, sample more distant from original vector.
+- Similar to how linear filtering works.
+
+*/
