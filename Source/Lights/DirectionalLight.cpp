@@ -7,9 +7,9 @@ DirectionalLight::DirectionalLight() : Light(){
 }
 
 DirectionalLight::DirectionalLight(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity, GLfloat _diffuseIntensity,
-                                    GLfloat shadowWidth, GLfloat shadowHeight,
+                                    GLfloat shadowWidth, GLfloat shadowHeight, GLfloat near, GLfloat far,
                                     GLfloat xDir, GLfloat yDir, GLfloat zDir) 
-                                    : Light(red, green, blue, _ambientIntensity, _diffuseIntensity, shadowWidth, shadowHeight){
+                                    : Light(red, green, blue, _ambientIntensity, _diffuseIntensity, shadowWidth, shadowHeight, near, far){
 
     // defining values for diffused light
     direction = glm::vec3(xDir, yDir, zDir);

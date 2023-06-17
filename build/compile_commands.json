@@ -68,5 +68,10 @@
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
   "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Resources -g -o CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/ShadowMap.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/ShadowMap.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Resources -g -o CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/OmniShadowMap.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/OmniShadowMap.cpp"
 }
 ]

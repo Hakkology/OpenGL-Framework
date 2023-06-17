@@ -9,7 +9,7 @@ public:
     PointLight();
 
     PointLight(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity, GLfloat _diffuseIntensity,
-                GLfloat shadowWidth, GLfloat shadowHeight,
+                GLfloat shadowWidth, GLfloat shadowHeight, GLfloat near, GLfloat far,
                 GLfloat xPos, GLfloat yPos, GLfloat zPos,
                 GLfloat con, GLfloat lin, GLfloat exp);
 
@@ -25,6 +25,8 @@ protected:
 
     // Attenuation of the light source
     GLfloat constant, linear, exponent;
+
+    GLfloat farPlane;
 
 };
 

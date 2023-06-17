@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Model.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shader.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o.d"
+  "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/OmniShadowMap.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/ShadowMap.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Texture.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o.d"
   "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Utility.cpp" "CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o" "gcc" "CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o.d"

@@ -369,6 +369,30 @@ Source/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.s
 .PHONY : Source/Shader.cpp.s
 
+Source/Shadows/OmniShadowMap.o: Source/Shadows/OmniShadowMap.cpp.o
+.PHONY : Source/Shadows/OmniShadowMap.o
+
+# target to build an object file
+Source/Shadows/OmniShadowMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o
+.PHONY : Source/Shadows/OmniShadowMap.cpp.o
+
+Source/Shadows/OmniShadowMap.i: Source/Shadows/OmniShadowMap.cpp.i
+.PHONY : Source/Shadows/OmniShadowMap.i
+
+# target to preprocess a source file
+Source/Shadows/OmniShadowMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.i
+.PHONY : Source/Shadows/OmniShadowMap.cpp.i
+
+Source/Shadows/OmniShadowMap.s: Source/Shadows/OmniShadowMap.cpp.s
+.PHONY : Source/Shadows/OmniShadowMap.s
+
+# target to generate assembly for a file
+Source/Shadows/OmniShadowMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.s
+.PHONY : Source/Shadows/OmniShadowMap.cpp.s
+
 Source/Shadows/ShadowMap.o: Source/Shadows/ShadowMap.cpp.o
 .PHONY : Source/Shadows/ShadowMap.o
 
@@ -504,6 +528,9 @@ help:
 	@echo "... Source/Shader.o"
 	@echo "... Source/Shader.i"
 	@echo "... Source/Shader.s"
+	@echo "... Source/Shadows/OmniShadowMap.o"
+	@echo "... Source/Shadows/OmniShadowMap.i"
+	@echo "... Source/Shadows/OmniShadowMap.s"
 	@echo "... Source/Shadows/ShadowMap.o"
 	@echo "... Source/Shadows/ShadowMap.i"
 	@echo "... Source/Shadows/ShadowMap.s"
