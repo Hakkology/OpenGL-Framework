@@ -369,6 +369,30 @@ Source/Shader.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.s
 .PHONY : Source/Shader.cpp.s
 
+Source/Shadows/ShadowMap.o: Source/Shadows/ShadowMap.cpp.o
+.PHONY : Source/Shadows/ShadowMap.o
+
+# target to build an object file
+Source/Shadows/ShadowMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o
+.PHONY : Source/Shadows/ShadowMap.cpp.o
+
+Source/Shadows/ShadowMap.i: Source/Shadows/ShadowMap.cpp.i
+.PHONY : Source/Shadows/ShadowMap.i
+
+# target to preprocess a source file
+Source/Shadows/ShadowMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.i
+.PHONY : Source/Shadows/ShadowMap.cpp.i
+
+Source/Shadows/ShadowMap.s: Source/Shadows/ShadowMap.cpp.s
+.PHONY : Source/Shadows/ShadowMap.s
+
+# target to generate assembly for a file
+Source/Shadows/ShadowMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.s
+.PHONY : Source/Shadows/ShadowMap.cpp.s
+
 Source/Texture.o: Source/Texture.cpp.o
 .PHONY : Source/Texture.o
 
@@ -480,6 +504,9 @@ help:
 	@echo "... Source/Shader.o"
 	@echo "... Source/Shader.i"
 	@echo "... Source/Shader.s"
+	@echo "... Source/Shadows/ShadowMap.o"
+	@echo "... Source/Shadows/ShadowMap.i"
+	@echo "... Source/Shadows/ShadowMap.s"
 	@echo "... Source/Texture.o"
 	@echo "... Source/Texture.i"
 	@echo "... Source/Texture.s"

@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o.d"
   "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o"
   "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o.d"
+  "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o"
+  "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o.d"
   "CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o"
   "CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o.d"
   "CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o"

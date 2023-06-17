@@ -10,8 +10,9 @@ PointLight::PointLight() : Light(){
 }
 
 PointLight::PointLight(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity, GLfloat _diffuseIntensity,
+                                    GLfloat shadowWidth, GLfloat shadowHeight,
                                     GLfloat xPos, GLfloat yPos, GLfloat zPos, GLfloat con, GLfloat lin, GLfloat exp) : 
-                                    Light(red, green, blue, _ambientIntensity, _diffuseIntensity){
+                                    Light(red, green, blue, _ambientIntensity, _diffuseIntensity, shadowWidth, shadowHeight){
 
     // defining values for diffused light
     position = glm::vec3(xPos, yPos, zPos);

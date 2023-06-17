@@ -33,9 +33,11 @@
 
 // Vertex Shader
 static const char* vShader = "../Shaders/shader.vert";
+static const char* vShadowShader = "../Shaders/directional_shadow_map.vert";
 
 // Fragment Shader
 static const char* fShader = "../Shaders/shader.frag";
+static const char* fShadowShader = "../Shaders/directional_shadow_map.frag";
 
 // Window Creation
 Scene mainWindow;
@@ -43,6 +45,11 @@ Scene mainWindow;
 // Mesh list
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
+Shader directionalShadowShader;
+
+// Uniform Variables
+GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
+        uniformSpecularIntensity =0, uniformShininess =0;
 
 // Camera creation
 Camera camera; 
@@ -59,8 +66,12 @@ Material dullMaterial;
 // Model objs
 Model trees;
 Model trees2;
+Model lampPost;
+Model statue;
 
 // Light instance creation
+unsigned int pointLightCount =0; 
+unsigned int spotLightCount =0;      
 DirectionalLight mainLight;
 PointLight pointLights[MAX_POINT_LIGHTS];
 SpotLight spotLights[MAX_SPOT_LIGHTS];
@@ -75,7 +86,7 @@ GLfloat lastTime = 0.0f;
 // Triangle location change variables
 bool direction = true;
 float triOffset = 0.0f;
-float triMaxoffset = 0.6f;
+float triMaxoffset = 0.8f;
 float triIncrement = 0.005f;
 
 // Rotation tools
@@ -88,11 +99,14 @@ float currentSize = 0.7f;
 float maxSize = 0.8f;
 float minSize = 0.1f;
 
-// to create an object
+// to create an objects and shaders
 void CreateGameObject();
-
-// shader functions
 void CreateShaders();
+
+// Render functions
+void RenderScene();
+void RenderPass(glm::mat4 projectionMatrix, glm::mat4 viewMatrix);
+void DirectionalShadowMapPass(DirectionalLight *mainLight);
 
 // to define boundary conditions
 void TransformControls();
@@ -122,36 +136,41 @@ int main(void)
     dullMaterial = Material (0.3f, 4);
 
     trees = Model();
-    trees.LoadModel("../Resources/Models/Tree1/Tree.obj");
-    // trees2 = Model();
-    // trees2.LoadModel("../Resources/Models/Trees/trees9.obj");
+    trees.LoadModel("../Resources/Models/Model/Tree.obj");
+    lampPost = Model();
+    lampPost.LoadModel("../Resources/Models/Model/uploads_files_2809625_Light.obj");
+    statue = Model();
+    statue.LoadModel("../Resources/Models/Model/12334_statue_v1_l3.obj");
+    trees2 = Model();
+    trees2.LoadModel("../Resources/Models/Model/Tree.obj");
 
     mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
-                                0.01f, 0.03f, 
-                                -1.0f, -1.0f, -1.0f);
+                                0.1f, 0.5f,
+                                2048, 2048, 
+                                -1.0f, -2.0f, -1.0f);
 
-    unsigned int pointLightCount =0;                            
-    pointLights[0] = PointLight(0.0f, 1.0f, 0.0f,
-                                0.1f, 1.0f,
+    pointLights[0] = PointLight( 0.0f, 1.0f, 0.0f,
+                                 0.1f, 1.0f,
+                                 1024, 1024,
                                 -4.0f, 0.0f, 0.0f,
-                                0.3f, 0.2f, 0.1f);
-    pointLightCount++;
-    pointLights[1] = PointLight(0.0f, 0.0f, 1.0f,
-                                0.1f, 1.0f,
-                                0.0f, 0.0f, 3.0f,
-                                0.3f, 0.1f, 0.1f);
-    pointLightCount++;
+                                 0.3f, 0.2f, 0.1f);
 
-    unsigned int spotLightCount =0;
-    spotLights[0] = SpotLight(1.0f, 0.0f, 0.0f,
-                              0.0f, 8.0f,
-                              5.0f, 2.0f, 5.0f,
-                              0.3f, 0.2f, 0.1f,
-                              0.0f,-1.0f, 0.0f, 30.0f);
+    pointLightCount++;
+    pointLights[1] = PointLight( 0.0f, 0.0f, 1.0f,
+                                 0.1f, 1.0f,
+                                 1024, 1024,
+                                 0.0f, 0.0f, 3.0f,
+                                 0.3f, 0.1f, 0.1f);
+
+    pointLightCount++;
+    spotLights[0] = SpotLight( 1.0f, 0.0f, 0.0f,
+                               0.0f, 8.0f,
+                               1024, 1024,
+                               5.0f, 2.0f, 5.0f,
+                               0.3f, 0.2f, 0.1f,
+                               0.0f,-1.0f, 0.0f, 30.0f);
+
     spotLightCount++;
-
-    GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
-            uniformSpecularIntensity =0, uniformShininess =0;
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(45.0f, mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
@@ -159,94 +178,6 @@ int main(void)
     /* Loop until the user closes the window */
     while (!mainWindow.getShouldClose())
     {
-        // Make window orange - RBG values, 255 means 1.
-        glClearColor(0.2f, 0.1f, 0.2f, 1.0f);
-
-        /* Render here */
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-        // Beginning of Program for Shader application
-        shaderList[0].UseShader();
-        uniformModel = shaderList[0].GetModelLocation();
-        uniformProjection = shaderList[0].GetProjectionLocation();
-        uniformView = shaderList[0].GetViewLocation();
-        uniformEyePosition = shaderList[0].GetEyePositionLocation();
-        uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
-        uniformShininess = shaderList[0].GetShininessLocation();
-
-        // for Camera Lights
-        spotLights[0].SetFlash(camera.getCameraPosition(), camera.getCameraDirection());
-
-        shaderList[0].SetDirectionalLight(&mainLight);
-        shaderList[0].SetPointLight(pointLights, pointLightCount);
-        shaderList[0].SetSpotLight(spotLights, spotLightCount);
-
-        glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projection));
-        glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(camera.calculateViewMatrix()));
-        glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
-
-        // Creation of GameObject-1
-        // Math for creating movement model
-        glm::mat4 model(1.0f);
-
-        model = glm::translate(model, glm::vec3(triOffset, 0.75f, -4.0f));
-        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 3.0f, 0.0f));
-        //model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
-
-        // shader transform
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        brickTexture.UseTexture();
-        shinyMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
-        meshList[0] -> Render3DMesh();
-
-        // Creation of GameObject-2
-        // Math for creating movement model
-        model = glm::mat4(1.0f);
-
-        model = glm::translate(model, glm::vec3(triOffset, -1.0f, -3.0f));
-        model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 3.0f));
-        model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
-        //model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
-
-        // shader transform
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        brickTexture.UseTexture();
-        dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
-        meshList[1] -> Render3DMesh();
-
-        // Creation of GameObject-3
-        // Math for creating movement model
-        model = glm::mat4(1.0f);
-
-        model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
-
-        // shader transform
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        dirtTexture.UseTexture();
-        dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
-        meshList[2] -> Render3DMesh();
-
-        // Creation of trees
-        model = glm::mat4(1.0f);
-        model = glm::translate(model, glm::vec3(-5.0f, -2.0f, -5.0f));
-        model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
-
-        // shader transform
-        glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
-        trees.Render3DModel();
-
-        // model = glm::mat4(1.0f);
-        // model = glm::translate(model, glm::vec3(-12.0f, -2.0f, -5.0f));
-        // model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
-
-        // // shader transform
-        // glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
-        // dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
-        // trees2.Render3DModel();
-
-        glUseProgram(0);
-        // End of Program for Shader Application
 
         /* Swap front and back buffers */
         mainWindow.swapBuffers();
@@ -262,6 +193,12 @@ int main(void)
         camera.keyControl(mainWindow.getWindow(), deltaTime);
         camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
         // Function for transform controls
+
+        DirectionalShadowMapPass(&mainLight);
+        RenderPass(projection, camera.calculateViewMatrix());
+
+        glUseProgram(0);
+        // End of Program for Shader Application
         TransformControls();
 
     }
@@ -321,6 +258,148 @@ void CreateShaders(){
     Shader *shader1 = new Shader();
     shader1 ->CreateFromFiles(vShader, fShader);
     shaderList.push_back(*shader1);
+
+    directionalShadowShader = Shader();
+    directionalShadowShader.CreateFromFiles(vShadowShader, fShadowShader);
+}
+
+void RenderScene(){
+
+    // Creation of GameObject-1
+    // Math for creating movement model
+    glm::mat4 model(1.0f);
+
+    model = glm::translate(model, glm::vec3(triOffset, 0.75f, -4.0f));
+    model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 3.0f, 0.0f));
+    //model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+
+    // shader transform
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    brickTexture.UseTexture();
+    shinyMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    meshList[0] -> Render3DMesh();
+
+    // Creation of GameObject-2
+    // Math for creating movement model
+    model = glm::mat4(1.0f);
+
+    model = glm::translate(model, glm::vec3(triOffset, -1.0f, -3.0f));
+    model = glm::rotate(model, currentAngle * toRadians, glm::vec3(0.0f, 1.0f, 3.0f));
+    model = glm::scale(model, glm::vec3(currentSize, currentSize, 1.0f));
+    //model = glm::scale(model, glm::vec3(0.4f, 0.4f, 1.0f));
+
+    // shader transform
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    brickTexture.UseTexture();
+    dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    meshList[1] -> Render3DMesh();
+
+    // Creation of GameObject-3
+    // Math for creating movement model
+    model = glm::mat4(1.0f);
+
+    model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
+
+    // shader transform
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    dirtTexture.UseTexture();
+    dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    meshList[2] -> Render3DMesh();
+
+    // Tree model
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(-3.0f, -2.0f, -3.0f));
+    model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    trees.Render3DModel();
+
+    // Tree2 model
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(3.0f, -2.0f, -3.0f));
+    model = glm::scale(model, glm::vec3(1.0f, 1.0f, 1.0f));
+
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    trees2.Render3DModel();
+
+    // Lamppost model
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(-2.0f, -2.0f, 0.0f));
+    model = glm::rotate(model, 0.0f, glm::vec3(0.0f, 0.0f, -90.0f));
+    model = glm::scale(model, glm::vec3(1.2f, 1.2f, 1.2f));
+
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    lampPost.Render3DModel();    
+
+    // statue model
+    model = glm::mat4(1.0f);
+    model = glm::translate(model, glm::vec3(0.0f, -2.0f, 0.0f));
+    model = glm::rotate(model, 90.0f * toRadians, glm::vec3(-1.0f, 0.0f, 0.0f));
+    model = glm::rotate(model, 180.0f * toRadians, glm::vec3(0.0f, 0.0f, 2.0f));
+    model = glm::scale(model, glm::vec3(0.003f, 0.003f, 0.003f));
+
+    glUniformMatrix4fv(uniformModel, 1, GL_FALSE, glm::value_ptr(model));
+    dullMaterial.UseMaterial(uniformSpecularIntensity, uniformShininess);
+    statue.Render3DModel();   
+}
+
+void RenderPass(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
+
+    shaderList[0].UseShader();
+
+    uniformModel = shaderList[0].GetModelLocation();
+    uniformProjection = shaderList[0].GetProjectionLocation();
+    uniformView = shaderList[0].GetViewLocation();
+    uniformEyePosition = shaderList[0].GetEyePositionLocation();
+    uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
+    uniformShininess = shaderList[0].GetShininessLocation();
+
+    glViewport(0,0, 1366, 768);
+
+    // Make window orange - RBG values, 255 means 1.
+    glClearColor(0.2f, 0.5f, 0.2f, 1.0f);
+    /* Render here */
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
+    glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(viewMatrix));
+    glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+    shaderList[0].SetDirectionalLight(&mainLight);
+    shaderList[0].SetPointLight(pointLights, pointLightCount);
+    shaderList[0].SetSpotLight(spotLights, spotLightCount);
+    glm::mat4 lightTransform = mainLight.CalculateLightTransform();
+    shaderList[0].SetDirectionalLightTransform(&lightTransform);
+
+    mainLight.GetShadowMap() -> Read(GL_TEXTURE1);
+    shaderList[0].SetTexture(0);
+    shaderList[0].SetDirectionalShadowMap(1);
+
+    // for Camera Lights
+    spotLights[0].SetFlash(camera.getCameraPosition(), camera.getCameraDirection());
+
+    RenderScene();
+}
+
+void DirectionalShadowMapPass(DirectionalLight *light){
+
+    directionalShadowShader.UseShader();
+    
+    glViewport(0, 0, light->GetShadowMap()->GetShadowWidth(), light->GetShadowMap()->GetShadowHeight());
+
+    light->GetShadowMap()->Write();
+    glClear(GL_DEPTH_BUFFER_BIT);
+
+    uniformModel = directionalShadowShader.GetModelLocation();
+    glm::mat4 lightTransform = light->CalculateLightTransform();
+    directionalShadowShader.SetDirectionalLightTransform (&lightTransform);
+
+    RenderScene();
+
+    glBindFramebuffer(GL_FRAMEBUFFER, 0);
 }
 
 void TransformControls(){

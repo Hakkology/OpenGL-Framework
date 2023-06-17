@@ -22,7 +22,8 @@ add_executable(OpenGL-Framework Source/main.cpp
                             Source/Lights/Light.cpp Header/Lights/Light.h
                             Source/Lights/DirectionalLight.cpp Header/Lights/DirectionalLight.h
                             Source/Lights/PointLight.cpp Header/Lights/PointLight.h
-                            Source/Lights/SpotLight.cpp Header/Lights/SpotLight.h)
+                            Source/Lights/SpotLight.cpp Header/Lights/SpotLight.h
+                            Source/Shadows/ShadowMap.cpp Header/Shadows/ShadowMap.h)
 # compile the source file, main
 
 include_directories(
