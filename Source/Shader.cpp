@@ -2,6 +2,7 @@
 #include <string.h>
 
 #include "../Header/Shader.h"
+#include "Shader.h"
 
 Shader::Shader(){
 
@@ -27,6 +28,19 @@ void Shader::CreateFromFiles(const char* vertexShaderPath, const char* fragmentS
     const char* fragmentCode = fragmentString.c_str();
 
     CompileShader (vertexCode, fragmentCode);
+}
+
+void Shader::CreateFromFiles(const char* vertexShaderPath, const char* geometryShaderPath, const char* fragmentShaderPath){
+
+    std::string vertexString = ReadFile (vertexShaderPath);
+    std::string geometryString = ReadFile (geometryShaderPath);
+    std::string fragmentString = ReadFile (fragmentShaderPath);
+
+    const char* vertexCode = vertexString.c_str();
+    const char* geometryCode = geometryString.c_str();
+    const char* fragmentCode = fragmentString.c_str();
+
+    CompileShader (vertexCode, geometryCode, fragmentCode);
 }
 
 std::string Shader::ReadFile(const char* filePath){
@@ -62,6 +76,29 @@ void Shader::CompileShader(const char* vertexCode, const char* fragmentCode){
 
     AddShader(shaderID, vertexCode, GL_VERTEX_SHADER);
     AddShader(shaderID, fragmentCode, GL_FRAGMENT_SHADER);
+
+    CompileProgram();
+    
+}
+
+void Shader::CompileShader(const char* vertexCode, const char* geometryCode, const char* fragmentCode){
+
+    shaderID = glCreateProgram();
+    if (!shaderID)
+    {
+        printf("Shader program could not be created.");
+        return;
+    }
+
+    AddShader(shaderID, vertexCode, GL_VERTEX_SHADER);
+    AddShader(shaderID, geometryCode, GL_GEOMETRY_SHADER);
+    AddShader(shaderID, fragmentCode, GL_FRAGMENT_SHADER);
+
+    CompileProgram();
+    
+}
+
+void Shader::CompileProgram(){
 
     GLint result = 0;
     GLchar eLog[1024] = {0};
@@ -164,6 +201,17 @@ void Shader::CompileShader(const char* vertexCode, const char* fragmentCode){
     uniformTexture = glGetUniformLocation(shaderID, "theTexture");
     uniformDirectionalLightTransform = glGetUniformLocation(shaderID, "directionalLightTransform");
     uniformDirectionalShadowMap = glGetUniformLocation(shaderID, "directionalShadowMap");
+
+    uniformOmniLightPos = glGetUniformLocation (shaderID, "lightPos");
+    uniformFarPlane = glGetUniformLocation (shaderID, "farPlane");
+
+    for (size_t i = 0; i < 6; i++)
+    {
+        char locBuff[100] = { '\0'};
+
+        snprintf(locBuff, sizeof(locBuff), "lightMatrices[%d]", i);
+        uniformlightMatrices[i] = glGetUniformLocation(shaderID, locBuff);
+    }
 }
 
 void Shader::AddShader(GLuint theProgram, const char* shaderCode, GLenum shaderType){
@@ -237,7 +285,18 @@ GLuint Shader::GetEyePositionLocation(){
     return uniformEyePosition;
 }
 
-GLuint Shader::GetShininessLocation(){
+GLuint Shader::GetOmniLightPosLocation()
+{
+    return uniformOmniLightPos;
+}
+
+GLuint Shader::GetFarPlaneLocation()
+{
+    return uniformFarPlane;
+}
+
+GLuint Shader::GetShininessLocation()
+{
 
     return uniformShininess;
 }
@@ -295,6 +354,14 @@ void Shader::SetDirectionalShadowMap(GLuint textureUnit){
 void Shader::SetDirectionalLightTransform(glm::mat4 *lTransform){
 
     glUniformMatrix4fv(uniformDirectionalLightTransform, 1, GL_FALSE, glm::value_ptr(*lTransform));
+}
+
+void Shader::SetLightMatrices(std::vector<glm::mat4> lightMatrices)
+{
+    for (size_t i = 0; i < 6; i++)
+    {
+        glUniformMatrix4fv(uniformlightMatrices[i], 1, GL_FALSE, glm::value_ptr(lightMatrices[i]));
+    }
 }
 
 void Shader::UseShader(){

@@ -10,7 +10,7 @@ Light::Light(){
 }
 
 Light::Light(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity, GLfloat _diffuseIntensity, 
-            GLfloat shadowWidth, GLfloat shadowHeight, GLfloat near, GLfloat far){
+            GLuint shadowWidth, GLuint shadowHeight, GLfloat near, GLfloat far){
 
     shadowMap = new ShadowMap;
     shadowMap->init(shadowWidth, shadowHeight);

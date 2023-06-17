@@ -27,6 +27,6 @@ protected:
     GLuint FBO, shadowMap;
     GLuint shadowWidth, shadowHeight;
 
-#endif
-
 };
+
+#endif

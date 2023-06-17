@@ -273,8 +273,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/
   /usr/include/stdc-predef.h \
   ../Header/Lights/DirectionalLight.h \
   ../Header/Lights/Light.h \
-  /usr/include/GL/glew.h \
-  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -287,6 +287,41 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/GL/glew.h \
+  /usr/include/c++/11/cstddef \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
@@ -303,8 +338,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/
   /usr/include/glm/glm.hpp \
   /usr/include/glm/detail/_fixes.hpp \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -348,21 +381,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
-  /usr/include/c++/11/debug/debug.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
@@ -551,8 +569,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: ../Source/Lights/Light.cpp \
   /usr/include/stdc-predef.h \
   ../Header/Lights/Light.h \
-  /usr/include/GL/glew.h \
-  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -565,6 +583,41 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: ../Source/Lights/Ligh
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/GL/glew.h \
+  /usr/include/c++/11/cstddef \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
@@ -581,8 +634,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: ../Source/Lights/Ligh
   /usr/include/glm/glm.hpp \
   /usr/include/glm/detail/_fixes.hpp \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -626,21 +677,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: ../Source/Lights/Ligh
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
-  /usr/include/c++/11/debug/debug.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
@@ -830,8 +866,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: ../Source/Lights
   /usr/include/stdc-predef.h \
   ../Header/Lights/PointLight.h \
   ../Header/Lights/Light.h \
-  /usr/include/GL/glew.h \
-  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -844,6 +880,41 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: ../Source/Lights
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/GL/glew.h \
+  /usr/include/c++/11/cstddef \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
@@ -860,8 +931,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: ../Source/Lights
   /usr/include/glm/glm.hpp \
   /usr/include/glm/detail/_fixes.hpp \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -905,21 +974,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: ../Source/Lights
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
-  /usr/include/c++/11/debug/debug.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
@@ -1103,15 +1157,18 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: ../Source/Lights
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  ../Header/Shadows/OmniShadowMap.h \
+  ../Header/Shadows/ShadowMap.h \
+  ../Header/Lights/PointLight.h
 
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: ../Source/Lights/SpotLight.cpp \
   /usr/include/stdc-predef.h \
   ../Header/Lights/SpotLight.h \
   ../Header/Lights/PointLight.h \
   ../Header/Lights/Light.h \
-  /usr/include/GL/glew.h \
-  /usr/include/c++/11/cstddef \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_algobase.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
   /usr/include/features.h \
@@ -1124,6 +1181,41 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: ../Source/Lights/
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/cpu_defines.h \
   /usr/include/c++/11/pstl/pstl_config.h \
+  /usr/include/c++/11/bits/functexcept.h \
+  /usr/include/c++/11/bits/exception_defines.h \
+  /usr/include/c++/11/bits/cpp_type_traits.h \
+  /usr/include/c++/11/ext/type_traits.h \
+  /usr/include/c++/11/ext/numeric_traits.h \
+  /usr/include/c++/11/bits/stl_pair.h \
+  /usr/include/c++/11/bits/move.h \
+  /usr/include/c++/11/type_traits \
+  /usr/include/c++/11/bits/stl_iterator_base_types.h \
+  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/11/bits/concept_check.h \
+  /usr/include/c++/11/debug/assertions.h \
+  /usr/include/c++/11/bits/stl_iterator.h \
+  /usr/include/c++/11/bits/ptr_traits.h \
+  /usr/include/c++/11/debug/debug.h \
+  /usr/include/c++/11/bits/predefined_ops.h \
+  /usr/include/c++/11/bits/allocator.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
+  /usr/include/c++/11/ext/new_allocator.h \
+  /usr/include/c++/11/new \
+  /usr/include/c++/11/bits/exception.h \
+  /usr/include/c++/11/bits/memoryfwd.h \
+  /usr/include/c++/11/bits/stl_construct.h \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/ext/alloc_traits.h \
+  /usr/include/c++/11/bits/alloc_traits.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/initializer_list \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/functional_hash.h \
+  /usr/include/c++/11/bits/hash_bytes.h \
+  /usr/include/c++/11/bits/range_access.h \
+  /usr/include/c++/11/bits/vector.tcc \
+  /usr/include/GL/glew.h \
+  /usr/include/c++/11/cstddef \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
@@ -1140,8 +1232,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: ../Source/Lights/
   /usr/include/glm/glm.hpp \
   /usr/include/glm/detail/_fixes.hpp \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/bits/cpp_type_traits.h \
-  /usr/include/c++/11/ext/type_traits.h \
   /usr/include/math.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -1185,21 +1275,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: ../Source/Lights/
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/stl_algobase.h \
-  /usr/include/c++/11/bits/functexcept.h \
-  /usr/include/c++/11/bits/exception_defines.h \
-  /usr/include/c++/11/ext/numeric_traits.h \
-  /usr/include/c++/11/bits/stl_pair.h \
-  /usr/include/c++/11/bits/move.h \
-  /usr/include/c++/11/type_traits \
-  /usr/include/c++/11/bits/stl_iterator_base_types.h \
-  /usr/include/c++/11/bits/stl_iterator_base_funcs.h \
-  /usr/include/c++/11/bits/concept_check.h \
-  /usr/include/c++/11/debug/assertions.h \
-  /usr/include/c++/11/bits/stl_iterator.h \
-  /usr/include/c++/11/bits/ptr_traits.h \
-  /usr/include/c++/11/debug/debug.h \
-  /usr/include/c++/11/bits/predefined_ops.h \
   /usr/include/c++/11/limits \
   /usr/include/c++/11/tr1/gamma.tcc \
   /usr/include/c++/11/tr1/special_function_util.h \
@@ -2534,6 +2609,11 @@ CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o: ../Source/Shader.cpp \
   ../Header/CommonValues.h \
   ../Header/Lights/DirectionalLight.h \
   ../Header/Lights/Light.h \
+  /usr/include/c++/11/vector \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_vector.h \
+  /usr/include/c++/11/bits/stl_bvector.h \
+  /usr/include/c++/11/bits/vector.tcc \
   /usr/include/glm/glm.hpp \
   /usr/include/c++/11/climits \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
@@ -2557,7 +2637,8 @@ CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o: ../Source/Shader.cpp \
   ../Header/Shadows/ShadowMap.h \
   ../Header/Lights/PointLight.h \
   ../Header/Lights/SpotLight.h \
-  ../Header/Lights/PointLight.h
+  ../Header/Lights/PointLight.h \
+  ../Header/Shader.h
 
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o: ../Source/Shadows/OmniShadowMap.cpp \
   /usr/include/stdc-predef.h \
@@ -3589,10 +3670,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/assimp/defs.h:
 
-/usr/include/c++/11/bits/stl_uninitialized.h:
-
-/usr/include/c++/11/vector:
-
 /usr/include/c++/11/bits/istream.tcc:
 
 /usr/include/c++/11/istream:
@@ -3649,17 +3726,9 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/c++/11/bits/string_view.tcc:
 
-/usr/include/c++/11/bits/functional_hash.h:
-
 /usr/include/glm/gtc/vec1.hpp:
 
 /usr/include/c++/11/bits/cxxabi_forced.h:
-
-/usr/include/glm/detail/type_quat.hpp:
-
-/usr/include/c++/11/ext/new_allocator.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
@@ -3711,10 +3780,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
-/usr/include/c++/11/bits/locale_facets.h:
-
-/usr/include/c++/11/bits/exception.h:
-
 /usr/include/assimp/types.h:
 
 /usr/include/c++/11/exception:
@@ -3724,10 +3789,6 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /usr/include/c++/11/cwchar:
-
-/usr/include/c++/11/bits/stl_function.h:
-
-/usr/include/c++/11/bits/memoryfwd.h:
 
 /usr/include/c++/11/bits/stringfwd.h:
 
@@ -3776,6 +3837,26 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/stdio.h:
+
+/usr/include/c++/11/bits/functional_hash.h:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
+
+/usr/include/c++/11/bits/stl_function.h:
+
+/usr/include/c++/11/bits/memoryfwd.h:
+
+/usr/include/c++/11/bits/locale_facets.h:
+
+/usr/include/c++/11/bits/exception.h:
+
+/usr/include/glm/detail/type_quat.hpp:
+
+/usr/include/c++/11/ext/new_allocator.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+/usr/include/c++/11/vector:
 
 /usr/include/glm/ext/vector_uint1.hpp:
 
@@ -4101,9 +4182,9 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/c++/11/bits/cpp_type_traits.h:
 
-/usr/include/c++/11/ext/alloc_traits.h:
-
 /usr/include/x86_64-linux-gnu/bits/sched.h:
+
+/usr/include/c++/11/ext/alloc_traits.h:
 
 /usr/include/glm/ext/vector_uint2_sized.hpp:
 
@@ -4137,9 +4218,9 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/assimp/color4.h:
 
-/usr/include/c++/11/bits/stl_bvector.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/c++/11/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -4419,9 +4500,9 @@ CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o: ../Source/main.cpp \
 
 /usr/include/glm/ext/matrix_float4x2.hpp:
 
-/usr/include/c++/11/initializer_list:
-
 /usr/include/c++/11/iosfwd:
+
+/usr/include/c++/11/initializer_list:
 
 /usr/include/glm/ext/matrix_float4x3_precision.hpp:
 

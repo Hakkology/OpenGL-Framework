@@ -9,7 +9,7 @@ public:
     PointLight();
 
     PointLight(GLfloat red, GLfloat green, GLfloat blue, GLfloat _ambientIntensity, GLfloat _diffuseIntensity,
-                GLfloat shadowWidth, GLfloat shadowHeight, GLfloat near, GLfloat far,
+                GLuint shadowWidth, GLuint shadowHeight, GLfloat near, GLfloat far,
                 GLfloat xPos, GLfloat yPos, GLfloat zPos,
                 GLfloat con, GLfloat lin, GLfloat exp);
 
@@ -17,6 +17,11 @@ public:
                 GLuint diffuseIntensityLocation, GLuint positionLocation,
                 GLuint constantLocation, GLuint linearLocation, GLuint exponentLocation, 
                 GLuint directionLocation=0, GLuint edgeLocation=0) override;
+    
+    std::vector<glm::mat4> CalculateLightTransform();
+
+    GLfloat GetFarPlane();
+    glm::vec3 GetPosition();
 
     ~PointLight();
 
