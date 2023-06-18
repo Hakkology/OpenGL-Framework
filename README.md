@@ -9,12 +9,14 @@ My first attempt in utilizing C++ with openGL Framework is in this repository. T
 - Creation of a triangle on a 2D Window using GLEW and GLFW.
 - Integration of GLM (OpenGL maths library) for matrix operations.
 - Transforming objects in terms of translation, rotation and scaling.
-- Creation of a 3D pyramid using indices and vertices with Mesh class.
+- Creating shader objects and binding them to relevant shaders (vertex/geometry/fragment).
+- Creation of a 3D pyramid using indices and vertices with Mesh class with indexed draws.
+- Creation of projections and its use on various mechanics.
 - Addition of Camera and User Input with GLFW.
 - Camera Controls and escape button to close the graphics window.
 - Texture and Image loading and texture mapping.
 - Phong Lighting Model, analyzing ambient, diffuse and specular lighting.
-- Point lights and spot lights.
+- Directional lights, Point lights and spot lights.
 - Importing 3D Models with proper textures.
 - Shadow Mapping.
 - Directional and Omnidirectional Shadow Maps, Cube Maps and the Geometry Shader.
