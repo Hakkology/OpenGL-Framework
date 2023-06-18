@@ -23,6 +23,7 @@ public:
     void CreateFromString(const char* vertexCode, const char* fragmentCode);
     void CreateFromFiles(const char* vertexPath, const char* fragmentPath);
     void CreateFromFiles(const char* vertexPath, const char* geometryPath, const char* fragmentPath);
+    void Validate();
 
     std::string ReadFile(const char* filePath);
 
@@ -41,8 +42,8 @@ public:
     
 
     void SetDirectionalLight(DirectionalLight *directionalLight);
-    void SetPointLight(PointLight *pointLight, unsigned int lightCount);
-    void SetSpotLight(SpotLight *SpotLight, unsigned int lightCount);
+    void SetPointLight(PointLight *pointLight, unsigned int lightCount, unsigned int textureUnit, unsigned int offset);
+    void SetSpotLight(SpotLight *SpotLight, unsigned int lightCount, unsigned int textureUnit, unsigned int offset);
     void SetTexture(GLuint textureUnit);
     void SetDirectionalShadowMap(GLuint textureUnit);
     void SetDirectionalLightTransform(glm::mat4 *transform);
@@ -109,6 +110,12 @@ private:
         GLuint uniformEdge;
 
     } uniformSpotLight[MAX_SPOT_LIGHTS];
+
+    struct{
+
+        GLuint shadowMap;
+        GLuint farPlane;
+    } uniformOmniShadowMap[MAX_POINT_LIGHTS + MAX_SPOT_LIGHTS];
         
     void CompileShader(const char* vertexCode, const char* fragmentCode);
     void CompileShader(const char* vertexCode, const char* geometryCode, const char* fragmentCode);

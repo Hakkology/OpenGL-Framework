@@ -21,6 +21,7 @@ public:
 
     void SetFlash(glm::vec3 pos, glm::vec3 dir);
 
+
     ~SpotLight();
 
 private:
@@ -29,6 +30,8 @@ private:
 
     // how much is not going to be shown on
     GLfloat edge, processedEdge;
+
+    bool isOn;
 
 };
 

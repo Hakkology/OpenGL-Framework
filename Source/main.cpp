@@ -153,29 +153,29 @@ int main(void)
     trees2.LoadModel("../Resources/Models/Model/Tree.obj");
 
     mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
-                                0.1f, 0.5f,
+                                0.0f, 0.1f,
                                 2048, 2048, 0.0, 0.0,
                                 -1.0f, -2.0f, -1.0f);
 
-    pointLights[0] = PointLight( 0.0f, 1.0f, 0.0f,
-                                 0.1f, 1.0f,
+    pointLights[0] = PointLight( 0.0f, 1.5f, 0.0f,
+                                 0.0f, 1.0f,
                                  1024, 1024, 0.01f, 100.0f,
-                                -4.0f, 0.0f, 0.0f,
-                                 0.3f, 0.2f, 0.1f);
+                                -4.0f, 0.0f, -1.0f,
+                                 0.3f, 0.05f, 0.05f);
 
     pointLightCount++;
-    pointLights[1] = PointLight( 0.0f, 0.0f, 1.0f,
-                                 0.1f, 1.0f,
+    pointLights[1] = PointLight( 0.0f, 0.5f, 4.0f,
+                                 0.0f, 1.0f,
                                  1024, 1024, 0.01f, 100.0f,
-                                 0.0f, 0.0f, 3.0f,
-                                 0.3f, 0.1f, 0.1f);
+                                 0.0f, 0.0f, -1.0f,
+                                 0.3f, 0.05f, 0.05f);
 
     pointLightCount++;
     spotLights[0] = SpotLight( 1.0f, 0.0f, 0.0f,
-                               0.0f, 8.0f,
+                               0.0f, 0.4f,
                                1024, 1024, 0.01f, 100.0f,
                                5.0f, 2.0f, 5.0f,
-                               0.3f, 0.2f, 0.1f,
+                               0.3f, 0.05f, 0.05f,
                                0.0f,-1.0f, 0.0f, 30.0f);
 
     spotLightCount++;
@@ -200,7 +200,6 @@ int main(void)
         // Camera key controls
         camera.keyControl(mainWindow.getWindow(), deltaTime);
         camera.mouseControl(mainWindow.getXChange(), mainWindow.getYChange());
-        // Function for transform controls
 
         DirectionalShadowMapPass(&mainLight);
         for (size_t i = 0; i < pointLightCount; i++)
@@ -347,7 +346,7 @@ void RenderScene(){
 
     // Lamppost model
     model = glm::mat4(1.0f);
-    model = glm::translate(model, glm::vec3(-2.0f, -2.0f, 0.0f));
+    model = glm::translate(model, glm::vec3(-0.5f, -2.0f, -1.5f));
     model = glm::rotate(model, 0.0f, glm::vec3(0.0f, 0.0f, -90.0f));
     model = glm::scale(model, glm::vec3(1.2f, 1.2f, 1.2f));
 
@@ -390,18 +389,19 @@ void RenderPass(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
     glUniform3f(uniformEyePosition, camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 
     shaderList[0].SetDirectionalLight(&mainLight);
-    shaderList[0].SetPointLight(pointLights, pointLightCount);
-    shaderList[0].SetSpotLight(spotLights, spotLightCount);
+    shaderList[0].SetPointLight(pointLights, pointLightCount, 3, 0);
+    shaderList[0].SetSpotLight(spotLights, spotLightCount, 3 + pointLightCount, pointLightCount);
     glm::mat4 lightTransform = mainLight.CalculateLightTransform();
     shaderList[0].SetDirectionalLightTransform(&lightTransform);
 
-    mainLight.GetShadowMap() -> Read(GL_TEXTURE1);
-    shaderList[0].SetTexture(0);
-    shaderList[0].SetDirectionalShadowMap(1);
+    mainLight.GetShadowMap() -> Read(GL_TEXTURE2);
+    shaderList[0].SetTexture(1);
+    shaderList[0].SetDirectionalShadowMap(2);
 
     // for Camera Lights
     spotLights[0].SetFlash(camera.getCameraPosition(), camera.getCameraDirection());
 
+    shaderList[0].Validate();
     RenderScene();
 }
 
@@ -418,6 +418,7 @@ void DirectionalShadowMapPass(DirectionalLight *light){
     glm::mat4 lightTransform = light->CalculateLightTransform();
     directionalShadowShader.SetDirectionalLightTransform (&lightTransform);
 
+    directionalShadowShader.Validate();
     RenderScene();
 
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
@@ -440,6 +441,7 @@ void OmniShadowMapPass(PointLight* light){
     glUniform1f(uniformFarPlane, light->GetFarPlane());
     omniShadowShader.SetLightMatrices(light->CalculateLightTransform());
 
+    omniShadowShader.Validate();
     RenderScene();
 
     glBindFramebuffer(GL_FRAMEBUFFER, 0);
