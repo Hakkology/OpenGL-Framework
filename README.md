@@ -2,7 +2,7 @@
 Making a Game Engine with OpenGL using VSCode on Ubuntu Dist.
 
 
-The work took a similar approach to Dane Cook's OpenGL course but since i am building this up on Ubuntu, i had to take different approaches to find workable solutions. Some factors were easier to implement and others were a lot more difficult.
+The work took a similar approach to Dane Cook's OpenGL course but since i am building this up on Ubuntu, i had to take different approaches to find workable solutions. Some factors were easier to implement and others were a lot more difficult. During the course, i took notes from theory lessons in OpenGLNotes.cpp. Feel free to check and comment accordingly.
 My first attempt in utilizing C++ with openGL Framework is in this repository. Tasks completed are as follows:
 
 - Creation of a window and initiating GLEW and GLFW.
