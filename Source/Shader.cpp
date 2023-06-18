@@ -144,7 +144,7 @@ void Shader::CompileProgram(){
     uniformPointLightCount = glGetUniformLocation(shaderID, "pointLightCount");
 
     // point light value assignment for shaders
-    for (size_t i = 0; i < MAX_POINT_LIGHTS; i++)
+    for (int i = 0; i < MAX_POINT_LIGHTS; i++)
     {
         char locBuff[100] = { '\0'};
 
@@ -173,7 +173,7 @@ void Shader::CompileProgram(){
     uniformSpotLightCount = glGetUniformLocation(shaderID, "spotLightCount");
 
     // spotlight value assignment for shaders
-    for (size_t i = 0; i < MAX_SPOT_LIGHTS; i++)
+    for (int i = 0; i < MAX_SPOT_LIGHTS; i++)
     {
         char locBuff[100] = { '\0'};
 
@@ -212,7 +212,7 @@ void Shader::CompileProgram(){
     uniformOmniLightPos = glGetUniformLocation (shaderID, "lightPos");
     uniformFarPlane = glGetUniformLocation (shaderID, "farPlane");
 
-    for (size_t i = 0; i < 6; i++)
+    for (int i = 0; i < 6; i++)
     {
         char locBuff[100] = { '\0'};
 
@@ -220,7 +220,7 @@ void Shader::CompileProgram(){
         uniformlightMatrices[i] = glGetUniformLocation(shaderID, locBuff);
     }
 
-    for (size_t i = 0; i < MAX_POINT_LIGHTS + MAX_SPOT_LIGHTS; i++)
+    for (int i = 0; i < MAX_POINT_LIGHTS + MAX_SPOT_LIGHTS; i++)
     {
         char locBuff[100] = { '\0'};
 

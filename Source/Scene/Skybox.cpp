@@ -5,14 +5,10 @@ Skybox::Skybox(){
 
 }
 
-Skybox::Skybox(std::vector<std::string> faceLocations){
+Skybox::Skybox(std::vector<std::string> faceLocations, const char* vSkyboxShader, const char* fSkyboxShader){
 
     // Shader setup
     skyShader = new Shader();
-    // Vertex Shader
-    static const char* vSkyboxShader = "../Shaders/Skybox.vert";
-    // Fragment Shader
-    static const char* fSkyboxShader = "../Shaders/Skybox.frag";
 
     skyShader->CreateFromFiles(vSkyboxShader, fSkyboxShader);
 

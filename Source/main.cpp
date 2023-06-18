@@ -31,20 +31,6 @@
 
 #include "../Header/Utility.h"
 
-
-// Vertex Shader
-static const char* vShader = "../Shaders/shader.vert";
-static const char* vShadowShader = "../Shaders/directional_shadow_map.vert";
-static const char* vOmniShadowShader = "../Shaders/omni_shadow_map.vert";
-
-// Geometry Shader
-static const char* gOmniShadowShader = "../Shaders/omni_shadow_map.geom";
-
-// Fragment Shader
-static const char* fShader = "../Shaders/shader.frag";
-static const char* fShadowShader = "../Shaders/directional_shadow_map.frag";
-static const char* fOmniShadowShader = "../Shaders/omni_shadow_map.frag";
-
 // Window Creation
 Scene mainWindow;
 
@@ -123,7 +109,6 @@ void TransformControls();
 
 int main(void)
 {
-
     mainWindow = Scene(1366,768);
     mainWindow.Initialize();
 
@@ -154,15 +139,15 @@ int main(void)
     trees2 = Model();
     trees2.LoadModel("../Resources/Models/Model/Tree.obj");
 
-    mainLight = DirectionalLight(1.0f, 1.0f, 1.0f, 
-                                0.0f, 0.1f,
+    mainLight = DirectionalLight(1.0f, 0.53f, 0.3f, 
+                                0.0f, 0.4f,
                                 2048, 2048, 0.0, 0.0,
-                                -1.0f, -2.0f, -1.0f);
+                                -10.0f, -12.0f, 18.5f);
 
     pointLights[0] = PointLight( 0.0f, 1.5f, 1.0f,
                                  0.0f, 1.0f,
                                  1024, 1024, 0.01f, 100.0f,
-                                -4.0f, 0.0f, -1.0f,
+                                -4.0f, 0.0f, 10.0f,
                                  0.3f, 0.05f, 0.05f);
 
     pointLightCount++;
@@ -190,7 +175,7 @@ int main(void)
     skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_bk.tga");
     skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_ft.tga");
 
-    skybox = Skybox (skyboxFaces);
+    skybox = Skybox (skyboxFaces, vSkyboxShader, fSkyboxShader);
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(glm::radians(60.0f), mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);

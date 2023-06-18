@@ -19,7 +19,7 @@ class Skybox{
 public:
 
     Skybox();
-    Skybox(std::vector<std::string> faceLocations);
+    Skybox(std::vector<std::string> faceLocations, const char* vSkyboxShader, const char* fSkyboxShader);
 
     void DrawSkybox(glm::mat4 viewMatrix, glm::mat4 projectionMatrix);
 
