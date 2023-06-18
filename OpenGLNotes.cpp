@@ -553,3 +553,38 @@ Percentage Closer Filtering (PCF)
 - Similar to how linear filtering works.
 
 */
+
+//////////////////////////// 
+
+/*
+
+Skybox
+- A cube mesh creating the illusion of a larger world.
+- Use cubemaps to texture the cube.
+- Requires its own shader to run before the main shader.
+- World is drawn on top of the skybox.
+- We have to use ViewMatrix farplane everywhere by disabling depthmask.
+
+- Bind 6 textures to each face, use RGB or RGBA values,
+glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X +i, 0, GL_RGB, width, height, 0 GL_RGB, GL_UNSIGNED_BYTE, data);
+- Use seperate shader for drawing skybox and pass in a 1x1x1 cube.
+- Create a very tiny skybox cubemap and disable depth map in order to see the world.
+- Pass gl_position with projection and view matrix
+TexCoords = aPos;
+- Fragment shader takes skybox as a samplerCube.
+colour = texture(skybox, TexCoords);
+
+- Initialize shader to use
+- Bind VAO of skybox cube
+- Bind texture of skybox
+- Draw Skybox
+- glDepthMask(GL_FALSE); before drawing.
+- Enable afterwards.
+
+- Camera position is the origin.
+- Only rotation shall remain for translations.
+- recall: Translation happens in the 4th column of a matrix.
+- glm::mat4(glm::mat3(viewMatrix));
+- do glClear before rendering the scene itself and do before rendering the skybox.
+
+*/
