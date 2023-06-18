@@ -345,6 +345,30 @@ Source/Scene.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.s
 .PHONY : Source/Scene.cpp.s
 
+Source/Scene/Skybox.o: Source/Scene/Skybox.cpp.o
+.PHONY : Source/Scene/Skybox.o
+
+# target to build an object file
+Source/Scene/Skybox.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o
+.PHONY : Source/Scene/Skybox.cpp.o
+
+Source/Scene/Skybox.i: Source/Scene/Skybox.cpp.i
+.PHONY : Source/Scene/Skybox.i
+
+# target to preprocess a source file
+Source/Scene/Skybox.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.i
+.PHONY : Source/Scene/Skybox.cpp.i
+
+Source/Scene/Skybox.s: Source/Scene/Skybox.cpp.s
+.PHONY : Source/Scene/Skybox.s
+
+# target to generate assembly for a file
+Source/Scene/Skybox.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OpenGL-Framework.dir/build.make CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.s
+.PHONY : Source/Scene/Skybox.cpp.s
+
 Source/Shader.o: Source/Shader.cpp.o
 .PHONY : Source/Shader.o
 
@@ -525,6 +549,9 @@ help:
 	@echo "... Source/Scene.o"
 	@echo "... Source/Scene.i"
 	@echo "... Source/Scene.s"
+	@echo "... Source/Scene/Skybox.o"
+	@echo "... Source/Scene/Skybox.i"
+	@echo "... Source/Scene/Skybox.s"
 	@echo "... Source/Shader.o"
 	@echo "... Source/Shader.i"
 	@echo "... Source/Shader.s"

@@ -23,6 +23,7 @@
 #include "../Header/Shader.h"
 #include "../Header/Scene.h"
 #include "../Header/Camera.h"
+#include "../Header/Scene/Skybox.h"
 
 #include "../Header/Lights/DirectionalLight.h"
 #include "../Header/Lights/PointLight.h"
@@ -82,6 +83,7 @@ unsigned int spotLightCount =0;
 DirectionalLight mainLight;
 PointLight pointLights[MAX_POINT_LIGHTS];
 SpotLight spotLights[MAX_SPOT_LIGHTS];
+Skybox skybox;
 
 // Utility instance creation
 Utility utility;
@@ -157,14 +159,14 @@ int main(void)
                                 2048, 2048, 0.0, 0.0,
                                 -1.0f, -2.0f, -1.0f);
 
-    pointLights[0] = PointLight( 0.0f, 1.5f, 0.0f,
+    pointLights[0] = PointLight( 0.0f, 1.5f, 1.0f,
                                  0.0f, 1.0f,
                                  1024, 1024, 0.01f, 100.0f,
                                 -4.0f, 0.0f, -1.0f,
                                  0.3f, 0.05f, 0.05f);
 
     pointLightCount++;
-    pointLights[1] = PointLight( 0.0f, 0.5f, 4.0f,
+    pointLights[1] = PointLight( 2.0f, 1.0f, 0.0f,
                                  0.0f, 1.0f,
                                  1024, 1024, 0.01f, 100.0f,
                                  0.0f, 0.0f, -1.0f,
@@ -179,6 +181,16 @@ int main(void)
                                0.0f,-1.0f, 0.0f, 30.0f);
 
     spotLightCount++;
+
+    std::vector<std::string> skyboxFaces;
+    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_rt.tga");
+    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_lf.tga");
+    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_up.tga");
+    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_dn.tga");
+    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_bk.tga");
+    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_ft.tga");
+
+    skybox = Skybox (skyboxFaces);
 
     // Math for creating projection model
     glm::mat4 projection = glm::perspective(glm::radians(60.0f), mainWindow.getBufferWidth() / mainWindow.getBufferHeight(), 0.1f, 100.f);
@@ -368,6 +380,15 @@ void RenderScene(){
 
 void RenderPass(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 
+
+    glViewport(0,0, 1366, 768);
+    // Make window orange - RBG values, 255 means 1.
+    glClearColor(0.2f, 0.5f, 0.2f, 1.0f);
+    /* Render here */
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    skybox.DrawSkybox(viewMatrix, projectionMatrix);
+
     shaderList[0].UseShader();
 
     uniformModel = shaderList[0].GetModelLocation();
@@ -376,13 +397,6 @@ void RenderPass(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
     uniformEyePosition = shaderList[0].GetEyePositionLocation();
     uniformSpecularIntensity = shaderList[0].GetSpecularIntensityLocation();
     uniformShininess = shaderList[0].GetShininessLocation();
-
-    glViewport(0,0, 1366, 768);
-
-    // Make window orange - RBG values, 255 means 1.
-    glClearColor(0.2f, 0.5f, 0.2f, 1.0f);
-    /* Render here */
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     glUniformMatrix4fv(uniformProjection, 1, GL_FALSE, glm::value_ptr(projectionMatrix));
     glUniformMatrix4fv(uniformView, 1, GL_FALSE, glm::value_ptr(viewMatrix));

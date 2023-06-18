@@ -125,10 +125,24 @@ CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene.cpp -o CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.s
 
+CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
+CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o: ../Source/Scene/Skybox.cpp
+CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene/Skybox.cpp
+
+CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene/Skybox.cpp > CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.i
+
+CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene/Skybox.cpp -o CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.s
+
 CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o: ../Source/Camera.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o: ../Source/Texture.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Texture.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o: ../Source/Utility.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Utility.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.i: cmake_force
@@ -170,7 +184,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o: ../Source/Material.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Material.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.i: cmake_force
@@ -184,7 +198,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Material.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o: ../Source/Model.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Model.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.i: cmake_force
@@ -198,7 +212,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: ../Source/Lights/Light.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/Light.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.i: cmake_force
@@ -212,7 +226,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/Light.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: ../Source/Lights/DirectionalLight.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/DirectionalLight.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.i: cmake_force
@@ -226,7 +240,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/DirectionalLight.cpp.s: cmake_forc
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: ../Source/Lights/PointLight.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/PointLight.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/PointLight.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: ../Source/Lights/SpotLight.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Lights/SpotLight.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Lights/SpotLight.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o: ../Source/Shadows/ShadowMap.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/ShadowMap.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/OpenGL-Framework.dir/Source/Shadows/ShadowMap.cpp.s: cmake_force
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o: CMakeFiles/OpenGL-Framework.dir/flags.make
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o: ../Source/Shadows/OmniShadowMap.cpp
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o: CMakeFiles/OpenGL-Framework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o -MF CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o.d -o CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Shadows/OmniShadowMap.cpp
 
 CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.i: cmake_force
@@ -285,6 +299,7 @@ OpenGL__Framework_OBJECTS = \
 "CMakeFiles/OpenGL-Framework.dir/Source/Mesh.cpp.o" \
 "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o" \
 "CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o" \
+"CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o" \
 "CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o" \
 "CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o" \
 "CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o" \
@@ -304,6 +319,7 @@ OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/main.cpp.o
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Mesh.cpp.o
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o
+OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Texture.cpp.o
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/Source/Utility.cpp.o
@@ -319,7 +335,7 @@ OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/build.make
 OpenGL-Framework: /usr/lib/x86_64-linux-gnu/libGLX.so
 OpenGL-Framework: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 OpenGL-Framework: CMakeFiles/OpenGL-Framework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable OpenGL-Framework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable OpenGL-Framework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGL-Framework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

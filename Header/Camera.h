@@ -41,6 +41,6 @@ private:
 
     void update();
 
-#endif
-
 };
+
+#endif

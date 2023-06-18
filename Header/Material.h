@@ -21,6 +21,6 @@ private:
     GLfloat specularIntensity;
     GLfloat shininess;
 
-#endif
-
 };
+
+#endif

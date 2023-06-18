@@ -1,4 +1,5 @@
 #include "../Header/Texture.h"
+#include "../Header/CommonValues.h"
 
 Texture::Texture(){
 

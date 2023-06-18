@@ -13,7 +13,8 @@ find_package(assimp REQUIRED)
 add_executable(OpenGL-Framework Source/main.cpp 
                             Source/Mesh.cpp Header/Mesh.h 
                             Source/Shader.cpp Header/Shader.h 
-                            Source/Scene.cpp Header/Scene.h 
+                            Source/Scene.cpp Header/Scene.h
+                            Source/Scene/Skybox.cpp Header/Scene/Skybox.h 
                             Source/Camera.cpp Header/Camera.h
                             Source/Texture.cpp Header/Texture.h
                             Source/Utility.cpp Header/Utility.h

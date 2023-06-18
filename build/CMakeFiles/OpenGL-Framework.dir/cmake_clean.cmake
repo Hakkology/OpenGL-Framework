@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o.d"
   "CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o"
   "CMakeFiles/OpenGL-Framework.dir/Source/Scene.cpp.o.d"
+  "CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o"
+  "CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o.d"
   "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o"
   "CMakeFiles/OpenGL-Framework.dir/Source/Shader.cpp.o.d"
   "CMakeFiles/OpenGL-Framework.dir/Source/Shadows/OmniShadowMap.cpp.o"

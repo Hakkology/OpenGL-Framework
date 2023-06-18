@@ -206,6 +206,4 @@ CMakeFiles/OpenGL-Framework.dir/Source/Model.cpp.o: \
  /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Mesh.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
  /usr/include/GL/gl.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Texture.h \
- /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/stb_image.h \
- /usr/include/c++/11/stdlib.h
+ /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/../Header/Texture.h

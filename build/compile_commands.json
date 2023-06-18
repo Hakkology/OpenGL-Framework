@@ -21,6 +21,11 @@
 },
 {
   "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
+  "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Resources -g -o CMakeFiles/OpenGL-Framework.dir/Source/Scene/Skybox.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene/Skybox.cpp",
+  "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Scene/Skybox.cpp"
+},
+{
+  "directory": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/build",
   "command": "/usr/bin/c++  -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Header/Lights -I/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/$(PROJECT_SOURCE_DIR)/Resources -g -o CMakeFiles/OpenGL-Framework.dir/Source/Camera.cpp.o -c /home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp",
   "file": "/home/hakan/Desktop/Hakan/Programming/C++/OpenGL/OpenGL-Framework/Source/Camera.cpp"
 },
