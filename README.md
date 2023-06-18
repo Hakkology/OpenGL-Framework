@@ -20,9 +20,14 @@ My first attempt in utilizing C++ with openGL Framework is in this repository. T
 - Directional and Omnidirectional Shadow Maps, Cube Maps and the Geometry Shader.
 - Adding a Skybox using the cubemap.
 
+Below you may find an image of finalized works. Im aware there are things that needs to be polished but this is the result:
+
+<img src="Images/OpenGL1.png" alt="OpenGL Screenshot">
+
 There is much more inside the code aside from these headers. However, i plan to improve this as follows:
 
 - Code Refactoring (Need to polish on my C++ first).
+- Model class revision (to be able to read blender files etc).
 - Additional features related to game development such as Collision detection algorithms.
 - Analyze the code and take what is needed to create a 2D game.
 - Additional features using Dear Imgui UI library to start the engine works.
