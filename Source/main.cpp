@@ -37,8 +37,7 @@ Scene mainWindow;
 // Mesh list
 std::vector<Mesh*> meshList;
 std::vector<Shader> shaderList;
-Shader directionalShadowShader;
-Shader omniShadowShader;
+Shader directionalShadowShader, omniShadowShader;
 
 // Uniform Variables
 GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition =0,
@@ -49,19 +48,13 @@ GLuint uniformProjection =0, uniformModel=0, uniformView =0, uniformEyePosition 
 Camera camera; 
 
 // Texture creation
-Texture brickTexture;
-Texture dirtTexture;
-Texture plainTexture;
+Texture brickTexture, dirtTexture, plainTexture;
 
 // Material instance creation
-Material shinyMaterial;
-Material dullMaterial;
+Material shinyMaterial, dullMaterial;
 
 // Model objs
-Model trees;
-Model trees2;
-Model lampPost;
-Model statue;
+Model trees, trees2, lampPost, statue;
 
 // Light instance creation
 unsigned int pointLightCount =0; 
