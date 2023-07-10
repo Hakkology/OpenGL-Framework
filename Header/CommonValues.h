@@ -3,6 +3,10 @@
 
 #include "stb_image.h"
 
+// Window values
+const int WINDOW_WIDTH = 1366;
+const int WINDOW_HEIGHT = 788;
+
 // Shader assignments
 
 // Vertex Shader
@@ -22,5 +26,7 @@ static const char* fSkyboxShader = "../Shaders/Skybox.frag";
 
 const int MAX_POINT_LIGHTS = 3;
 const int MAX_SPOT_LIGHTS = 3;
+
+const float toRadians = 3.14159265f / 180.0f;
 
 #endif 
