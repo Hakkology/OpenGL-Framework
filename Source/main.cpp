@@ -85,7 +85,6 @@ float triMaxoffset = 0.8f;
 float triIncrement = 0.005f;
 
 // Rotation tools
-const float toRadians = 3.14159265f / 180.0f;
 float currentAngle = 0.0f;
 
 // Size tools
@@ -109,7 +108,7 @@ void TransformControls();
 
 int main(void)
 {
-    mainWindow = Scene(1366,768);
+    mainWindow = Scene(WINDOW_WIDTH, WINDOW_HEIGHT);
     mainWindow.Initialize();
 
     /*Creating Shapes Code Block*/
@@ -365,8 +364,7 @@ void RenderScene(){
 
 void RenderPass(glm::mat4 projectionMatrix, glm::mat4 viewMatrix){
 
-
-    glViewport(0,0, 1366, 768);
+    glViewport(0,0, WINDOW_WIDTH, WINDOW_HEIGHT);
     // Make window orange - RBG values, 255 means 1.
     glClearColor(0.2f, 0.5f, 0.2f, 1.0f);
     /* Render here */
