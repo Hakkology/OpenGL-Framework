@@ -119,24 +119,24 @@ int main(void)
     camera = Camera(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 1.0f, 0.0f), -90.0f, 0.0f, 5.0f, 0.5f);
 
     // Loading textures
-    brickTexture = Texture("../Resources/Textures/Ground/brick.png");
+    brickTexture = Texture(brickTexturePath);
     brickTexture.LoadTextureA();
-    dirtTexture = Texture("../Resources/Textures/Ground/dirt.png");
+    dirtTexture = Texture(dirtTexturePath);
     dirtTexture.LoadTextureA();
-    plainTexture = Texture("../Resources/Textures/Ground/plain.png");
+    plainTexture = Texture(plainTexturePath);
     plainTexture.LoadTextureA();
 
     shinyMaterial = Material(1.0f, 32);
     dullMaterial = Material (0.3f, 4);
 
     trees = Model();
-    trees.LoadModel("../Resources/Models/Model/Tree.obj");
+    trees.LoadModel(treeModelPath);
     lampPost = Model();
-    lampPost.LoadModel("../Resources/Models/Model/uploads_files_2809625_Light.obj");
+    lampPost.LoadModel(lampModelPath);
     statue = Model();
-    statue.LoadModel("../Resources/Models/Model/12334_statue_v1_l3.obj");
+    statue.LoadModel(statueModelPath);
     trees2 = Model();
-    trees2.LoadModel("../Resources/Models/Model/Tree.obj");
+    trees2.LoadModel(treeModelPath);
 
     mainLight = DirectionalLight(1.0f, 0.53f, 0.3f, 
                                 0.0f, 0.4f,
@@ -167,12 +167,12 @@ int main(void)
     spotLightCount++;
 
     std::vector<std::string> skyboxFaces;
-    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_rt.tga");
-    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_lf.tga");
-    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_up.tga");
-    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_dn.tga");
-    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_bk.tga");
-    skyboxFaces.push_back("../Resources/Models/Texture/Skybox/cupertin-lake_ft.tga");
+    skyboxFaces.push_back(skyboxRtPath);
+    skyboxFaces.push_back(skyboxLfPath);
+    skyboxFaces.push_back(skyboxUpPath);
+    skyboxFaces.push_back(skyboxDnPath);
+    skyboxFaces.push_back(skyboxBkPath);
+    skyboxFaces.push_back(skyboxFtPath);
 
     skybox = Skybox (skyboxFaces, vSkyboxShader, fSkyboxShader);
 
