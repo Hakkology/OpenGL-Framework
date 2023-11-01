@@ -1,6 +1,5 @@
 # OpenGL-Framework
-Making a Game Engine with OpenGL using VSCode on Ubuntu Dist.
-
+C++ Application with OpenGL on Ubuntu in order to display visuals. Also include GLFW, assimp libraries in order to work with models, shaders and textures. Through shaders, classes for lights and shadows in order to implement visual effects, skyboxes and ability to create any visual component as mesh is implemented.
 
 The work took a similar approach to Dane Cook's OpenGL course but since i am building this up on Ubuntu, i had to take different approaches to find workable solutions. Some factors were easier to implement and others were a lot more difficult. During the course, i took notes from theory lessons in OpenGLNotes.cpp. Feel free to check and comment accordingly.
 My first attempt in utilizing C++ with openGL Framework is in this repository. Tasks completed are as follows:
